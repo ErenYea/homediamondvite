@@ -9,6 +9,7 @@ import PremiumCoverage from "../../components/PremiumCoverage";
 import { useNavigate } from "react-router-dom";
 import InputForm4 from "../../components/InputForm4";
 import ProcessCompleted from "../../components/ProcessCompleted";
+import OptionsCheckBoxContainer from "../../components/OptionsCheckBoxContainer";
 
 const Enrollment = () => {
   const { step1Data, step2Data, step3Data, step4Data } = useAppStore();
@@ -37,11 +38,20 @@ const Enrollment = () => {
         <ProgressBar step={currentStep} /> {/* Pass currentStep directly */}
       </div>
 
-      <div className="grid grid-cols-[2fr_3fr] gap-4 w-full h-full ">
+      <div
+        className={`grid ${
+          currentStep !== 3 ? "grid-cols-[2fr_3fr]" : "grid-cols-[2fr_3fr_2fr]"
+        }  gap-4 w-[80%] h-full `}
+      >
         <div className="flex justify-center items-start pt-[30px] text-black">
           {currentStep === 2 && <WarrantyBenefits />}
           {currentStep === 3 && <PremiumCoverage />}
         </div>
+        {currentStep === 3 && (
+          <div className="flex justify-center items-start pt-[30px] text-black">
+            <OptionsCheckBoxContainer />
+          </div>
+        )}
         <div className="flex flex-col justify-start items-center h-full w-full mt-[5px]">
           {currentStep === 1 && <InputForm sellerId={1} />}
           {currentStep === 2 && <InputForm2 />}

@@ -155,6 +155,9 @@ const translations = {
       increasedHomeValue:
         "Increased Home Value: Having a home warranty can make your property more attractive to potential buyers, as it offers them protection and reduces their risk of unexpected repair costs. Replacing a central air conditioning system can cost between $7,000 and $15,000 on average, which can be a selling point for buyers if covered by a warranty.",
     },
+    checkboxContainer: {
+      title: "Click To Select Additional Coverage Options:",
+    },
     premiumCoverage: {
       title: "Coverage Included in your PREMIUM Warranty",
       plumbingSystem: "Plumbing System",
@@ -335,6 +338,9 @@ const translations = {
         "Comodidad: Con una garantía para el hogar, solo necesita contactar a su proveedor de garantía para programar una reparación. Ellos se encargan de encontrar un técnico calificado, ahorrándole tiempo y molestias.",
       increasedHomeValue:
         "Aumento del Valor de la Vivienda: Tener una garantía para el hogar puede hacer que su propiedad sea más atractiva para los posibles compradores, ya que les ofrece protección y reduce su riesgo de costos de reparación inesperados. Reemplazar un sistema de aire acondicionado central puede costar entre $7,000 y $15,000 en promedio, lo cual puede ser un punto de venta para los compradores si está cubierto por una garantía.",
+    },
+    checkboxContainer: {
+      title: "Haga clic para seleccionar opciones de cobertura adicionales:",
     },
     premiumCoverage: {
       title: "Cobertura Incluida en su Garantía PREMIUM",
