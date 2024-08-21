@@ -5,6 +5,12 @@ import PremiumHomeText from "../../components/PremiumHomeText";
 import InputForm from "../../components/InputForm";
 
 const Home = () => {
+  const scrolltoContainer = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Optional: Add smooth scrolling
+    });
+  };
   return (
     <div className="w-full flex flex-col mt-[80px] pb-[50px]">
       <div className="">
@@ -35,19 +41,34 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-center space-x-4">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
+      <div className="w-full flex justify-evenly ">
+        <span className="">
+          <img src="/logo1.png" alt="" className="w-[200px]" />
+        </span>
+        <span className="">
+          <img src="/logo1.png" alt="" className="w-[200px]" />
+        </span>
+        <span className="">
+          <img src="/logo1.png" alt="" className="w-[200px]" />
+        </span>
       </div>
-      <div className="w-full flex justify-center items-center mb-4 ">
+      <div className="w-full flex justify-center items-center mb-4 mt-4">
         <span className="italic font-bold text-blue-600 text-xl">
           “Testimonial Quote . . . . . Tiffany to provide“
         </span>
       </div>
       <div className="flex items-start w-full h-[400px] relative">
-        <div className="z-0 w-[50%] h-[400px] bg-slate-500"></div>
+        <div className="z-0 w-[50%] h-[400px] bg-white">
+          <div className="w-full h-full flex flex-col pt-6 items-center">
+            <img src="/dhp_home_logo.jpg" alt="" className="w-[350px]" />
+            <div
+              onClick={scrolltoContainer}
+              className="flex justify-center bg-teal-400 items-center py-2 px-6 text-2xl cursor-pointer hover:bg-blue-400 transition-all   rounded-lg shadow-md border text-white"
+            >
+              Free Quote
+            </div>
+          </div>
+        </div>
         <div className=" z-10 h-full flex-grow bg-teal-500 flex items-center">
           <div
             className="cutBox bg-teal-500 h-full"
