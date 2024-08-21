@@ -32,7 +32,7 @@ const Enrollment = () => {
     }
   }, [currentStep]);
   return (
-    <div className="flex flex-col items-center mt-[50px] pt-[25px] overflow-x-hidden right-[1%]">
+    <div className="flex flex-col items-center mt-[80px] pt-[25px] overflow-x-hidden right-[1%]">
       <div className="w-[50%]">
         <ProgressBar step={currentStep} /> {/* Pass currentStep directly */}
       </div>

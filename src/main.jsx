@@ -6,6 +6,7 @@ import Home from "./pages/Home/Home.jsx";
 import NavBar from "./components/NavBar.jsx";
 import Footer from "./components/Footer.jsx";
 import Enrollment from "./pages/Enrollment/Enrollment.jsx";
+import ContactUs from "./pages/ContactUs/ContactUs.jsx";
 
 const router = createBrowserRouter([
   {
@@ -73,7 +74,7 @@ const router = createBrowserRouter([
     element: (
       <div className="w-full h-screen">
         <NavBar />
-        <Home />
+        <ContactUs />
         <Footer />
       </div>
     ),
