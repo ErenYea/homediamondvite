@@ -7,8 +7,6 @@ import { useAppStore } from "../lib/store";
 const NavBar = () => {
   const { language, setLanguage } = useAppStore();
   const handleLanguageToggle = (event) => {
-    // console.log("here");
-
     setLanguage(event.target.checked ? "es" : "en");
   };
   return (
@@ -18,13 +16,13 @@ const NavBar = () => {
           <img src={"/dhp_home_logo.jpg"} alt="Logo" className="w-[150px]" />
         </Link>
         <div className="ml-[20px] text-teal-500 mt-2 space-x-5">
-          <Link href="/products" className=" hover:underline">
+          <Link to="/products" className=" hover:underline">
             <TextBlock section="navbar" element="products" />
           </Link>
-          <Link href="/FAQ" className="hover:underline">
+          <Link to="/FAQ" className="hover:underline">
             <TextBlock section="navbar" element="faq" />
           </Link>
-          <Link href="/contact-us" className=" hover:underline">
+          <Link to="/contact-us" className=" hover:underline">
             <TextBlock section="navbar" element="contact" />
           </Link>
         </div>
