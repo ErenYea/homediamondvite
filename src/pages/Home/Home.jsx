@@ -6,7 +6,7 @@ import InputForm from "../../components/InputForm";
 
 const Home = () => {
   return (
-    <div className="w-full flex flex-col pb-[50px]">
+    <div className="w-full flex flex-col mt-[80px] pb-[50px]">
       <div className="">
         <MarqueeComponent />
       </div>
