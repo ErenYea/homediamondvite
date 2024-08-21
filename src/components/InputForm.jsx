@@ -125,7 +125,7 @@ const InputForm = ({ sellerId }) => {
           <div className="flex justify-center text-white mt-[5%]">
             <button
               type="submit"
-              className="bg-[#7ec8e3] text-white border-none py-[10px] px-[20px] rounded cursor-pointer hover:bg-[#0056b3]"
+              className="bg-[#7ec8e3] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all hover:bg-[#0056b3]"
             >
               <TextBlock section="inputForm" element="submitButton" />
             </button>
