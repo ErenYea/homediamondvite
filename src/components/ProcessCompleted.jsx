@@ -2,9 +2,7 @@ import React from "react";
 import TextBlock from "./TextBlock";
 import { useAppStore } from "../lib/store";
 
-type Props = {};
-
-const ProcessCompleted = (props: Props) => {
+const ProcessCompleted = () => {
   const { step4Data } = useAppStore();
   return (
     <div className="flex justify-center items-center box-border w-full ">
