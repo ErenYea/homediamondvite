@@ -8,10 +8,7 @@ import { states } from "../lib/constant";
 const InputForm2 = () => {
   const navigate = useNavigate();
   const { step1Data, setstep2Data } = useAppStore();
-  const initialData = useMemo(
-    () => sessionStorage.getItem("initialData") || step1Data || {},
-    [JSON.parse(sessionStorage.getItem("initialData")), step1Data]
-  );
+  const initialData = useMemo(() => step1Data || {}, [step1Data]);
   const initialSellerID = useMemo(
     () => sessionStorage.getItem("SellerID") || step1Data?.SellerID || "",
     [parseInt(sessionStorage.getItem("SellerID")), step1Data]

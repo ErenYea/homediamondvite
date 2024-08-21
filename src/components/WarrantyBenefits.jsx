@@ -3,7 +3,7 @@ import TextBlock from "./TextBlock";
 
 const WarrantyBenefits = () => {
   return (
-    <div className="text-white ">
+    <div className="text-black ">
       <h2 className="mb-[10px] text-2xl font-bold ">
         <TextBlock section="warrantyBenefits" element="title" />
       </h2>

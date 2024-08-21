@@ -28,7 +28,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-full relative top-[-100px] z-[1000] ">
+      <div className="w-full h-full relative top-[-100px] z-[900] ">
         <div className=" w-[450px] h-full ml-[12rem] ">
           <div className="bg-[#0492c2] p-[10px] rounded-lg box-border">
             <InputForm sellerId={1} />
