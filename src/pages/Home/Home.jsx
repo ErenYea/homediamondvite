@@ -3,15 +3,19 @@ import MarqueeComponent from "../../components/MarqueeComponent";
 import ImageSlider from "../../components/ImageSlider";
 import PremiumHomeText from "../../components/PremiumHomeText";
 import InputForm from "../../components/InputForm";
+import { Outlet, useParams } from "react-router-dom";
 
 const Home = () => {
+  const params = useParams();
   const scrolltoContainer = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth", // Optional: Add smooth scrolling
     });
   };
-  return (
+  return params?.id ? (
+    <Outlet />
+  ) : (
     <div className="w-full flex flex-col mt-[80px] pb-[50px]">
       <div className="">
         <MarqueeComponent />

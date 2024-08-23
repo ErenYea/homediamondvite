@@ -7,6 +7,8 @@ import NavBar from "./components/NavBar.jsx";
 import Footer from "./components/Footer.jsx";
 import Enrollment from "./pages/Enrollment/Enrollment.jsx";
 import ContactUs from "./pages/ContactUs/ContactUs.jsx";
+import Company from "./components/Company.jsx";
+import ErrorPage from "./components/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +20,19 @@ const router = createBrowserRouter([
         <Footer />
       </div>
     ),
+    errorElement: (
+      <div className="w-full h-screen">
+        <NavBar />
+        <ErrorPage />
+        <Footer />
+      </div>
+    ),
+    children: [
+      {
+        path: ":id",
+        element: <Company />,
+      },
+    ],
   },
   {
     path: "/enrollment",

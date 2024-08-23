@@ -9,10 +9,7 @@ const InputForm2 = () => {
   const navigate = useNavigate();
   const { step1Data, setstep2Data } = useAppStore();
   const initialData = useMemo(() => step1Data || {}, [step1Data]);
-  const initialSellerID = useMemo(
-    () => sessionStorage.getItem("SellerID") || step1Data?.SellerID || "",
-    [parseInt(sessionStorage.getItem("SellerID")), step1Data]
-  );
+  const initialSellerID = useMemo(() => step1Data?.SellerID || "", [step1Data]);
 
   const [formData, setFormData] = useState({
     LeadID: initialData.LeadID || "",

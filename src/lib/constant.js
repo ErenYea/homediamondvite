@@ -50,3 +50,24 @@ export const states = [
   { abbreviation: "WI", name: "Wisconsin", id: 50 },
   { abbreviation: "WY", name: "Wyoming", id: 51 },
 ];
+
+export const companies = [
+  {
+    id: "b5e8f9c4-8e02-469b-98d3-4c8f3e8b91f9",
+    name: "My Company 1",
+    logo: "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/company-logo-design-template-e089327a5c476ce5c70c74f7359c5898_screen.jpg?ts=1672291305",
+    description: "",
+  },
+  {
+    id: "e3f0d3d0-56a7-4b82-9e95-846e8f3c8f4a",
+    name: "My Company 2",
+    logo: "https://www.shutterstock.com/image-vector/circle-line-simple-design-logo-600nw-2174926871.jpg",
+    description: "",
+  },
+  {
+    id: "a2f5d3d9-7b5a-45f8-b8df-98c3e4b89a37",
+    name: "My Company 3",
+    logo: "https://st3.depositphotos.com/43745012/44906/i/450/depositphotos_449066958-stock-photo-financial-accounting-logo-financial-logo.jpg",
+    description: "",
+  },
+];

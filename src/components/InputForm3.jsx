@@ -3,17 +3,13 @@ import TextBlock from "./TextBlock";
 import { useAppStore } from "../lib/store";
 import { submitStep3 } from "../lib/step3";
 
-const InputForm3 = () => {
+const InputForm3 = ({ selectedData, setSelectedData }) => {
   const { step2Data, setstep3Data } = useAppStore();
   const initialData = useMemo(() => step2Data || {}, [step2Data]);
   const [formData, setFormData] = useState({
     LeadID: initialData.RateQuoted?.[0]?.LeadID || "",
     RateQuoted: initialData.RateQuoted?.[0]?.RateQuote || "",
-    Options:
-      initialData.Options?.map((option) => ({
-        ...option,
-        selected: false,
-      })) || [],
+    Options: selectedData,
     Total:
       initialData.RateQuoted?.reduce((acc, curr) => acc + curr?.RateQuote, 0) ||
       0,
@@ -59,11 +55,7 @@ const InputForm3 = () => {
       ...prevData,
       LeadID: initialData.RateQuoted?.[0]?.LeadID || "",
       RateQuoted: initialData.RateQuoted?.[0]?.RateQuote || "",
-      Options:
-        initialData.Options?.map((option) => ({
-          ...option,
-          selected: false,
-        })) || [],
+      Options: selectedData,
       Total:
         initialData.RateQuoted?.reduce(
           (acc, curr) => acc + curr?.RateQuote,
@@ -75,42 +67,37 @@ const InputForm3 = () => {
   useEffect(() => {
     const total =
       formData.RateQuoted +
-      formData.Options.reduce(
+      selectedData.reduce(
         (acc, option) => acc + (option?.selected ? option?.ReserveAmount : 0),
         0
       );
     setFormData((prevData) => ({ ...prevData, Total: total }));
-  }, [formData.Options, formData.RateQuoted]);
+  }, [selectedData, formData.RateQuoted]);
 
   return (
-    <div className="flex justify-center items-center box-border w-full ">
-      <div className="bg-[#0492c2] w-full max-w-[400px] rounded-md box-border px-2 py-1">
-        <form onSubmit={handleSubmit}>
-          <h3>
-            <TextBlock section="inputForm3" element="baseWarrantyRate" />: $
+    <div className="flex justify-center items-center box-border w-full h-full text-white">
+      <div className="bg-[#0492c2] w-full h-full flex items-start justify-start max-w-[400px] rounded-md box-border px-2 py-1">
+        <form onSubmit={handleSubmit} className="space-y-4 w-full">
+          <h3 className="font-bold text-3xl">Your Custom Plan</h3>
+          <h3 className="text-white text-xl">
+            <TextBlock section="inputForm3" element="baseWarrantyRate" /> $
             {formData.RateQuoted.toFixed(2)}
           </h3>
-          <div className="form-grid">
-            {formData.Options.map((option, index) => (
-              <div className="form-group" key={option?.ReserveId}>
-                <input
-                  type="checkbox"
-                  checked={option?.selected}
-                  onChange={() => handleOptionChange(index)}
-                />
-                {option?.ReserveDescription} - $
-                {option?.ReserveAmount.toFixed(2)}
-              </div>
-            ))}
-          </div>
-          <h4>
-            <TextBlock section="inputForm3" element="total" />: $
+          <h3 className="text-white text-xl">
+            <TextBlock section="inputForm3" element="additionaloptions" /> $
+            {(
+              formData.Total.toFixed(2) - formData.RateQuoted.toFixed(2)
+            ).toFixed(2)}
+          </h3>
+          <h4 className="font-bold text-3xl">Your Price</h4>
+          <h4 className="text-white text-xl">
+            <TextBlock section="inputForm3" element="total" /> $
             {formData.Total.toFixed(2)}
           </h4>
-          <div className="flex justify-center text-white mt-[5%]">
+          <div className="flex w-full justify-center text-white mt-[5%]">
             <button
               type="submit"
-              className="bg-[#7ec8e3] text-white border-none py-[10px] px-[20px] rounded cursor-pointer hover:bg-[#0056b3]"
+              className="bg-[#7ec8e3] text-white border-none py-[10px] px-[20px] transition-all rounded cursor-pointer hover:bg-[#0056b3]"
             >
               <TextBlock section="inputForm3" element="submit" />
             </button>

@@ -73,6 +73,7 @@ const translations = {
       baseWarrantyRate: "Base Warranty Rate:",
       total: "Total:",
       submit: "Next",
+      additionaloptions: "Additional Options",
     },
     inputForm4: {
       billingFirstName: "First Name:",
@@ -177,6 +178,7 @@ const translations = {
       contactUsMessage: "Message",
       contactUsSend: "Send",
     },
+
     // Add other sections here...
   },
   es: {
@@ -252,6 +254,7 @@ const translations = {
       baseWarrantyRate: "Tarifa de Garantía Base:",
       total: "Total:",
       submit: "Siguiente",
+      additionaloptions: "Opciones adicionales",
     },
     inputForm4: {
       billingFirstName: "Nombre:",
