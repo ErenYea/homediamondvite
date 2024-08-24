@@ -90,27 +90,39 @@ const InputForm3 = ({ selectedData, setSelectedData, companyid }) => {
       <div className="bg-[#0492c2] w-full h-full flex items-start justify-start max-w-[400px] rounded-md box-border px-2 py-1">
         <form onSubmit={handleSubmit} className="space-y-4 w-full">
           <h3 className="font-bold text-3xl">Your Custom Plan</h3>
-          <h3 className="text-white text-xl">
-            <TextBlock section="inputForm3" element="baseWarrantyRate" /> $
-            {formData.RateQuoted.toFixed(2)}
-          </h3>
-          <h3 className="text-white text-xl">
-            <TextBlock section="inputForm3" element="additionaloptions" /> $
-            {(
-              formData.Total.toFixed(2) - formData.RateQuoted.toFixed(2)
-            ).toFixed(2)}
-          </h3>
+          <div className="grid grid-cols-2 w-full gap-2">
+            <div className="text-white text-xl ">
+              <TextBlock section="inputForm3" element="baseWarrantyRate" />
+            </div>
+            <div className="text-end text-xl">
+              $ {formData.RateQuoted.toFixed(2)}
+            </div>
+            <div className="text-white text-xl">
+              <TextBlock section="inputForm3" element="additionaloptions" />
+            </div>
+            <div className="text-end text-xl">
+              ${" "}
+              {(
+                formData.Total.toFixed(2) - formData.RateQuoted.toFixed(2)
+              ).toFixed(2)}
+            </div>
+          </div>
           <h4 className="font-bold text-3xl">Your Price</h4>
-          <h4 className="text-white text-xl">
-            <TextBlock section="inputForm3" element="total" /> $
-            {formData.Total.toFixed(2)}
-          </h4>
+          <div className="grid grid-cols-2 w-full gap-2">
+            <div className="text-white text-xl">
+              <TextBlock section="inputForm3" element="total" />
+            </div>
+            <div className="text-end text-xl">
+              {" "}
+              $ {formData.Total.toFixed(2)}
+            </div>
+          </div>
           <div className="flex w-full justify-center text-white mt-[5%]">
             <LoadingButton
               loading={loading}
               variant="contained"
               type="submit"
-              className="bg-[#7ec8e3] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all hover:bg-[#0056b3]"
+              className="bg-[#7ec8e3] w-[150px] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all hover:bg-[#0056b3]"
             >
               <TextBlock section="inputForm3" element="submit" />
             </LoadingButton>

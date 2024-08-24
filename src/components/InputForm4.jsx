@@ -277,7 +277,7 @@ const InputForm4 = ({ companyid }) => {
               loading={loading}
               variant="contained"
               type="submit"
-              className="bg-[#7ec8e3] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all hover:bg-[#0056b3]"
+              className="bg-[#7ec8e3] w-[150px] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all hover:bg-[#0056b3]"
             >
               <TextBlock section="inputForm4" element="submit" />
             </LoadingButton>

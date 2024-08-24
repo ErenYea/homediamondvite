@@ -214,6 +214,9 @@ const translations = {
       question: "Have Any Questions Or Concerns Feel Free To Contact Us Below",
       quote: "Testimonial Quote. . . . . Tiffany to provide",
     },
+    errorpage: {
+      title: "Something went wrong",
+    },
 
     // Add other sections here...
   },
@@ -426,6 +429,9 @@ const translations = {
       question:
         "Si tiene alguna pregunta o inquietud, no dude en contactarnos a continuación",
       quote: "Testimonial Quote. . . . . Tiffany to provide",
+    },
+    errorpage: {
+      title: "Algo salió mal",
     },
     // Add other sections here...
   },

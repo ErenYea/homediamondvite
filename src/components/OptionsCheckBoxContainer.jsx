@@ -22,21 +22,25 @@ const OptionsCheckBoxContainer = ({ setFormData, formData }) => {
       </h2>
       <div className="flex flex-col gap-1">
         {formData.map((option, index) => (
-          <div key={index} className="flex items-center gap-2">
-            <input
-              type="checkbox"
-              id={`option-${option.ReserveId}`}
-              defaultChecked={false} // Check if ReserveAmount is greater than 0 to set the default state
-              onChange={(event) => handleCheckboxChange(event, index)}
-              checked={option.selected}
-              className="form-checkbox h-4 w-4 text-blue-600"
-            />
-            <label
-              htmlFor={`option-${option.ReserveId}`}
-              className="text-gray-700"
-            >
-              {option.ReserveDescription} - ${option.ReserveAmount}
-            </label>
+          <div key={index} className=" gap-5 w-full grid grid-cols-2">
+            <div className="flex items-center space-x-2">
+              <input
+                type="checkbox"
+                id={`option-${option.ReserveId}`}
+                defaultChecked={false} // Check if ReserveAmount is greater than 0 to set the default state
+                onChange={(event) => handleCheckboxChange(event, index)}
+                checked={option.selected}
+                className="form-checkbox h-4 w-4 text-blue-600"
+              />
+              <label
+                htmlFor={`option-${option.ReserveId}`}
+                className="text-gray-700"
+              >
+                {option.ReserveDescription}
+              </label>
+            </div>
+
+            <div className="text-gray-700">${option.ReserveAmount}</div>
           </div>
         ))}
       </div>
