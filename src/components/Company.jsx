@@ -20,7 +20,7 @@ const Company = () => {
   );
   return (
     companyData && (
-      <div className="font-tainos w-full flex flex-col mt-[100px] pb-[50px]">
+      <div className="font-tainos w-full transition-all flex flex-col mt-[100px] pb-[50px]">
         <div className="">
           <MarqueeComponent />
         </div>

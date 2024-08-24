@@ -11,6 +11,7 @@ const InputForm = ({ sellerId, companyid }) => {
   const navigate = useNavigate();
   const { setstep1Data } = useAppStore();
   const [loading, setloading] = useState(false);
+  const [error, setError] = useState(null);
 
   const [form, setForm] = useState({
     firstName: "",
@@ -57,10 +58,14 @@ const InputForm = ({ sellerId, companyid }) => {
     } catch (error) {
       setloading(false);
       console.error("Error submitting form:", error);
+      setError(error);
     }
   };
+  if (error) {
+    throw error;
+  }
   return (
-    <div className="flex justify-center items-center box-border w-full">
+    <div className="flex justify-center  transition-all items-center box-border w-full">
       <div className="bg-[#0492c2] w-full max-w-[400px] rounded-md box-border px-2 py-1">
         <h2 className="text-center mb-[5px] text-white">
           <TextBlock section="inputForm" element="title" />

@@ -12,7 +12,7 @@ const InputForm2 = ({ companyid }) => {
   const [loading, setLoading] = useState(false);
   const initialData = useMemo(() => step1Data || {}, [step1Data]);
   const initialSellerID = useMemo(() => step1Data?.SellerID || "", [step1Data]);
-
+  const [error, setError] = useState(null);
   const [formData, setFormData] = useState({
     LeadID: initialData.LeadID || "",
     LeadUID: initialData.LeadUID || "",
@@ -59,6 +59,7 @@ const InputForm2 = ({ companyid }) => {
     } catch (error) {
       setLoading(false);
       console.error("Error submitting Step 2:", error);
+      setError(error);
     }
   };
 
@@ -77,9 +78,11 @@ const InputForm2 = ({ companyid }) => {
       City: initialData.CityName || "",
     }));
   }, [initialData, initialSellerID]);
-
+  if (error) {
+    throw error;
+  }
   return (
-    <div className="flex justify-center items-center box-border w-full ">
+    <div className="flex justify-center transition-all items-center box-border w-full ">
       <div className="bg-[#0492c2] w-full max-w-[400px] rounded-md box-border px-2 py-1">
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col mb-[5px] ">

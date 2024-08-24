@@ -8,6 +8,7 @@ import { LoadingButton } from "@mui/lab";
 const InputForm4 = ({ companyid }) => {
   const { step1Data, step3Data, setstep4Data } = useAppStore();
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const customerIdObject = step1Data || {};
   const { LeadID, LeadUID } = customerIdObject;
   console.log(customerIdObject);
@@ -73,10 +74,14 @@ const InputForm4 = ({ companyid }) => {
       setErrorMessage(
         "An error occurred while processing your payment. Please try again later."
       );
+      setError(error);
     }
   };
+  if (error) {
+    throw error;
+  }
   return (
-    <div className="flex justify-center items-center box-border w-full ">
+    <div className="flex justify-center transition-all items-center box-border   w-full ">
       <div className="bg-[#0492c2] w-full max-w-[400px] rounded-md box-border px-2 py-1">
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col mb-[5px] ">

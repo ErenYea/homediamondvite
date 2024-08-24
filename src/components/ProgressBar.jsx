@@ -84,7 +84,7 @@ const ProgressBar = ({ step }) => {
           <div className="flex-1"></div>
         </div>
 
-        <div className="flex text-xs content-center text-center">
+        <div className="flex text-sm content-center text-center">
           {milestones.map((text, index) => (
             <div className="w-1/4" key={index}>
               {text}

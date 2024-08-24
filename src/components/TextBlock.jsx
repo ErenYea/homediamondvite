@@ -209,6 +209,10 @@ const translations = {
         "For personalized assistance and to explore other coverage options, please click the button below to contact our support representatives.",
       contactButtonText: "Contact Us",
     },
+    enrollementpage: {
+      question: "Have Any Questions Or Concerns Feel Free To Contact Us Below",
+      quote: "Testimonial Quote. . . . . Tiffany to provide",
+    },
 
     // Add other sections here...
   },
@@ -416,6 +420,11 @@ const translations = {
     productsPage: {
       mainText:
         "Una garantía para el hogar PROTEGE su tiempo y dinero contra costos de reparación inesperados. . .",
+    },
+    enrollementpage: {
+      question:
+        "Si tiene alguna pregunta o inquietud, no dude en contactarnos a continuación",
+      quote: "Testimonial Quote. . . . . Tiffany to provide",
     },
     // Add other sections here...
   },

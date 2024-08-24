@@ -10,7 +10,7 @@ const NavBar = () => {
     setLanguage(event.target.checked ? "es" : "en");
   };
   return (
-    <div className="fixed top-0 h-[100px] shadow-xl w-full border z-[1000] border-green-600 bg-white box-border text-teal-500 uppercase flex justify-between items-center">
+    <div className="fixed top-0 h-[100px] shadow-xl w-full  z-[1000] transition-all bg-white box-border text-teal-500 uppercase flex justify-between items-center">
       <div className="flex items-center">
         <Link to={"/"}>
           <img src={"/dhp_home_logo.jpg"} alt="Logo" className="w-[150px]" />

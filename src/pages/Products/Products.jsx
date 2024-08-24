@@ -1,14 +1,20 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MarqueeComponent from "../../components/MarqueeComponent";
 import ImageSlider from "../../components/ImageSlider";
-import PremiumHomeText from "../../components/PremiumHomeText";
-import InputForm from "../../components/InputForm";
-import { Outlet, useParams } from "react-router-dom";
+
 import PremiumHomeText2 from "../../components/PremiumHomeText2";
 import TextBlock from "../../components/TextBlock";
 import PremiumProductText from "../../components/PremiumProductText";
+import { useNavigate } from "react-router-dom";
 
 const Products = () => {
+  const navigate = useNavigate();
+  const scrolltoContainer = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Optional: Add smooth scrolling
+    });
+  };
   const products = [
     {
       title: "Plumbing System",
@@ -31,6 +37,12 @@ const Products = () => {
       averageReplaceCost: "$1500",
     },
   ];
+  const gotohome = () => {
+    navigate("/");
+  };
+  useEffect(() => {
+    scrolltoContainer();
+  }, []);
   return (
     <div className="w-full flex flex-col mt-[100px] pb-[50px]">
       <div className="">
@@ -68,6 +80,38 @@ const Products = () => {
               <span className="text-lg font-medium leading-normal">{`Avg. replace cost: ${product.averageReplaceCost}`}</span>
             </div>
           ))}
+        </div>
+      </div>
+
+      <div className="italic font-bold text-blue-600 text-xl w-full text-center mb-4">
+        <span>“</span>
+        <TextBlock section="enrollementpage" element={`quote`} />
+        <span>“</span>
+      </div>
+      <div className="flex items-start w-full h-[400px] relative">
+        <div className="z-0 w-[50%] h-[400px] bg-white">
+          <div className="w-full h-full flex flex-col pt-6 items-center">
+            <img src="/dhp_home_logo.jpg" alt="" className="w-[350px]" />
+            <div
+              onClick={gotohome}
+              className="flex justify-center bg-teal-400 items-center py-2 px-6 text-2xl cursor-pointer hover:bg-blue-400 transition-all   rounded-lg shadow-md border text-white"
+            >
+              Free Quote
+            </div>
+          </div>
+        </div>
+        <div className=" z-10 h-full flex-grow bg-teal-500 flex items-center">
+          <div
+            className="cutBox bg-teal-500 h-full"
+            style={{
+              clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
+              width: "calc(30%)", // Expand the width to cover the extra clipped area
+              marginLeft: "-20%", // Shift the div to the left by the amount that was clipped
+            }}
+          ></div>
+          <div className="w-full  text-white">
+            <PremiumHomeText2 />
+          </div>
         </div>
       </div>
     </div>

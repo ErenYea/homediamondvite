@@ -11,19 +11,20 @@ import Company from "./components/Company.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 import Products from "./pages/Products/Products.jsx";
 import NoWarrantiesYet from "./pages/NoWarrantiesYet/NoWarrantiesYet.jsx";
+import ErrorBoundary from "./components/ErrorBoundary.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <div className="w-full h-screen">
+      <div className="w-full h-full">
         <NavBar />
         <Home />
         <Footer />
       </div>
     ),
     errorElement: (
-      <div className="w-full h-screen">
+      <div className="w-full h-full">
         <NavBar />
         <ErrorPage />
         <Footer />
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
   {
     path: "/enrollment",
     element: (
-      <div className="w-full h-screen">
+      <div className="w-full h-full">
         <NavBar />
         <Enrollment />
         <Footer />
@@ -51,11 +52,18 @@ const router = createBrowserRouter([
         element: "",
       },
     ],
+    errorElement: (
+      <div className="w-full h-full">
+        <NavBar />
+        <ErrorPage />
+        <Footer />
+      </div>
+    ),
   },
   {
     path: "/terms-and-condition",
     element: (
-      <div className="w-full h-screen">
+      <div className="w-full h-full">
         <NavBar />
         <Home />
         <Footer />
@@ -65,7 +73,7 @@ const router = createBrowserRouter([
   {
     path: "/products",
     element: (
-      <div className="w-full h-screen">
+      <div className="w-full h-full">
         <NavBar />
         <Products />
         <Footer />
@@ -75,7 +83,7 @@ const router = createBrowserRouter([
   {
     path: "/privacy",
     element: (
-      <div className="w-full h-screen">
+      <div className="w-full h-full">
         <NavBar />
         <Home />
         <Footer />
@@ -85,7 +93,7 @@ const router = createBrowserRouter([
   {
     path: "/faq",
     element: (
-      <div className="w-full h-screen">
+      <div className="w-full h-full">
         <NavBar />
         <Home />
         <Footer />
@@ -95,9 +103,16 @@ const router = createBrowserRouter([
   {
     path: "/contact-us",
     element: (
-      <div className="w-full h-screen">
+      <div className="w-full h-full">
         <NavBar />
         <ContactUs />
+        <Footer />
+      </div>
+    ),
+    errorElement: (
+      <div className="w-full h-full">
+        <NavBar />
+        <ErrorPage />
         <Footer />
       </div>
     ),
@@ -105,7 +120,7 @@ const router = createBrowserRouter([
   {
     path: "/nowarrantiesyet",
     element: (
-      <div className="w-full h-screen">
+      <div className="w-full h-full">
         <NavBar />
         <NoWarrantiesYet />
         <Footer />
@@ -116,6 +131,8 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <ErrorBoundary>
+      <RouterProvider router={router} />
+    </ErrorBoundary>
   </StrictMode>
 );

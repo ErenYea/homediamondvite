@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import MarqueeComponent from "../../components/MarqueeComponent";
 import ImageSlider from "../../components/ImageSlider";
 import PremiumHomeText from "../../components/PremiumHomeText";
@@ -14,10 +14,13 @@ const Home = () => {
       behavior: "smooth", // Optional: Add smooth scrolling
     });
   };
+  useEffect(() => {
+    scrolltoContainer();
+  }, []);
   return params?.id ? (
     <Outlet />
   ) : (
-    <div className="w-full flex flex-col mt-[100px] pb-[50px]">
+    <div className="w-full flex flex-col mt-[100px] transition-all pb-[50px]">
       <div className="">
         <MarqueeComponent />
       </div>

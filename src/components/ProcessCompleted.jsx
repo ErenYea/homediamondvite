@@ -5,23 +5,25 @@ import { useAppStore } from "../lib/store";
 const ProcessCompleted = () => {
   const { step4Data } = useAppStore();
   return (
-    <div className="flex justify-center items-center box-border w-full ">
-      <div className="bg-[#0492c2] w-full max-w-[400px] rounded-md box-border px-2 py-1">
-        <h2 className="text-center mb-[5px]">
+    <div className="flex  justify-center transition-all items-start box-border w-full h-full ">
+      <div className="bg-[#0492c2] w-full max-w-[400px] rounded-md box-border px-2 py-1 flex flex-col">
+        <h2 className="text-center mb-[5px] text-xl font-semibold">
           <TextBlock section="processCompleted" element="title" />
         </h2>
-        <p>
-          <TextBlock section="processCompleted" element="orderID" />:{" "}
-          {step4Data?.orderID}
-        </p>
-        <p>
-          <TextBlock section="processCompleted" element="transactionID" />:{" "}
-          {step4Data?.transactionID}
-        </p>
-        <p>
-          <TextBlock section="processCompleted" element="amountPaid" />: $
-          {step4Data?.amountPaid}
-        </p>
+        <div className="grid grid-cols-2 text-white gap-2 mt-2 mb-2 text-lg">
+          <div>
+            <TextBlock section="processCompleted" element="orderID" />:{" "}
+          </div>
+          <div>{step4Data?.orderID}</div>
+          <div>
+            <TextBlock section="processCompleted" element="transactionID" />:{" "}
+          </div>
+          <div>{step4Data?.transactionID}</div>
+          <div>
+            <TextBlock section="processCompleted" element="amountPaid" />:
+          </div>
+          <div>${step4Data?.amountPaid}</div>
+        </div>
       </div>
     </div>
   );

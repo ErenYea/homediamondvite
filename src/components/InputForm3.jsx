@@ -7,6 +7,7 @@ import { LoadingButton } from "@mui/lab";
 const InputForm3 = ({ selectedData, setSelectedData, companyid }) => {
   const { step2Data, setstep3Data } = useAppStore();
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
   const initialData = useMemo(() => step2Data || {}, [step2Data]);
   const [formData, setFormData] = useState({
     LeadID: initialData.RateQuoted?.[0]?.LeadID || "",
@@ -52,6 +53,7 @@ const InputForm3 = ({ selectedData, setSelectedData, companyid }) => {
     } catch (error) {
       setLoading(false);
       console.error("Error submitting Step 3:", error);
+      setError(error);
     }
   };
 
@@ -79,8 +81,12 @@ const InputForm3 = ({ selectedData, setSelectedData, companyid }) => {
     setFormData((prevData) => ({ ...prevData, Total: total }));
   }, [selectedData, formData.RateQuoted]);
 
+  if (error) {
+    throw error;
+  }
+
   return (
-    <div className="flex justify-center items-center box-border w-full h-full text-white">
+    <div className="flex justify-center transition-all items-center box-border w-full h-full text-white">
       <div className="bg-[#0492c2] w-full h-full flex items-start justify-start max-w-[400px] rounded-md box-border px-2 py-1">
         <form onSubmit={handleSubmit} className="space-y-4 w-full">
           <h3 className="font-bold text-3xl">Your Custom Plan</h3>
