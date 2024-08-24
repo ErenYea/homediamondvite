@@ -10,12 +10,12 @@ const NavBar = () => {
     setLanguage(event.target.checked ? "es" : "en");
   };
   return (
-    <div className="fixed top-0 h-[100px]  w-full  z-[1000]  bg-white box-border text-teal-500 uppercase flex justify-between items-center">
+    <div className="fixed top-0 h-[100px] shadow-xl w-full border z-[1000] border-green-600 bg-white box-border text-teal-500 uppercase flex justify-between items-center">
       <div className="flex items-center">
         <Link to={"/"}>
           <img src={"/dhp_home_logo.jpg"} alt="Logo" className="w-[150px]" />
         </Link>
-        <div className="ml-[20px] text-teal-500 mt-2 space-x-5">
+        <div className="ml-[20px] text-teal-500 mt-2 space-x-5 font-semibold">
           <Link to="/products" className=" hover:underline">
             <TextBlock section="navbar" element="products" />
           </Link>

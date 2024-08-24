@@ -3,6 +3,7 @@ export const createFormSlice = (set, get) => ({
   step2Data: null,
   step3Data: null,
   step4Data: null,
+  companyid: null,
   setstep1Data: (step1Data) => {
     set({ step1Data });
   },
@@ -14,5 +15,8 @@ export const createFormSlice = (set, get) => ({
   },
   setstep4Data: (step4Data) => {
     set({ step4Data });
+  },
+  setCompanyId: (companyid) => {
+    set({ companyid });
   },
 });

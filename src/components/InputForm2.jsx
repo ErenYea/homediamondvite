@@ -4,10 +4,12 @@ import { useNavigate } from "react-router-dom";
 import { useAppStore } from "../lib/store";
 import { submitStep2 } from "../lib/step2";
 import { states } from "../lib/constant";
+import { LoadingButton } from "@mui/lab";
 
-const InputForm2 = () => {
+const InputForm2 = ({ companyid }) => {
   const navigate = useNavigate();
   const { step1Data, setstep2Data } = useAppStore();
+  const [loading, setLoading] = useState(false);
   const initialData = useMemo(() => step1Data || {}, [step1Data]);
   const initialSellerID = useMemo(() => step1Data?.SellerID || "", [step1Data]);
 
@@ -41,15 +43,21 @@ const InputForm2 = () => {
       navigate("/nowarrantiesyet");
       return;
     }
+    setLoading(true);
     try {
       console.log("This is the data being sent: ", formData);
       const response = await submitStep2(formData);
       console.log("API Response:", response);
       setstep2Data(response);
+      setLoading(false);
       sessionStorage.setItem("initialData", JSON.stringify(response));
       sessionStorage.setItem("SellerID", formData.SellerID.toString());
-      // navigate("/enrollment");
+      // if (companyid){
+
+      // }
+      // // navigate("/enrollment");
     } catch (error) {
+      setLoading(false);
       console.error("Error submitting Step 2:", error);
     }
   };
@@ -247,12 +255,20 @@ const InputForm2 = () => {
             </div>
           </div>
           <div className="flex justify-center text-white mt-[5%]">
-            <button
+            <LoadingButton
+              loading={loading}
+              variant="contained"
+              type="submit"
+              className="bg-[#7ec8e3] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all hover:bg-[#0056b3]"
+            >
+              <TextBlock section="inputForm2" element="submit" />
+            </LoadingButton>
+            {/* <button
               type="submit"
               className="bg-[#7ec8e3] text-white border-none py-[10px] px-[20px] rounded cursor-pointer hover:bg-[#0056b3]"
             >
               <TextBlock section="inputForm2" element="submit" />
-            </button>
+            </button> */}
           </div>
         </form>
       </div>
