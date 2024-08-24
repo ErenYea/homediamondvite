@@ -200,6 +200,7 @@ const translations = {
         "A Home Warranty PROTECTS Your Time and Money from Unexpected Repair Costs . . .",
     },
     noWarrantiesPage: {
+      title: "No Warranties Available at This Time",
       sorryMessage:
         "We are Sorry, We Can't Present an Offer for You at This Time",
       sorryDescription:

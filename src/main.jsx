@@ -103,7 +103,7 @@ const router = createBrowserRouter([
   {
     path: "/contact-us",
     element: (
-      <div className="w-full h-full">
+      <div className="w-full h-screen">
         <NavBar />
         <ContactUs />
         <Footer />
