@@ -4,7 +4,7 @@ import ContactUsForm from "../../components/ContactUsForm";
 
 const ContactUs = () => {
   return (
-    <div className="mt-[80px] pb-[50px] text-black h-full">
+    <div className="mt-[100px] pb-[50px] text-black h-full">
       <div className="flex items-start w-full h-full relative">
         <div className="z-0 w-[50%]  h-[80%]">
           <div className="w-full h-full">

@@ -4,6 +4,7 @@ import ImageSlider from "../../components/ImageSlider";
 import PremiumHomeText from "../../components/PremiumHomeText";
 import InputForm from "../../components/InputForm";
 import { Outlet, useParams } from "react-router-dom";
+import PremiumHomeText2 from "../../components/PremiumHomeText2";
 
 const Home = () => {
   const params = useParams();
@@ -16,7 +17,7 @@ const Home = () => {
   return params?.id ? (
     <Outlet />
   ) : (
-    <div className="w-full flex flex-col mt-[80px] pb-[50px]">
+    <div className="w-full flex flex-col mt-[100px] pb-[50px]">
       <div className="">
         <MarqueeComponent />
       </div>
@@ -83,7 +84,7 @@ const Home = () => {
             }}
           ></div>
           <div className="w-full  text-white">
-            <PremiumHomeText />
+            <PremiumHomeText2 />
           </div>
         </div>
       </div>

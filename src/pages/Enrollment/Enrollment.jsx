@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import InputForm4 from "../../components/InputForm4";
 import ProcessCompleted from "../../components/ProcessCompleted";
 import OptionsCheckBoxContainer from "../../components/OptionsCheckBoxContainer";
+import TextBlock from "../../components/TextBlock";
 
 const Enrollment = () => {
   const { step1Data, step2Data, step3Data, step4Data } = useAppStore();
@@ -49,7 +50,10 @@ const Enrollment = () => {
     }
   }, [currentStep]);
   return (
-    <div className="flex flex-col items-center mt-[80px] pt-[25px] overflow-x-hidden right-[1%]">
+    <div className="flex flex-col items-center mt-[100px]  overflow-x-hidden right-[1%]">
+      <div className="bg-[#63A8AE] text-white font-semibold text-xl lg:text-2xl w-full text-center py-2 ">
+        <TextBlock section="progressBanner" element={`step${currentStep}`} />
+      </div>
       <div className="w-[50%]">
         <ProgressBar step={currentStep} /> {/* Pass currentStep directly */}
       </div>

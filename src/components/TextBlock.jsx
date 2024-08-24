@@ -96,6 +96,17 @@ const translations = {
       orderID: "Order ID",
       transactionID: "Transaction ID",
       amountPaid: "Amount Paid",
+      congratsMessage:
+        "Congratulations! Welcome to Diamond Home Protection's Premium Home Warranty Program.",
+      ThanksMessage:
+        "Thank you for subscribing to our premium home warranty coverage. We are delighted to have you as part of the Diamond Home Protection family. Your coverage is now active (or being processed?), providing you with peace of mind and financial protection against unexpected home repair costs.",
+      subHeading: "Your Receipt and Policy",
+      subHeadingText:
+        "You can view your receipt and access your policy details using the links below:",
+      subHeadingLink1: "[View Receipt]",
+      subHeadingLink2: "[View Policy]",
+      furtherAssistanceText:
+        "If you have any questions or need further assistance, please don't hesitate to reach out to our support team.",
     },
     quotes: {
       quote1:
@@ -159,6 +170,12 @@ const translations = {
     checkboxContainer: {
       title: "Click To Select Additional Coverage Options:",
     },
+    progressBanner: {
+      step2: "Enter Your Personal Info",
+      step3: "Select Your Premium Plan Options",
+      step4: "Complete your Order",
+      step5: "Confirm your Order",
+    },
     premiumCoverage: {
       title: "Coverage Included in your PREMIUM Warranty",
       plumbingSystem: "Plumbing System",
@@ -177,6 +194,20 @@ const translations = {
       contactUsPhone: "Phone",
       contactUsMessage: "Message",
       contactUsSend: "Send",
+    },
+    productsPage: {
+      mainText:
+        "A Home Warranty PROTECTS Your Time and Money from Unexpected Repair Costs . . .",
+    },
+    noWarrantiesPage: {
+      sorryMessage:
+        "We are Sorry, We Can't Present an Offer for You at This Time",
+      sorryDescription:
+        "Unfortunately, we are unable to provide a warranty offer for your home based on the information submitted. But don't worry, we're here to help!",
+      contactMessage: "Connect with Our Support Team",
+      contactDescription:
+        "For personalized assistance and to explore other coverage options, please click the button below to contact our support representatives.",
+      contactButtonText: "Contact Us",
     },
 
     // Add other sections here...
@@ -277,6 +308,17 @@ const translations = {
       orderID: "ID de Orden",
       transactionID: "ID de Transacción",
       amountPaid: "Cantidad Pagada",
+      congratsMessage:
+        "¡Felicidades! Bienvenido al programa de garantía premium para el hogar de Diamond Home Protection.",
+      ThanksMessage:
+        "Gracias por suscribirse a nuestra cobertura de garantía premium para el hogar. Somos Encantado de tenerlo como parte de la familia Diamond Home Protection. Sula cobertura ahora está activa (¿o en proceso?), brindándole tranquilidad mente y protección financiera contra costos inesperados de reparación del hogar.",
+      subHeading: "Su recibo y póliza",
+      subHeadingText:
+        "Puede ver su recibo y acceder a los detalles de su póliza utilizando los enlaces a continuación:",
+      subHeadingLink1: "[Ver recibo]",
+      subHeadingLink2: "[Ver política]",
+      furtherAssistanceText:
+        "Si tiene alguna pregunta o necesita más ayuda, no dude en comunicarse con nuestro equipo de soporte.",
     },
     quotes: {
       quote1:
@@ -342,8 +384,15 @@ const translations = {
       increasedHomeValue:
         "Aumento del Valor de la Vivienda: Tener una garantía para el hogar puede hacer que su propiedad sea más atractiva para los posibles compradores, ya que les ofrece protección y reduce su riesgo de costos de reparación inesperados. Reemplazar un sistema de aire acondicionado central puede costar entre $7,000 y $15,000 en promedio, lo cual puede ser un punto de venta para los compradores si está cubierto por una garantía.",
     },
+
     checkboxContainer: {
       title: "Haga clic para seleccionar opciones de cobertura adicionales:",
+    },
+    progressBanner: {
+      step2: "Ingrese su información personal",
+      step3: "Seleccione las opciones de su plan premium",
+      step4: "Completa tu pedido",
+      step5: "Confirma tu pedido",
     },
     premiumCoverage: {
       title: "Cobertura Incluida en su Garantía PREMIUM",
@@ -363,6 +412,10 @@ const translations = {
       contactUsPhone: "Teléfono",
       contactUsMessage: "Mensaje",
       contactUsSend: "Enviar",
+    },
+    productsPage: {
+      mainText:
+        "Una garantía para el hogar PROTEGE su tiempo y dinero contra costos de reparación inesperados. . .",
     },
     // Add other sections here...
   },

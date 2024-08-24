@@ -48,7 +48,7 @@ const InputForm2 = () => {
       setstep2Data(response);
       sessionStorage.setItem("initialData", JSON.stringify(response));
       sessionStorage.setItem("SellerID", formData.SellerID.toString());
-      navigate("/enrollment");
+      // navigate("/enrollment");
     } catch (error) {
       console.error("Error submitting Step 2:", error);
     }

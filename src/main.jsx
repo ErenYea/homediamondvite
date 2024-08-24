@@ -9,6 +9,8 @@ import Enrollment from "./pages/Enrollment/Enrollment.jsx";
 import ContactUs from "./pages/ContactUs/ContactUs.jsx";
 import Company from "./components/Company.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
+import Products from "./pages/Products/Products.jsx";
+import NoWarrantiesYet from "./pages/NoWarrantiesYet/NoWarrantiesYet.jsx";
 
 const router = createBrowserRouter([
   {
@@ -59,7 +61,7 @@ const router = createBrowserRouter([
     element: (
       <div className="w-full h-screen">
         <NavBar />
-        <Home />
+        <Products />
         <Footer />
       </div>
     ),
@@ -90,6 +92,16 @@ const router = createBrowserRouter([
       <div className="w-full h-screen">
         <NavBar />
         <ContactUs />
+        <Footer />
+      </div>
+    ),
+  },
+  {
+    path: "/nowarrantiesyet",
+    element: (
+      <div className="w-full h-screen">
+        <NavBar />
+        <NoWarrantiesYet />
         <Footer />
       </div>
     ),
