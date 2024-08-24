@@ -43,6 +43,12 @@ const router = createBrowserRouter([
         <Footer />
       </div>
     ),
+    children: [
+      {
+        path: ":id",
+        element: "",
+      },
+    ],
   },
   {
     path: "/terms-and-condition",

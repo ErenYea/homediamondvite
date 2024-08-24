@@ -5,14 +5,14 @@ import { createLanguageSlice } from "./slices/createLanguageSlice";
 import { createFormSlice } from "./slices/createFormSlice";
 
 export const useAppStore = create()(
-  persist(
-    (...a) => ({
-      ...createUserSlice(...a),
-      ...createLanguageSlice(...a),
-      ...createFormSlice(...a),
-    }),
-    {
-      name: "user-state",
-    }
-  )
+  // persist(
+  (...a) => ({
+    ...createUserSlice(...a),
+    ...createLanguageSlice(...a),
+    ...createFormSlice(...a),
+  }),
+  {
+    name: "user-state",
+  }
+  // )
 );

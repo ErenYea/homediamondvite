@@ -9,9 +9,9 @@ const ProgressBar = ({ step }) => {
   ];
 
   return (
-    <div className="">
-      <div className="max-w-xl mx-auto my-4  pb-4">
-        <div className="flex pb-3">
+    <div className="transition-all">
+      <div className="max-w-xl mx-auto my-4  pb-4 transition-all">
+        <div className="flex pb-3 transition-all">
           <div className="flex-1"></div>
 
           <div className="flex-1">

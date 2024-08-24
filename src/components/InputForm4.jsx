@@ -3,9 +3,11 @@ import TextBlock from "./TextBlock";
 import { useAppStore } from "../lib/store";
 import { states } from "../lib/constant";
 import { submitStep4 } from "../lib/step4";
+import { LoadingButton } from "@mui/lab";
 
-const InputForm4 = () => {
+const InputForm4 = ({ companyid }) => {
   const { step1Data, step3Data, setstep4Data } = useAppStore();
+  const [loading, setLoading] = useState(false);
   const customerIdObject = step1Data || {};
   const { LeadID, LeadUID } = customerIdObject;
   console.log(customerIdObject);
@@ -47,6 +49,7 @@ const InputForm4 = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(billingData);
+    setLoading(true);
     try {
       const response = await submitStep4(billingData);
       const { response_code, orderid, transactionid, amount_authorized } =
@@ -63,7 +66,9 @@ const InputForm4 = () => {
           "There is something wrong with your payment information, please check everything and submit again."
         );
       }
+      setLoading(false);
     } catch (error) {
+      setLoading(false);
       console.error("Error submitting Step 4:", error);
       setErrorMessage(
         "An error occurred while processing your payment. Please try again later."
@@ -263,12 +268,20 @@ const InputForm4 = () => {
             </div>
           </div>
           <div className="flex justify-center text-white mt-[5%]">
-            <button
+            <LoadingButton
+              loading={loading}
+              variant="contained"
+              type="submit"
+              className="bg-[#7ec8e3] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all hover:bg-[#0056b3]"
+            >
+              <TextBlock section="inputForm4" element="submit" />
+            </LoadingButton>
+            {/* <button
               type="submit"
               className="bg-[#7ec8e3] text-white border-none py-[10px] px-[20px] rounded cursor-pointer hover:bg-[#0056b3]"
             >
               <TextBlock section="inputForm4" element="submit" />
-            </button>
+            </button> */}
           </div>
           {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
         </form>

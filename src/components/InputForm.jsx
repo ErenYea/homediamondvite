@@ -4,10 +4,13 @@ import TextBlock from "./TextBlock";
 import { useNavigate, useNavigation } from "react-router-dom";
 import { useAppStore } from "../lib/store";
 import { submitStep1 } from "../lib/step1";
+import { LoadingButton } from "@mui/lab";
+import SaveIcon from "@mui/icons-material/Save";
 
-const InputForm = ({ sellerId }) => {
+const InputForm = ({ sellerId, companyid }) => {
   const navigate = useNavigate();
   const { setstep1Data } = useAppStore();
+  const [loading, setloading] = useState(false);
 
   const [form, setForm] = useState({
     firstName: "",
@@ -28,6 +31,7 @@ const InputForm = ({ sellerId }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
+      setloading(true);
       const dataToSubmit = {
         FirstName: form.firstName,
         LastName: form.lastName,
@@ -44,9 +48,14 @@ const InputForm = ({ sellerId }) => {
       console.log("Response from server:", response);
 
       setstep1Data(response);
-
-      navigate("/enrollment");
+      setloading(false);
+      if (companyid) {
+        navigate(`/enrollment/${companyid}`);
+      } else {
+        navigate(`/enrollment`);
+      }
     } catch (error) {
+      setloading(false);
       console.error("Error submitting form:", error);
     }
   };
@@ -123,12 +132,14 @@ const InputForm = ({ sellerId }) => {
             />
           </div>
           <div className="flex justify-center text-white mt-[5%]">
-            <button
+            <LoadingButton
+              loading={loading}
+              variant="contained"
               type="submit"
               className="bg-[#7ec8e3] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all hover:bg-[#0056b3]"
             >
               <TextBlock section="inputForm" element="submitButton" />
-            </button>
+            </LoadingButton>
           </div>
         </form>
       </div>

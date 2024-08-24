@@ -2,9 +2,11 @@ import React, { useEffect, useMemo, useState } from "react";
 import TextBlock from "./TextBlock";
 import { useAppStore } from "../lib/store";
 import { submitStep3 } from "../lib/step3";
+import { LoadingButton } from "@mui/lab";
 
-const InputForm3 = ({ selectedData, setSelectedData }) => {
+const InputForm3 = ({ selectedData, setSelectedData, companyid }) => {
   const { step2Data, setstep3Data } = useAppStore();
+  const [loading, setLoading] = useState(false);
   const initialData = useMemo(() => step2Data || {}, [step2Data]);
   const [formData, setFormData] = useState({
     LeadID: initialData.RateQuoted?.[0]?.LeadID || "",
@@ -23,6 +25,7 @@ const InputForm3 = ({ selectedData, setSelectedData }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
     const selectedOptions = formData.Options.filter(
       (option) => option?.selected
     );
@@ -45,7 +48,9 @@ const InputForm3 = ({ selectedData, setSelectedData }) => {
     try {
       const response = await submitStep3(dataToSubmit);
       setstep3Data({ ...response, totalAmount: formData.Total });
+      setLoading(false);
     } catch (error) {
+      setLoading(false);
       console.error("Error submitting Step 3:", error);
     }
   };
@@ -95,12 +100,20 @@ const InputForm3 = ({ selectedData, setSelectedData }) => {
             {formData.Total.toFixed(2)}
           </h4>
           <div className="flex w-full justify-center text-white mt-[5%]">
-            <button
+            <LoadingButton
+              loading={loading}
+              variant="contained"
+              type="submit"
+              className="bg-[#7ec8e3] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all hover:bg-[#0056b3]"
+            >
+              <TextBlock section="inputForm3" element="submit" />
+            </LoadingButton>
+            {/* <button
               type="submit"
               className="bg-[#7ec8e3] text-white border-none py-[10px] px-[20px] transition-all rounded cursor-pointer hover:bg-[#0056b3]"
             >
               <TextBlock section="inputForm3" element="submit" />
-            </button>
+            </button> */}
           </div>
         </form>
       </div>
