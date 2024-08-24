@@ -38,16 +38,17 @@ const NoWarrantiesYet = () => {
             />
           </span>
         </div>
-        <NavLink to="/contact-us">
-          <div className="flex justify-center w-fit mx-auto bg-teal-400 items-center py-2 px-6 text-2xl cursor-pointer hover:bg-blue-400 transition-all rounded-lg shadow-md border text-white">
+
+        <div className="flex justify-center w-fit mx-auto bg-teal-400 items-center py-2 px-6 text-2xl cursor-pointer hover:bg-blue-400 transition-all rounded-lg shadow-md border text-white">
+          <NavLink to="/contact-us">
             <span className="w-fit">
               <TextBlock
                 section="noWarrantiesPage"
                 element="contactButtonText"
               />
             </span>
-          </div>
-        </NavLink>
+          </NavLink>
+        </div>
       </div>
       <div className="flex items-start w-full h-[400px] relative">
         <div className="z-0 w-[50%] h-[400px] bg-white">
