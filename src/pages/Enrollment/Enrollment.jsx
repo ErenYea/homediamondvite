@@ -130,7 +130,7 @@ const Enrollment = () => {
           </div>
           <div className=" z-10 h-full flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
             <div
-              className="cutBox bg-[#63A8AE] h-full"
+              className="cutBox bg-gradient-to-r from-[#63A8AE] to-[#5fa4af] h-full"
               style={{
                 clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
                 width: "calc(30%)", // Expand the width to cover the extra clipped area

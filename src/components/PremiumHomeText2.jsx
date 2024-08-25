@@ -5,7 +5,7 @@ const PremiumHomeText2 = () => {
   return (
     <div className="flex flex-col xl:gap-6 lg:gap-4 gap-2 ">
       <div className="lg:max-w-[80%] md:max-w-[90%] xl:max-w-[70%]">
-        <span className=" font-extrabold xl:text-4xl text-3xl xl:leading-normal leading-snug tracking-wide heading-times-bold-uppercase">
+        <span className=" font-extrabold xl:text-4xl text-3xl xl:leading-normal subheading leading-snug tracking-wide heading-times-bold-uppercase">
           <TextBlock section="premiumHomeText" element="title" />
         </span>
       </div>

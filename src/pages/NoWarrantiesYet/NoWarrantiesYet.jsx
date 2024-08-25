@@ -39,7 +39,7 @@ const NoWarrantiesYet = () => {
           </span>
         </div>
 
-        <div className="flex justify-center w-fit mx-auto bg-teal-400 items-center py-2 px-6 text-2xl cursor-pointer hover:bg-blue-400 transition-all rounded-lg shadow-md border text-white">
+        <div className="flex justify-center w-fit mx-auto bg-[#63A8AE] items-center py-2 px-6 text-2xl cursor-pointer  transition-all rounded-lg shadow-md border text-white">
           <NavLink to="/contact-us">
             <span className="w-fit">
               <TextBlock
@@ -56,15 +56,15 @@ const NoWarrantiesYet = () => {
             <img src="/dhp_home_logo.jpg" alt="" className="w-[350px]" />
             <div
               onClick={gotohome}
-              className="flex justify-center bg-teal-400 items-center py-2 px-6 text-2xl cursor-pointer hover:bg-blue-400 transition-all   rounded-lg shadow-md border text-white"
+              className="flex justify-center bg-[#63A8AE] items-center py-2 px-6 text-2xl cursor-pointer  transition-all   rounded-lg shadow-md border text-white"
             >
               Free Quote
             </div>
           </div>
         </div>
-        <div className=" z-10 h-full flex-grow bg-teal-500 flex items-center">
+        <div className=" z-10 h-full flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
           <div
-            className="cutBox bg-teal-500 h-full"
+            className="cutBox bg-gradient-to-r from-[#63A8AE] to-[#5fa4af] h-full"
             style={{
               clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
               width: "calc(30%)", // Expand the width to cover the extra clipped area

@@ -85,10 +85,10 @@ const InputForm2 = ({ companyid }) => {
     <div className="flex justify-center transition-all items-center box-border w-full ">
       <div className="bg-[#2E7EB5] w-full max-w-[400px] rounded-md box-border px-2 py-1">
         <form onSubmit={handleSubmit}>
-          <div className="flex flex-col mb-[5px] ">
+          <div className="flex flex-col mb-[5px] gap-2 ">
             <div className="w-full flex flex-row space-x-2">
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm2" element="firstName" />
                 </label>
                 <input
@@ -100,8 +100,8 @@ const InputForm2 = ({ companyid }) => {
                   required
                 />
               </div>
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm2" element="lastName" />
                 </label>
                 <input
@@ -115,8 +115,8 @@ const InputForm2 = ({ companyid }) => {
               </div>
             </div>
             <div className="w-full flex flex-row space-x-2">
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm2" element="phone" />
                 </label>
                 <input
@@ -130,8 +130,8 @@ const InputForm2 = ({ companyid }) => {
                   required
                 />
               </div>
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm2" element="email" />
                 </label>
                 <input
@@ -145,8 +145,8 @@ const InputForm2 = ({ companyid }) => {
               </div>
             </div>
             <div className="w-full flex flex-row space-x-2">
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm2" element="zipCode" />
                 </label>
                 <input
@@ -160,8 +160,8 @@ const InputForm2 = ({ companyid }) => {
                   required
                 />
               </div>
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm2" element="propertyType" />
                 </label>
                 <select
@@ -169,7 +169,7 @@ const InputForm2 = ({ companyid }) => {
                   value={formData.PropertyType}
                   onChange={handleChange}
                   required
-                  className="text-black p-[5px] border w-full rounded box-border"
+                  className="text-black p-[7px] border w-full rounded box-border"
                 >
                   {propertyTypes.map((type) => (
                     <option key={type.id} value={type.id}>
@@ -180,8 +180,8 @@ const InputForm2 = ({ companyid }) => {
               </div>
             </div>
             <div className="w-full flex flex-row space-x-2">
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm2" element="propertyAddress1" />
                 </label>
                 <input
@@ -193,8 +193,8 @@ const InputForm2 = ({ companyid }) => {
                   required
                 />
               </div>
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm2" element="propertyAddress2" />
                 </label>
                 <input
@@ -207,8 +207,8 @@ const InputForm2 = ({ companyid }) => {
               </div>
             </div>
             <div className="w-full flex flex-row space-x-2">
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm2" element="city" />
                 </label>
                 <input
@@ -220,8 +220,8 @@ const InputForm2 = ({ companyid }) => {
                   required
                 />
               </div>
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm2" element="state" />
                 </label>
                 <select
@@ -229,7 +229,7 @@ const InputForm2 = ({ companyid }) => {
                   value={formData.StateID}
                   onChange={handleChange}
                   required
-                  className="text-black p-[5px] border w-full rounded box-border"
+                  className="text-black p-[7px] border w-full rounded box-border"
                 >
                   <option value={0}>
                     <TextBlock section="inputForm2" element="selectState" />
@@ -242,8 +242,8 @@ const InputForm2 = ({ companyid }) => {
                 </select>
               </div>
             </div>
-            <div className="text-[#333] mb-[5px] ">
-              <label className="text-[#333] mb-[5px]">
+            <div className="text-white mb-[5px] ">
+              <label className="text-white mb-[5px] subheading">
                 <TextBlock section="inputForm2" element="sqFt" />
               </label>
               <input

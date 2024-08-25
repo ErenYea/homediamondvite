@@ -5,8 +5,9 @@
 @tailwind utilities;
 
 /* Apply Times New Roman font to the body */
-body {
+* {
   font-family: "Times New Roman", Times, serif;
+  /* font-size: la; */
 }
 
 /* If you want to apply the Tinos font you imported */

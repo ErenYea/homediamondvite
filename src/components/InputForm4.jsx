@@ -31,7 +31,21 @@ const InputForm4 = ({ companyid }) => {
     BillingStateAbbreviation: "",
   });
   const [errorMessage, setErrorMessage] = useState("");
-
+  const isBillingDataValid = () => {
+    for (const key in billingData) {
+      if (billingData.hasOwnProperty(key)) {
+        if (
+          billingData[key] === "" ||
+          billingData[key] === null ||
+          billingData[key] === undefined ||
+          billingData[key] == 0
+        ) {
+          return false; // If any field is empty, return false
+        }
+      }
+    }
+    return true; // If all fields are filled, return true
+  };
   const handleChange = (e) => {
     const { name, value } = e.target;
     setBillingData({ ...billingData, [name]: value });
@@ -50,31 +64,37 @@ const InputForm4 = ({ companyid }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     console.log(billingData);
+    setErrorMessage("");
     setLoading(true);
-    try {
-      const response = await submitStep4(billingData);
-      const { response_code, orderid, transactionid, amount_authorized } =
-        response;
+    if (isBillingDataValid()) {
+      try {
+        const response = await submitStep4(billingData);
+        const { response_code, orderid, transactionid, amount_authorized } =
+          response;
 
-      if (response_code === "1" || response_code === "100") {
-        setstep4Data({
-          orderID: orderid,
-          transactionID: transactionid,
-          amountPaid: amount_authorized,
-        });
-      } else if (response_code === "2" || response_code === "3") {
+        if (response_code === "1" || response_code === "100") {
+          setstep4Data({
+            orderID: orderid,
+            transactionID: transactionid,
+            amountPaid: amount_authorized,
+          });
+        } else if (response_code === "2" || response_code === "3") {
+          setErrorMessage(
+            "There is something wrong with your payment information, please check everything and submit again."
+          );
+        }
+        setLoading(false);
+      } catch (error) {
+        setLoading(false);
+        console.error("Error submitting Step 4:", error);
         setErrorMessage(
-          "There is something wrong with your payment information, please check everything and submit again."
+          "An error occurred while processing your payment. Please try again later."
         );
+        setError(error);
       }
+    } else {
+      setErrorMessage("Please Fill all Field");
       setLoading(false);
-    } catch (error) {
-      setLoading(false);
-      console.error("Error submitting Step 4:", error);
-      setErrorMessage(
-        "An error occurred while processing your payment. Please try again later."
-      );
-      setError(error);
     }
   };
   if (error) {
@@ -84,10 +104,10 @@ const InputForm4 = ({ companyid }) => {
     <div className="flex justify-center transition-all items-center box-border   w-full ">
       <div className="bg-[#2E7EB5] w-full max-w-[400px] rounded-md box-border px-2 py-1">
         <form onSubmit={handleSubmit}>
-          <div className="flex flex-col mb-[5px] ">
+          <div className="flex flex-col mb-[5px] gap-2 ">
             <div className="w-full flex flex-row space-x-2">
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm4" element="billingFirstName" />
                 </label>
                 <input
@@ -100,8 +120,8 @@ const InputForm4 = ({ companyid }) => {
                   required
                 />
               </div>
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm4" element="billingLastName" />
                 </label>
                 <input
@@ -116,8 +136,8 @@ const InputForm4 = ({ companyid }) => {
               </div>
             </div>
             <div className="w-full flex flex-row space-x-2">
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm4" element="billingAddress1" />
                 </label>
                 <input
@@ -130,8 +150,8 @@ const InputForm4 = ({ companyid }) => {
                   required
                 />
               </div>
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm4" element="billingAddress2" />
                 </label>
                 <input
@@ -145,8 +165,8 @@ const InputForm4 = ({ companyid }) => {
               </div>
             </div>
             <div className="w-full flex flex-row space-x-2">
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm4" element="billingCity" />
                 </label>
                 <input
@@ -159,15 +179,15 @@ const InputForm4 = ({ companyid }) => {
                   required
                 />
               </div>
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm4" element="billingStateID" />
                 </label>
                 <select
                   name="BillingStateID"
                   value={billingData.BillingStateID}
                   onChange={handleStateChange}
-                  className="text-black p-[5px] border w-full rounded box-border"
+                  className="text-black p-[7px] border w-full rounded box-border"
                   required
                 >
                   <option value={0}>
@@ -182,8 +202,8 @@ const InputForm4 = ({ companyid }) => {
               </div>
             </div>
             <div className="w-full flex flex-row space-x-2">
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm4" element="billingZip" />
                 </label>
                 <input
@@ -196,8 +216,8 @@ const InputForm4 = ({ companyid }) => {
                   required
                 />
               </div>
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm4" element="billingPhone" />
                 </label>
                 <input
@@ -212,8 +232,8 @@ const InputForm4 = ({ companyid }) => {
               </div>
             </div>
             <div className="w-full flex flex-row space-x-2">
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm4" element="billingEmail" />
                 </label>
                 <input
@@ -226,8 +246,8 @@ const InputForm4 = ({ companyid }) => {
                   required
                 />
               </div>
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm4" element="creditCardNumber" />
                 </label>
                 <input
@@ -242,8 +262,8 @@ const InputForm4 = ({ companyid }) => {
               </div>
             </div>
             <div className="w-full flex flex-row space-x-2">
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm4" element="expirationDate" />
                 </label>
                 <input
@@ -256,8 +276,8 @@ const InputForm4 = ({ companyid }) => {
                   required
                 />
               </div>
-              <div className="text-[#333] mb-[5px] w-1/2">
-                <label className="text-[#333] mb-[5px]">
+              <div className="text-white mb-[5px] w-1/2">
+                <label className="text-white mb-[5px] subheading">
                   <TextBlock section="inputForm4" element="cvvCode" />
                 </label>
                 <input
@@ -277,7 +297,7 @@ const InputForm4 = ({ companyid }) => {
               loading={loading}
               variant="contained"
               type="submit"
-              className="bg-[#7ec8e3] w-[150px] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all hover:bg-[#0056b3]"
+              className="!bg-[#63A8AE] w-[150px]  text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all "
             >
               <TextBlock section="inputForm4" element="submit" />
             </LoadingButton>
@@ -288,7 +308,11 @@ const InputForm4 = ({ companyid }) => {
               <TextBlock section="inputForm4" element="submit" />
             </button> */}
           </div>
-          {errorMessage && <p style={{ color: "red" }}>{errorMessage}</p>}
+          {errorMessage && (
+            <p className=" tracking-wide" style={{ color: "red" }}>
+              {errorMessage}
+            </p>
+          )}
         </form>
       </div>
     </div>

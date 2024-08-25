@@ -5,7 +5,7 @@ const PremiumHomeText = () => {
   return (
     <div className="flex flex-col xl:gap-6 lg:gap-4 gap-2 ">
       <div className="xl:max-w-[60%] lg:max-w-[70%] md:max-w-[80%]">
-        <span className=" font-extrabold xl:text-4xl text-3xl xl:leading-normal leading-snug tracking-wide heading-times-bold-uppercase">
+        <span className=" font-extrabold xl:text-4xl text-3xl xl:leading-normal subheading leading-snug tracking-wide heading-times-bold-uppercase">
           <TextBlock section="homeInfoText" element="mainHomePageHeading" />
         </span>
       </div>

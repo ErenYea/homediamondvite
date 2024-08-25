@@ -12,17 +12,20 @@ const Footer = () => {
           className="h-[40px] w-[100px]"
         />
       </div>
-      <div className="flex  items-center justify-center text-center flex-1">
-        <p>
+      <div className="flex  items-center justify-center text-center flex-1 ">
+        <p className="subheading">
           <TextBlock section="footer" element="copyright" />
         </p>
       </div>
       <div className="flex items-center justify-end ">
-        <Link to="/terms-and-conditions" className=" ml-[10px] text-base">
+        <Link
+          to="/terms-and-conditions"
+          className=" ml-[10px] text-base subheading"
+        >
           <TextBlock section="footer" element="termsAndConditions" />
         </Link>
         <span className="mx-[4px]"> | </span>
-        <Link to="/privacy" className="mr-[5px] text-base">
+        <Link to="/privacy" className="mr-[5px] text-base subheading">
           <TextBlock section="footer" element="privacy" />
         </Link>
       </div>

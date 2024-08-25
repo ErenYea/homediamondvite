@@ -20,7 +20,7 @@ const Company = () => {
   );
   return (
     companyData && (
-      <div className="font-tainos w-full transition-all flex flex-col mt-[100px] pb-[50px]">
+      <div className=" w-full transition-all flex flex-col mt-[100px] pb-[50px]">
         <div className="">
           <MarqueeComponent />
         </div>
@@ -30,7 +30,7 @@ const Company = () => {
           </div>
           <div className="z-10 h-[400px] flex-grow bg-teal-500 flex items-center">
             <div
-              className="cutBox bg-teal-500 h-full"
+              className="cutBox bg-gradient-to-r from-[#63A8AE] to-[#5fa4af] h-full"
               style={{
                 clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
                 width: "calc(30% )", // Expand the width to cover the extra clipped area
@@ -92,9 +92,9 @@ const Company = () => {
               </div>
             </div>
           </div>
-          <div className=" z-10 h-full flex-grow bg-teal-500 flex items-center">
+          <div className=" z-10 h-full flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
             <div
-              className="cutBox bg-teal-500 h-full"
+              className="cutBox bg-gradient-to-r from-[#63A8AE] to-[#5fa4af] h-full"
               style={{
                 clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
                 width: "calc(30%)", // Expand the width to cover the extra clipped area

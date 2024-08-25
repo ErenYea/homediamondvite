@@ -17,7 +17,7 @@ const OptionsCheckBoxContainer = ({ setFormData, formData }) => {
 
   return (
     <div className="flex flex-col gap-2 md:gap-4">
-      <h2 className="text-lg lg:text-xl xl:text-2xl text-blue-600 ">
+      <h2 className="text-lg lg:text-xl xl:text-2xl text-[#2E7EB5] subheading text-wrap ">
         <TextBlock section="checkboxContainer" element="title" />
       </h2>
       <div className="flex flex-col gap-1">
@@ -30,6 +30,7 @@ const OptionsCheckBoxContainer = ({ setFormData, formData }) => {
                 defaultChecked={false} // Check if ReserveAmount is greater than 0 to set the default state
                 onChange={(event) => handleCheckboxChange(event, index)}
                 checked={option.selected}
+                style={{ accentColor: "#2E7EB5" }}
                 className="form-checkbox h-4 w-4 text-blue-600"
               />
               <label

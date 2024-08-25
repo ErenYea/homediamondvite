@@ -28,9 +28,9 @@ const NavBar = () => {
         </div>
       </div>
       <div className="mr-2">
-        <span>English</span>
+        <span className="subheading">English</span>
         <Switch checked={language === "es"} onChange={handleLanguageToggle} />
-        <span>Español</span>
+        <span className="subheading">Español</span>
       </div>
     </div>
   );

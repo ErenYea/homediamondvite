@@ -22,13 +22,13 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-        <div className="relative z-10 h-[80%] flex-grow bg-[#2E7Eb5] flex items-center">
+        <div className="relative z-10 h-[80%] flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
           <div
-            className="cutBox bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] h-full"
+            className="cutBox bg-gradient-to-r from-[#63A8AE] to-[#5fa4af] h-full"
             style={{
               clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
-              width: "calc(70% + 30%)", // Expand the width to cover the extra clipped area
-              marginLeft: "-30%", // Shift the div to the left by the amount that was clipped
+              width: "calc(30%)", // Expand the width to cover the extra clipped area
+              marginLeft: "-20%", // Shift the div to the left by the amount that was clipped
             }}
           ></div>
           <div className="w-full absolute h-full flex items-center justify-center lg:left-0">

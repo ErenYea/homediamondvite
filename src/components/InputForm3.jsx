@@ -89,15 +89,15 @@ const InputForm3 = ({ selectedData, setSelectedData, companyid }) => {
     <div className="flex justify-center transition-all items-center box-border w-full h-full text-white">
       <div className="bg-[#2E7EB5] w-full h-full flex items-start justify-start max-w-[400px] rounded-md box-border px-2 py-1">
         <form onSubmit={handleSubmit} className="space-y-4 w-full">
-          <h3 className="font-bold text-3xl">Your Custom Plan</h3>
+          <h3 className="font-bold text-3xl subheading">Your Custom Plan</h3>
           <div className="grid grid-cols-2 w-full gap-2">
-            <div className="text-white text-xl ">
+            <div className="text-white text-xl  ">
               <TextBlock section="inputForm3" element="baseWarrantyRate" />
             </div>
             <div className="text-end text-xl">
               $ {formData.RateQuoted.toFixed(2)}
             </div>
-            <div className="text-white text-xl">
+            <div className="text-white text-xl ">
               <TextBlock section="inputForm3" element="additionaloptions" />
             </div>
             <div className="text-end text-xl">
@@ -107,9 +107,9 @@ const InputForm3 = ({ selectedData, setSelectedData, companyid }) => {
               ).toFixed(2)}
             </div>
           </div>
-          <h4 className="font-bold text-3xl">Your Price</h4>
+          <h4 className="font-bold text-3xl subheading">Your Price</h4>
           <div className="grid grid-cols-2 w-full gap-2">
-            <div className="text-white text-xl">
+            <div className="text-white text-xl ">
               <TextBlock section="inputForm3" element="total" />
             </div>
             <div className="text-end text-xl">
@@ -122,7 +122,7 @@ const InputForm3 = ({ selectedData, setSelectedData, companyid }) => {
               loading={loading}
               variant="contained"
               type="submit"
-              className="bg-[#7ec8e3] w-[150px] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all hover:bg-[#0056b3]"
+              className="!bg-[#63A8AE] w-[150px] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all "
             >
               <TextBlock section="inputForm3" element="submit" />
             </LoadingButton>

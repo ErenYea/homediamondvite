@@ -67,12 +67,12 @@ const InputForm = ({ sellerId, companyid }) => {
   return (
     <div className="flex justify-center  transition-all items-center box-border w-full">
       <div className="bg-[#2E7EB5] w-full max-w-[400px] rounded-md box-border px-2 py-1">
-        <h2 className="text-center mb-[5px] text-white">
+        <h2 className="text-center mb-[5px] text-white text-xl subheading">
           <TextBlock section="inputForm" element="title" />
         </h2>
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col mb-[5px]">
-            <label className="text-[#333] mb-[5px]">
+            <label className="text-white mb-[5px] text-lg">
               <TextBlock section="inputForm" element="firstNameLabel" />
             </label>
             <input
@@ -80,12 +80,12 @@ const InputForm = ({ sellerId, companyid }) => {
               name="firstName"
               value={form.firstName}
               onChange={handleChange}
-              className="text-black p-[5px] border rounded box-border"
+              className="text-black p-[5px] border rounded box-border text-lg"
               required
             />
           </div>
           <div className="flex flex-col mb-[5px]">
-            <label className="text-[#333] mb-[5px]">
+            <label className=" mb-[5px] text-lg text-white">
               <TextBlock section="inputForm" element="lastNameLabel" />
             </label>
             <input
@@ -93,12 +93,12 @@ const InputForm = ({ sellerId, companyid }) => {
               name="lastName"
               value={form.lastName}
               onChange={handleChange}
-              className="text-black p-[5px] border rounded box-border"
+              className="text-black p-[5px] border rounded box-border text-lg"
               required
             />
           </div>
           <div className="flex flex-col mb-[5px]">
-            <label className="text-[#333] mb-[5px]">
+            <label className="text-white mb-[5px] text-lg">
               <TextBlock section="inputForm" element="emailLabel" />
             </label>
             <input
@@ -106,12 +106,12 @@ const InputForm = ({ sellerId, companyid }) => {
               name="email"
               value={form.email}
               onChange={handleChange}
-              className="text-black p-[5px] border rounded box-border"
+              className="text-black p-[5px] border rounded box-border text-lg"
               required
             />
           </div>
           <div className="flex flex-col mb-[5px]">
-            <label className="text-[#333] mb-[5px]">
+            <label className="text-white mb-[5px] text-lg">
               <TextBlock section="inputForm" element="phoneLabel" />
             </label>
             <input
@@ -119,12 +119,12 @@ const InputForm = ({ sellerId, companyid }) => {
               name="phone"
               value={form.phone}
               onChange={handleChange}
-              className="text-black p-[5px] border rounded box-border"
+              className="text-black p-[5px] border rounded box-border text-lg"
               required
             />
           </div>
           <div className="flex flex-col mb-[5px]">
-            <label className="text-[#333] mb-[5px]">
+            <label className="text-white mb-[5px] text-lg">
               <TextBlock section="inputForm" element="zipLabel" />
             </label>
             <input
@@ -132,7 +132,7 @@ const InputForm = ({ sellerId, companyid }) => {
               name="zip"
               value={form.zip}
               onChange={handleChange}
-              className="text-black p-[5px] border rounded box-border"
+              className="text-black p-[5px] border rounded box-border text-lg"
               required
             />
           </div>
@@ -141,7 +141,7 @@ const InputForm = ({ sellerId, companyid }) => {
               loading={loading}
               variant="contained"
               type="submit"
-              className="!bg-[#63A8AE] w-[150px] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all"
+              className="!bg-[#63A8AE] w-[150px] text-white border-none text-lg py-[10px] px-[20px] rounded cursor-pointer transition-all"
             >
               <TextBlock section="inputForm" element="submitButton" />
             </LoadingButton>

@@ -13,7 +13,7 @@ const PremiumCoverage = () => {
   ];
   return (
     <div className="flex flex-col gap-2 md:gap-4">
-      <h2 className="text-lg lg:text-xl xl:text-2xl text-blue-600 ">
+      <h2 className="text-lg lg:text-xl xl:text-2xl text-[#2E7EB5] subheading ">
         <TextBlock section="premiumCoverage" element="title" />
       </h2>
       <div className="flex flex-col gap-1">
