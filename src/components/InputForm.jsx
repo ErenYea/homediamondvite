@@ -66,7 +66,7 @@ const InputForm = ({ sellerId, companyid }) => {
   }
   return (
     <div className="flex justify-center  transition-all items-center box-border w-full">
-      <div className="bg-[#0492c2] w-full max-w-[400px] rounded-md box-border px-2 py-1">
+      <div className="bg-[#2E7EB5] w-full max-w-[400px] rounded-md box-border px-2 py-1">
         <h2 className="text-center mb-[5px] text-white">
           <TextBlock section="inputForm" element="title" />
         </h2>
@@ -141,7 +141,7 @@ const InputForm = ({ sellerId, companyid }) => {
               loading={loading}
               variant="contained"
               type="submit"
-              className="bg-[#7ec8e3] w-[150px] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all hover:bg-[#0056b3]"
+              className="!bg-[#63A8AE] w-[150px] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all"
             >
               <TextBlock section="inputForm" element="submitButton" />
             </LoadingButton>

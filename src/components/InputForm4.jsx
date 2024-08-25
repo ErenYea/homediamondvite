@@ -82,7 +82,7 @@ const InputForm4 = ({ companyid }) => {
   }
   return (
     <div className="flex justify-center transition-all items-center box-border   w-full ">
-      <div className="bg-[#0492c2] w-full max-w-[400px] rounded-md box-border px-2 py-1">
+      <div className="bg-[#2E7EB5] w-full max-w-[400px] rounded-md box-border px-2 py-1">
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col mb-[5px] ">
             <div className="w-full flex flex-row space-x-2">

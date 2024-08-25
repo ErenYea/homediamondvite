@@ -1,4 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Apply Times New Roman font to the body */
+body {
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* If you want to apply the Tinos font you imported */
+.body-tinos {
+  font-family: "Tinos", serif;
+}
+
+/* Custom class for headings */
+.heading-times-bold-uppercase {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* Subheadings: Montserrat */
+.subheading {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+}

@@ -87,7 +87,7 @@ const InputForm3 = ({ selectedData, setSelectedData, companyid }) => {
 
   return (
     <div className="flex justify-center transition-all items-center box-border w-full h-full text-white">
-      <div className="bg-[#0492c2] w-full h-full flex items-start justify-start max-w-[400px] rounded-md box-border px-2 py-1">
+      <div className="bg-[#2E7EB5] w-full h-full flex items-start justify-start max-w-[400px] rounded-md box-border px-2 py-1">
         <form onSubmit={handleSubmit} className="space-y-4 w-full">
           <h3 className="font-bold text-3xl">Your Custom Plan</h3>
           <div className="grid grid-cols-2 w-full gap-2">

@@ -89,7 +89,7 @@ const ContactUsForm = () => {
             required
           />
         </div>
-        <Button variant="contained" type="submit">
+        <Button variant="contained" type="submit" className="!bg-[#63A8AE]">
           <TextBlock section="contactUsPage" element="contactUsSend" />
         </Button>
       </form>

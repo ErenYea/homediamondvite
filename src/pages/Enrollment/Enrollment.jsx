@@ -61,7 +61,7 @@ const Enrollment = () => {
 
   return (
     <div className="flex flex-col items-center mt-[100px] transition-all overflow-x-hidden right-[1%] pb-[50px]">
-      <div className="bg-[#63A8AE] text-white transition-all font-semibold text-xl lg:text-2xl w-full text-center py-2 ">
+      <div className="bg-[#63A8AE] text-white transition-all font-semibold text-xl lg:text-2xl w-full text-center py-2 subheading">
         <TextBlock section="progressBanner" element={`step${currentStep}`} />
       </div>
       <div className="w-[50%] transition-all">
@@ -107,11 +107,11 @@ const Enrollment = () => {
         </div>
       </div>
       <div className="flex justify-center h-full gap-5  w-full items-start pt-[30px] flex-col">
-        <div className="bg-[#63A8AE] text-white transition-all font-semibold text-xl lg:text-2xl w-full text-center py-2 ">
+        <div className="bg-[#63A8AE] text-white transition-all font-semibold text-xl lg:text-2xl w-full text-center py-2 subheading">
           <TextBlock section="enrollementpage" element={`question`} />
         </div>
 
-        <div className="italic font-bold text-blue-600 text-xl w-full text-center">
+        <div className="italic font-bold text-[#2E7Eb5] text-xl w-full text-center">
           <span>“</span>
           <TextBlock section="enrollementpage" element={`quote`} />
           <span>“</span>
@@ -122,15 +122,15 @@ const Enrollment = () => {
               <img src="/dhp_home_logo.jpg" alt="" className="w-[350px]" />
               <div
                 onClick={gotoContact}
-                className="flex justify-center bg-teal-400 items-center py-2 px-6 text-2xl cursor-pointer hover:bg-blue-400 transition-all   rounded-lg shadow-md border text-white"
+                className="flex justify-center bg-[#63A8AE] items-center py-2 px-6 text-2xl cursor-pointer  transition-all   rounded-lg shadow-md border text-white"
               >
                 Contact Us
               </div>
             </div>
           </div>
-          <div className=" z-10 h-full flex-grow bg-teal-500 flex items-center">
+          <div className=" z-10 h-full flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
             <div
-              className="cutBox bg-teal-500 h-full"
+              className="cutBox bg-[#63A8AE] h-full"
               style={{
                 clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
                 width: "calc(30%)", // Expand the width to cover the extra clipped area

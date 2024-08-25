@@ -17,7 +17,7 @@ const ProgressBar = ({ step }) => {
           <div className="flex-1">
             <div
               className={`w-10 h-10  mx-auto rounded-full text-lg text-white flex items-center ${
-                step >= 2 ? "bg-teal-500" : "bg-gray-300"
+                step >= 2 ? "bg-[#2E7EB5]" : "bg-gray-300"
               }`}
             >
               <span className="text-white text-center w-full">
@@ -29,7 +29,7 @@ const ProgressBar = ({ step }) => {
           <div className="w-1/6 align-center items-center align-middle content-center flex">
             <div className="w-full bg-gray-300 rounded items-center align-middle align-center flex-1">
               <div
-                className="bg-teal-500 text-xs leading-none py-1 text-center text-grey-darkest rounded "
+                className="bg-[#2E7EB5] text-xs leading-none py-1 text-center text-grey-darkest rounded "
                 style={{ width: step > 2 ? "100%" : "0%" }}
               ></div>
             </div>
@@ -38,7 +38,7 @@ const ProgressBar = ({ step }) => {
           <div className="flex-1">
             <div
               className={`w-10 h-10  mx-auto rounded-full text-lg text-white flex items-center ${
-                step >= 3 ? "bg-teal-500" : "bg-gray-300"
+                step >= 3 ? "bg-[#2E7EB5]" : "bg-gray-300"
               }`}
             >
               <span className="text-white text-center w-full">
@@ -50,7 +50,7 @@ const ProgressBar = ({ step }) => {
           <div className="w-1/6 align-center items-center align-middle content-center flex">
             <div className="w-full bg-gray-300 rounded items-center align-middle align-center flex-1">
               <div
-                className="bg-teal-500 text-xs leading-none py-1 text-center text-grey-darkest rounded "
+                className="bg-[#2E7EB5] text-xs leading-none py-1 text-center text-grey-darkest rounded "
                 style={{ width: step > 3 ? "100%" : "0%" }}
               ></div>
             </div>
@@ -59,7 +59,7 @@ const ProgressBar = ({ step }) => {
           <div className="flex-1">
             <div
               className={`w-10 h-10  mx-auto rounded-full text-lg text-white flex items-center ${
-                step >= 4 ? "bg-teal-500" : "bg-gray-300"
+                step >= 4 ? "bg-[#2E7EB5]" : "bg-gray-300"
               }`}
             ></div>
           </div>
@@ -67,7 +67,7 @@ const ProgressBar = ({ step }) => {
           <div className="w-1/6 align-center items-center align-middle content-center flex">
             <div className="w-full bg-gray-300 rounded items-center align-middle align-center flex-1">
               <div
-                className="bg-teal-500 text-xs leading-none py-1 text-center text-grey-darkest rounded "
+                className="bg-[#2E7EB5] text-xs leading-none py-1 text-center text-grey-darkest rounded "
                 style={{ width: step > 4 ? "100%" : "0%" }}
               ></div>
             </div>
@@ -76,7 +76,7 @@ const ProgressBar = ({ step }) => {
           <div className="flex-1">
             <div
               className={`w-10 h-10  mx-auto rounded-full text-lg text-white flex items-center ${
-                step > 4 ? "bg-teal-500" : "bg-gray-300"
+                step > 4 ? "bg-[#2E7EB5]" : "bg-gray-300"
               }`}
             ></div>
           </div>

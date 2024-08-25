@@ -44,7 +44,7 @@ const Company = () => {
         </div>
         <div className="w-full h-[450px] flex relative top-[-100px] z-[900] ">
           <div className=" w-[450px] h-full ml-[12rem] ">
-            <div className="bg-[#0492c2] p-[10px] rounded-lg box-border">
+            <div className="bg-[#2E7EB5] p-[10px] rounded-lg box-border">
               <InputForm sellerId={1} companyid={params.id} />
             </div>
           </div>

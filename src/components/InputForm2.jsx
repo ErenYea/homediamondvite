@@ -83,7 +83,7 @@ const InputForm2 = ({ companyid }) => {
   }
   return (
     <div className="flex justify-center transition-all items-center box-border w-full ">
-      <div className="bg-[#0492c2] w-full max-w-[400px] rounded-md box-border px-2 py-1">
+      <div className="bg-[#2E7EB5] w-full max-w-[400px] rounded-md box-border px-2 py-1">
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col mb-[5px] ">
             <div className="w-full flex flex-row space-x-2">
@@ -262,7 +262,7 @@ const InputForm2 = ({ companyid }) => {
               loading={loading}
               variant="contained"
               type="submit"
-              className="bg-[#7ec8e3] w-[150px] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all hover:bg-[#0056b3]"
+              className="!bg-[#63A8AE] w-[150px] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all hover:bg-[#0056b3]"
             >
               <TextBlock section="inputForm2" element="submit" />
             </LoadingButton>

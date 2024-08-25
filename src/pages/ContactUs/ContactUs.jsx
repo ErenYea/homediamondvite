@@ -4,12 +4,12 @@ import ContactUsForm from "../../components/ContactUsForm";
 
 const ContactUs = () => {
   return (
-    <div className="mt-[100px] h-full pb-[50px] text-black h-full">
+    <div className="mt-[100px] pb-[50px] text-black h-full">
       <div className="flex items-start w-full h-full relative">
         <div className="z-0 w-[50%]  h-[80%]">
           <div className="w-full h-full">
             <div className="flex flex-col justify-center h-full w-fit mx-auto md:ml-[10%] lg:pl-0 pr-[20%]">
-              <span className="font-extrabold xl:text-4xl text-3xl xl:leading-normal leading-snug tracking-wide capitalize">
+              <span className="font-extrabold xl:text-4xl text-3xl xl:leading-normal leading-snug tracking-wide capitalize heading-times-bold-uppercase">
                 <TextBlock section="contactUsPage" element="contactUsHeading" />
               </span>
 
@@ -22,9 +22,9 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-        <div className="relative z-10 h-[80%] flex-grow bg-teal-500 flex items-center">
+        <div className="relative z-10 h-[80%] flex-grow bg-[#2E7Eb5] flex items-center">
           <div
-            className="cutBox bg-teal-500 h-full"
+            className="cutBox bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] h-full"
             style={{
               clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
               width: "calc(70% + 30%)", // Expand the width to cover the extra clipped area

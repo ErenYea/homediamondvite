@@ -6,7 +6,7 @@ const ProcessCompleted = () => {
   const { step4Data } = useAppStore();
   return (
     <div className="flex  justify-center transition-all items-start box-border w-full h-full ">
-      <div className="bg-[#0492c2] w-full max-w-[400px] rounded-md box-border px-2 py-1 flex flex-col">
+      <div className="bg-[#2E7EB5] w-full max-w-[400px] rounded-md box-border px-2 py-1 flex flex-col">
         <h2 className="text-center mb-[5px] text-xl font-semibold">
           <TextBlock section="processCompleted" element="title" />
         </h2>

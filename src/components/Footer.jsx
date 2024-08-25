@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="fixed bottom-0 h-[50px] w-full z-[1000] shadow-xl drop-shadow-2xl  bg-white uppercase flex items-center justify-between text-teal-500">
+    <div className="fixed bottom-0 h-[50px] w-full z-[1000] shadow-xl drop-shadow-2xl  bg-white uppercase flex items-center justify-between text-[#2E7Eb5]">
       <div className="flex items-center justify-start ml-[5px]">
         <img
           src={"/bbb_logo.jpg"}
