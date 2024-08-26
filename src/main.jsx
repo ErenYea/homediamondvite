@@ -12,6 +12,7 @@ import ErrorPage from "./components/ErrorPage.jsx";
 import Products from "./pages/Products/Products.jsx";
 import NoWarrantiesYet from "./pages/NoWarrantiesYet/NoWarrantiesYet.jsx";
 import ErrorBoundary from "./components/ErrorBoundary.jsx";
+import RemoveMyData from "./pages/RemoveMyData/RemoveMyData.jsx";
 
 const router = createBrowserRouter([
   {
@@ -123,6 +124,16 @@ const router = createBrowserRouter([
       <div className="w-full h-full">
         <NavBar />
         <NoWarrantiesYet />
+        <Footer />
+      </div>
+    ),
+  },
+  {
+    path: "/remove-my-data",
+    element: (
+      <div className="w-full h-screen">
+        <NavBar />
+        <RemoveMyData />
         <Footer />
       </div>
     ),

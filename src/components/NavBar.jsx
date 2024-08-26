@@ -25,6 +25,9 @@ const NavBar = () => {
           <Link to="/contact-us" className=" hover:underline">
             <TextBlock section="navbar" element="contact" />
           </Link>
+          <Link to="/remove-my-data" className=" hover:underline">
+            <TextBlock section="navbar" element="removeMyData" />
+          </Link>
         </div>
       </div>
       <div className="mr-2">

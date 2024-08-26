@@ -7,6 +7,7 @@ const translations = {
       faq: "FAQ",
       contact: "Contact Us",
       company: "Your Company Here",
+      removeMyData: "Remove My Data",
     },
     inputForm: {
       title: "Get your warranty now!",
@@ -195,6 +196,19 @@ const translations = {
       contactUsMessage: "Message",
       contactUsSend: "Send",
     },
+    removeMyDataPage: {
+      removeMyDataHeading: "Remove My Data",
+      removeMyDataParagraph: "Fill out the form to remove your data",
+      firstName: "First Name",
+      lastName: "Last Name",
+      phone: "Phone",
+      email: "Email",
+      zipCode: "Zip Code",
+      homeState: "Home State",
+      homeZipCode: "Home Zip Code",
+      homeCity: "Home City",
+      homeAddress: "Home Address",
+    },
     productsPage: {
       mainText:
         "A Home Warranty PROTECTS Your Time and Money from Unexpected Repair Costs . . .",
@@ -226,6 +240,7 @@ const translations = {
       faq: "Preguntas Frecuentes",
       contact: "Contáctenos",
       company: "Tu Empresa Aquí",
+      removeMyData: "Eliminar mis datos",
     },
     inputForm: {
       title: "¡Obtén tu garantía ahora!",
@@ -420,6 +435,19 @@ const translations = {
       contactUsPhone: "Teléfono",
       contactUsMessage: "Mensaje",
       contactUsSend: "Enviar",
+    },
+    removeMyDataPage: {
+      removeMyDataHeading: "Eliminar mis datos",
+      removeMyDataParagraph: "Rellena el formulario para eliminar tus datos",
+      firstName: "Nombre de pila",
+      lastName: "Apellido",
+      phone: "Teléfono",
+      email: "Correo electrónico",
+      zipCode: "Código postal",
+      homeState: "Estado de origen",
+      homeZipCode: "Código postal de casa",
+      homeCity: "Ciudad natal",
+      homeAddress: "Dirección de casa",
     },
     productsPage: {
       mainText:
