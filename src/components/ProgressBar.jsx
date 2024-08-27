@@ -4,7 +4,7 @@ const ProgressBar = ({ step }) => {
   const milestones = [
     "Personal Info",
     "Select Plan",
-    "Complete Order",
+    "Billing Information",
     "Confirmation",
   ];
 

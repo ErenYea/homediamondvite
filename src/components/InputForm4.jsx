@@ -235,6 +235,7 @@ const InputForm4 = ({ companyid }) => {
                   value={billingData.BillingPhone}
                   className="text-black p-[5px] border w-full rounded box-border"
                   onChange={handleChange}
+                  pattern="[0-9]{11}"
                   placeholder="Billing Phone"
                   required
                 />

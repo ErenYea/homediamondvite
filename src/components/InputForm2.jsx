@@ -27,7 +27,11 @@ const InputForm2 = ({ companyid }) => {
     PropertyAddress1: "",
     PropertyAddress2: "",
     City: initialData.CityName || "",
-    StateID: 1,
+    StateID: initialData.StateAbbreviation
+      ? states.filter(
+          (state) => state.abbreviation === initialData.StateAbbreviation
+        )[0].id
+      : 1,
     SqFt: 0,
   });
 
@@ -74,6 +78,7 @@ const InputForm2 = ({ companyid }) => {
     setPropertyType(response.PropertyType);
   };
   useEffect(() => {
+    // console.log(initialData);
     setFormData((prevData) => ({
       ...prevData,
       LeadID: initialData.LeadID || "",
@@ -85,6 +90,11 @@ const InputForm2 = ({ companyid }) => {
       ZipCode: initialData.ZipCode || "",
       SellerID: 1,
       City: initialData.CityName || "",
+      StateID: initialData.StateAbbreviation
+        ? states.filter(
+            (state) => state.abbreviation === initialData.StateAbbreviation
+          )[0].id
+        : 1,
     }));
   }, [initialData, initialSellerID]);
 
@@ -139,7 +149,7 @@ const InputForm2 = ({ companyid }) => {
                   onChange={handleChange}
                   placeholder="Phone (10 digits)"
                   className="text-black p-[5px] border w-full rounded box-border"
-                  pattern="[0-9]{10}"
+                  pattern="[0-9]{11}"
                   required
                 />
               </div>

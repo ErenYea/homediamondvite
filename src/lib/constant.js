@@ -247,7 +247,7 @@ export const translations = {
     progressBanner: {
       step2: "Enter Your Personal Info",
       step3: "Select Your Premium Plan Options",
-      step4: "Complete your Order",
+      step4: "Enter the Billing Information",
       step5: "Confirm your Order",
     },
     premiumCoverage: {
@@ -262,7 +262,7 @@ export const translations = {
     contactUsPage: {
       contactUsHeading: "contact us",
       contactUsParagraph:
-        "For any query or suggestion, feel free to reach out!",
+        "For any questions, please fill the 'Contact Us' form and we will get back to you.",
       contactUsName: "Name",
       contactUsEmail: "Email",
       contactUsPhone: "Phone",
@@ -666,7 +666,7 @@ export const translations = {
     progressBanner: {
       step2: "Ingrese su información personal",
       step3: "Seleccione las opciones de su plan premium",
-      step4: "Completa tu pedido",
+      step4: "Ingrese la información de facturación",
       step5: "Confirma tu pedido",
     },
     premiumCoverage: {
@@ -681,7 +681,7 @@ export const translations = {
     contactUsPage: {
       contactUsHeading: "contáctenos",
       contactUsParagraph:
-        "Para cualquier consulta o sugerencia, ¡no dude en comunicarse!",
+        "Para cualquier pregunta, por favor complete el formulario de 'Contáctenos' y nos pondremos en contacto con usted.",
       contactUsName: "Nombre",
       contactUsEmail: "Correo electrónico",
       contactUsPhone: "Teléfono",

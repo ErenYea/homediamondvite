@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TextBlock from "../../components/TextBlock";
 import ContactUsForm from "../../components/ContactUsForm";
 
 const ContactUs = () => {
+  const scrolltoContainer = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Optional: Add smooth scrolling
+    });
+  };
+  useEffect(() => {
+    scrolltoContainer();
+  }, []);
   return (
     <div className="mt-[100px] pb-[50px] text-black h-full">
+      <div className="bg-[#63A8AE]  text-white transition-all subheading font-semibold capitalize text-xl lg:text-2xl w-full text-center py-2 ">
+        <TextBlock section="contactUsPage" element={`contactUsHeading`} />
+      </div>
       <div className="flex items-start w-full h-full relative">
         <div className="z-0 w-[50%]  h-[80%]">
           <div className="w-full h-full">
