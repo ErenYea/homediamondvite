@@ -13,26 +13,26 @@ const Footer = () => {
         />
       </div>
       <div className="flex  items-center justify-center text-center flex-1 ">
-        <p className="subheading">
+        <p className="subheading lg:!text-sm ">
           <TextBlock section="footer" element="copyright" />
         </p>
       </div>
       <div className="flex items-center justify-end ">
         <Link
           to="/remove-my-data"
-          className="  text-base subheading border-r border-r-[#2E7Eb5] px-2"
+          className="  text-base subheading border-r border-r-[#2E7Eb5] px-2 lg:!text-sm"
         >
           <TextBlock section="footer" element="removeMyData" />
         </Link>
 
         <Link
           to="/terms-and-conditions"
-          className="text-base subheading border-r border-r-[#2E7Eb5] px-2"
+          className="text-base subheading border-r border-r-[#2E7Eb5] px-2 lg:!text-sm"
         >
           <TextBlock section="footer" element="termsAndConditions" />
         </Link>
 
-        <Link to="/privacy" className="px-2 text-base subheading">
+        <Link to="/privacy" className="px-2 text-base subheading lg:!text-sm">
           <TextBlock section="footer" element="privacy" />
         </Link>
       </div>

@@ -1,12 +1,75 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import MarqueeComponent from "../../components/MarqueeComponent";
 import ImageSlider from "../../components/ImageSlider";
 import PremiumHomeText from "../../components/PremiumHomeText";
 import InputForm from "../../components/InputForm";
 import { Outlet, useParams } from "react-router-dom";
 import PremiumHomeText2 from "../../components/PremiumHomeText2";
+import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
 
 const Home = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
+  const [fadeOut, setFadeOut] = useState(false);
+
+  const testimonials = [
+    {
+      message:
+        "My Refrigerator stopped working and would not stay cold. I called Diamond Home Protection and a gentleman quickly had someone come out and replaced the part. Everyone from customer service to the service repair technician was very knowledgeable and friendly.",
+      name: "Christina G., Arkansas",
+    },
+    {
+      message:
+        "I call Diamond Home due to my air conditioner not cooling properly. Within one day they had a service repair technician come out to let me know that we needed a new condenser. The part was ordered and replaced 24 hours later. I would recommend them to all my friends and family.",
+      name: "Jason Z., Texas",
+    },
+    {
+      message:
+        "My Central Vacuum system would not turn on. I had Diamond Home have a service technician come out and look at it. The technician let me know that we needed a new motor, and he had one on the truck to replace immediately. The service I received was above and beyond anything I had experienced in the past with other companies.",
+      name: "Andrew S., New Hampshire",
+    },
+    {
+      message:
+        "I am a single mother, and my garage door would not open with my car stuck in the garage. I called Diamond Home Protection and they had someone come out the next morning. The technician replaced the wire that went from the opener to the keypad.   The technician was very prompt and friendly. I would recommend Diamond Home Protection.",
+      name: "Barbara M., North Dakota",
+    },
+  ];
+
+  const handlePrev = () => {
+    if (animating) return;
+    setFadeOut(true);
+    setAnimating(true);
+
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+      );
+      setFadeOut(false);
+    }, 500); // Match this with the CSS transition duration
+  };
+
+  const handleNext = () => {
+    if (animating) return;
+    setFadeOut(true);
+    setAnimating(true);
+
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      );
+      setFadeOut(false);
+    }, 500); // Match this with the CSS transition duration
+  };
+
+  useEffect(() => {
+    if (!fadeOut) {
+      const timeout = setTimeout(() => {
+        setAnimating(false);
+      }, 500); // Duration of the transition should match this timeout
+      return () => clearTimeout(timeout);
+    }
+  }, [fadeOut]);
+
   const params = useParams();
   const scrolltoContainer = () => {
     window.scrollTo({
@@ -42,10 +105,37 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-full relative top-[-100px] z-[900] ">
-        <div className=" w-[450px] h-full ml-[12rem] ">
+      <div className="w-full h-full relative top-[-100px] z-[900] flex items-center">
+        <div className=" w-[450px] h-full xl:ml-[12rem] ml-[4rem] lg:[8rem]">
           <div className="bg-[#2E7EB5] p-[10px] rounded-lg box-border">
             <InputForm sellerId={1} />
+          </div>
+        </div>
+
+        <div className="lg:w-[80%] w-[100%] xl:w-[60%] h-full bg-white flex items-center justify-around">
+          <div
+            onClick={handlePrev}
+            className="w-12 h-12 rounded-full bg-[#E7E6EA] flex items-center justify-center cursor-pointer"
+          >
+            <ChevronLeftIcon className="text-[#2E7Eb5]" />
+          </div>
+          <div
+            className={`bg-gradient-to-r shadow-lg from-[#63A8AE] to-[#2E7Eb5] w-[60%] rounded-xl h-[60%] flex flex-col justify-center items-center p-8 transition-opacity duration-500 ease-in-out transform ${
+              fadeOut ? "opacity-0" : "opacity-100"
+            }`}
+          >
+            <p className="text-lg text-[#E7E6EA] text-center mb-4">
+              {testimonials[currentIndex].message}
+            </p>
+            <p className="text-base text-[#E7E6EA] text-center subheading">
+              - {testimonials[currentIndex].name}
+            </p>
+          </div>
+          <div
+            onClick={handleNext}
+            className="w-12 h-12 rounded-full bg-[#E7E6EA] flex items-center justify-center cursor-pointer"
+          >
+            <ChevronRightIcon className="text-[#2E7Eb5]" />
           </div>
         </div>
       </div>
