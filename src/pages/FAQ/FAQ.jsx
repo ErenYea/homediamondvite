@@ -32,6 +32,11 @@ const FAQ = () => {
       answer:
         "To request service, log in to your Homeowner Portal account, select the system or appliance that needs service, answer a few questions, and we'll dispatch an authorized Service Contractor to your home.",
     },
+    {
+      question: "When can you purchase a home warranty?",
+      answer:
+        "You can purchase a home warranty at any time for any house. While many home warranties are purchased by a buyer or a seller of a home during a real estate transaction, a home warranty can be purchased by any homeowner looking to protect their budget.",
+    },
   ];
 
   const handleQuestionToggle = (ind) => {
@@ -48,19 +53,20 @@ const FAQ = () => {
           {faqs.map((faq, ind) => (
             <div
               key={ind}
-              className="w-full flex justify-between bg-white text-[#2E7Eb5] p-5 rounded-lg cursor-pointer"
+              className="w-full flex justify-between bg-white text-[#2E7Eb5] p-5 rounded-lg cursor-pointer transition-all duration-300"
               onClick={() => handleQuestionToggle(ind)}
             >
               <div className="w-[90%] flex flex-col gap-5">
                 <span>{faq.question}</span>
                 {openedQuestion === ind && <span>{faq.answer}</span>}
               </div>
-              {openedQuestion !== ind && (
-                <PlusIcon className="text-[#2E7Eb5] w-6 h-6" />
-              )}
-              {openedQuestion === ind && (
-                <MinusIcon className="text-[#2E7Eb5] w-6 h-6" />
-              )}
+              <div className="transition-transform duration-300">
+                {openedQuestion === ind ? (
+                  <MinusIcon className="text-[#2E7Eb5] w-6 h-6" />
+                ) : (
+                  <PlusIcon className="text-[#2E7Eb5] w-6 h-6" />
+                )}
+              </div>
             </div>
           ))}
         </div>
