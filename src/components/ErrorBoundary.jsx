@@ -6,19 +6,19 @@ import Footer from "./Footer.jsx";
 class ErrorBoundary extends Component {
   constructor(props) {
     super(props);
-    console.log(props);
+    // console.log(props);
     this.state = { hasError: false, error: null };
   }
 
   static getDerivedStateFromError(error) {
-    console.log("In Error ", error);
+    // console.log("In Error ", error);
     // Update state so the next render will show the fallback UI
     return { hasError: true, error };
   }
 
   componentDidCatch(error, errorInfo) {
     // You can also log the error to an error reporting service
-    console.error("Error caught by ErrorBoundary:", error, errorInfo);
+    // console.error("Error caught by ErrorBoundary:", error, errorInfo);
   }
   render() {
     if (this.state.hasError) {

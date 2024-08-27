@@ -7,9 +7,9 @@ const OptionsCheckBoxContainer = ({ setFormData, formData }) => {
   const handleCheckboxChange = (event, optionId) => {
     // Handle checkbox change
     // event.target.checked will be true or false depending on the checkbox state
-    console.log(
-      `Option ${optionId} is ${event.target.checked ? "checked" : "unchecked"}`
-    );
+    // console.log(
+    //   `Option ${optionId} is ${event.target.checked ? "checked" : "unchecked"}`
+    // );
     const newOptions = [...formData];
     newOptions[optionId].selected = !newOptions[optionId].selected;
     setFormData(newOptions);

@@ -6,33 +6,42 @@ import { submitStep4 } from "../lib/step4";
 import { LoadingButton } from "@mui/lab";
 
 const InputForm4 = ({ companyid }) => {
-  const { step1Data, step3Data, setstep4Data } = useAppStore();
+  const { step1Data, step3Data, step2Data, setstep4Data } = useAppStore();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const customerIdObject = step1Data || {};
   const { LeadID, LeadUID } = customerIdObject;
-  console.log(customerIdObject);
   const [billingData, setBillingData] = useState({
-    BillingFirstName: "",
-    BillingLastName: "",
-    BillingAddress1: "",
-    BillingAddress2: "",
-    BillingCity: "",
-    BillingZip: "",
-    BillingPhone: "",
-    BillingEmail: "",
-    ccnumber: "4111111111111111",
-    ccexp: "1212",
-    cvv: "999",
+    BillingFirstName: step2Data.FirstName || "",
+    BillingLastName: step2Data.LastName || "",
+    BillingAddress1: step2Data.PropertyAddress1 || "",
+    BillingAddress2: step2Data.PropertyAddress2 || "",
+    BillingCity: step2Data.City || "",
+    BillingZip: step2Data.ZipCode || "",
+    BillingPhone: step1Data.Phone || "",
+    BillingEmail: step2Data.Email || "",
+    ccnumber: "",
+    ccexp: "",
+    cvv: "",
+    // ccnumber: "4111111111111111",
+    // ccexp: "1212",
+    // cvv: "999",
     LeadID: LeadID,
     LeadUID: LeadUID,
     totalAmount: step3Data.totalAmount || -1,
-    BillingStateID: 0,
-    BillingStateAbbreviation: "",
+    BillingStateID: step2Data.StateID || 0,
+    BillingStateAbbreviation: states.find(
+      (state) => state.id === step2Data?.StateID
+    )
+      ? states.find((state) => state.id === step2Data?.StateID).abbreviation
+      : "",
   });
   const [errorMessage, setErrorMessage] = useState("");
   const isBillingDataValid = () => {
     for (const key in billingData) {
+      if (key == "BillingAddress2") {
+        continue;
+      }
       if (billingData.hasOwnProperty(key)) {
         if (
           billingData[key] === "" ||
@@ -63,7 +72,7 @@ const InputForm4 = ({ companyid }) => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(billingData);
+    // console.log("Billing Data", billingData);
     setErrorMessage("");
     setLoading(true);
     if (isBillingDataValid()) {
