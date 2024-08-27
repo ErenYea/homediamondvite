@@ -139,22 +139,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="w-full flex justify-evenly ">
-        <span className="">
-          <img src="/logo1.png" alt="" className="w-[200px]" />
-        </span>
-        <span className="">
-          <img src="/logo1.png" alt="" className="w-[200px]" />
-        </span>
-        <span className="">
-          <img src="/logo1.png" alt="" className="w-[200px]" />
-        </span>
-      </div>
-      <div className="w-full flex justify-center items-center mb-4 mt-4">
-        <span className="italic font-bold text-[#2E7Eb5] text-xl">
-          “Testimonial Quote . . . . . Tiffany to provide“
-        </span>
-      </div>
+
       <div className="flex items-start w-full h-[400px] relative">
         <div className="z-0 w-[50%] h-[400px] bg-white">
           <div className="w-full h-full flex flex-col pt-6 items-center">

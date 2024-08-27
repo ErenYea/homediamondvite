@@ -72,7 +72,7 @@ const InputForm = ({ sellerId, companyid }) => {
   return (
     <div className="flex justify-center  transition-all items-center box-border w-full">
       <div className="bg-[#2E7EB5] w-full max-w-[400px] rounded-md box-border px-2 py-1">
-        <h2 className="text-center mb-[5px] text-white text-xl subheading">
+        <h2 className="text-center mb-[5px] text-white !text-xl subheading !font-semibold ">
           <TextBlock section="inputForm" element="title" />
         </h2>
         <form onSubmit={handleSubmit}>

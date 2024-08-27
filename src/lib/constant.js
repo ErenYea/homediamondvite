@@ -301,7 +301,7 @@ export const translations = {
       contactButtonText: "Contact Us",
     },
     enrollementpage: {
-      question: "Have Any Questions Or Concerns Feel Free To Contact Us Below",
+      question: "Have Any Questions Or Concerns? Feel Free To Contact Us!",
       quote: "Testimonial Quote. . . . . Tiffany to provide",
     },
     errorpage: {
@@ -534,8 +534,7 @@ export const translations = {
         "Una garantía para el hogar PROTEGE su tiempo y dinero contra costos de reparación inesperados. . .",
     },
     enrollementpage: {
-      question:
-        "Si tiene alguna pregunta o inquietud, no dude en contactarnos a continuación",
+      question: "¿Tiene alguna pregunta o inquietud? ¡No dude en contactarnos!",
       quote: "Testimonial Quote. . . . . Tiffany to provide",
     },
     errorpage: {
