@@ -282,6 +282,9 @@ export const translations = {
       homeCity: "Home City",
       homeAddress: "Home Address",
     },
+    faqPage: {
+      faqHeading: "Frequently Asked Questions",
+    },
     productsPage: {
       mainText:
         "A Home Warranty PROTECTS Your Time and Money from Unexpected Repair Costs . . .",
@@ -298,7 +301,7 @@ export const translations = {
       contactButtonText: "Contact Us",
     },
     enrollementpage: {
-      question: "Have Any Questions Or Concerns Feel Free To Contact Us Below",
+      question: "Have Any Questions Or Concerns? Feel Free To Contact Us!",
       quote: "Testimonial Quote. . . . . Tiffany to provide",
     },
     errorpage: {
@@ -644,13 +647,15 @@ export const translations = {
       homeCity: "Ciudad natal",
       homeAddress: "Dirección de casa",
     },
+    faqPage: {
+      faqHeading: "Preguntas frecuentes",
+    },
     productsPage: {
       mainText:
         "Una garantía para el hogar PROTEGE su tiempo y dinero contra costos de reparación inesperados. . .",
     },
     enrollementpage: {
-      question:
-        "Si tiene alguna pregunta o inquietud, no dude en contactarnos a continuación",
+      question: "¿Tiene alguna pregunta o inquietud? ¡No dude en contactarnos!",
       quote: "Testimonial Quote. . . . . Tiffany to provide",
     },
     errorpage: {

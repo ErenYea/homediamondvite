@@ -148,7 +148,7 @@ const Products = () => {
         </div>
       </div>
 
-      <div className="w-full flex h-[500px] justify-center">
+      <div className="w-full flex h-[500px] justify-center mb-8">
         <div className="w-[60%] h-full bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center justify-around">
           <div
             onClick={handlePrev}
@@ -177,11 +177,6 @@ const Products = () => {
         </div>
       </div>
 
-      <div className="italic font-bold text-blue-600 text-xl w-full text-center mb-4">
-        <span>“</span>
-        <TextBlock section="enrollementpage" element={`quote`} />
-        <span>“</span>
-      </div>
       <div className="flex items-start w-full h-[400px] relative">
         <div className="z-0 w-[50%] h-[400px] bg-white">
           <div className="w-full h-full flex flex-col pt-6 items-center">
