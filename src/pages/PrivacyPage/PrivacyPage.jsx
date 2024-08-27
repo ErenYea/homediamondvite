@@ -1,8 +1,8 @@
 import React from "react";
-import TextBlock from "../../components/TextBlock";
 import { useAppStore } from "../../lib/store";
+import TextBlock from "../../components/TextBlock";
 
-const Privacy = () => {
+const PrivacyPage = () => {
   const { getText } = useAppStore();
   const formatText = (section, element, index, cond) => {
     const data = getText(section, element, index);
@@ -234,4 +234,4 @@ const Privacy = () => {
   );
 };
 
-export default Privacy;
+export default PrivacyPage;

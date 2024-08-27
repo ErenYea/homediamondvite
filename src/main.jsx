@@ -13,9 +13,9 @@ import Products from "./pages/Products/Products.jsx";
 import NoWarrantiesYet from "./pages/NoWarrantiesYet/NoWarrantiesYet.jsx";
 import ErrorBoundary from "./components/ErrorBoundary.jsx";
 import RemoveMyData from "./pages/RemoveMyData/RemoveMyData.jsx";
-import Privacy from "./pages/Privacy/privacy.jsx";
 import FAQ from "./pages/FAQ/FAQ.jsx";
 import TermsAndCondition from "./pages/TermsAndCondition/TermsAndCondition.jsx";
+import PrivacyPage from "./pages/PrivacyPage/PrivacyPage.jsx";
 
 const router = createBrowserRouter([
   {
@@ -99,7 +99,7 @@ const router = createBrowserRouter([
     element: (
       <div className="w-full h-full">
         <NavBar />
-        <Privacy />
+        <PrivacyPage />
         <Footer />
       </div>
     ),
