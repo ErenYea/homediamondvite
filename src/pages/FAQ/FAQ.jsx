@@ -57,8 +57,10 @@ const FAQ = () => {
               onClick={() => handleQuestionToggle(ind)}
             >
               <div className="w-[90%] flex flex-col gap-5">
-                <span>{faq.question}</span>
-                {openedQuestion === ind && <span>{faq.answer}</span>}
+                <span className="font-semibold text-xl">{faq.question}</span>
+                {openedQuestion === ind && (
+                  <span className="text-lg">{faq.answer}</span>
+                )}
               </div>
               <div className="transition-transform duration-300">
                 {openedQuestion === ind ? (
