@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TextBlock from "../../components/TextBlock";
 import { MinusIcon, PlusIcon } from "@heroicons/react/24/outline";
 
@@ -42,6 +42,15 @@ const FAQ = () => {
   const handleQuestionToggle = (ind) => {
     setOpenedQuestion((prevIndex) => (prevIndex === ind ? null : ind));
   };
+  const scrolltoContainer = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Optional: Add smooth scrolling
+    });
+  };
+  useEffect(() => {
+    scrolltoContainer();
+  }, []);
 
   return (
     <div className="mt-[100px] pb-[50px] text-black h-screen w-full flex justify-center items-center">
