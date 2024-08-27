@@ -45,7 +45,15 @@ const Enrollment = () => {
       setFadeOut(false);
     }, 500); // Match this with the CSS transition duration
   };
-
+  const scrolltoContainer = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Optional: Add smooth scrolling
+    });
+  };
+  useEffect(() => {
+    scrolltoContainer();
+  }, []);
   useEffect(() => {
     if (!fadeOut) {
       const timeout = setTimeout(() => {
