@@ -42,7 +42,7 @@ const InputForm = ({ sellerId, companyid }) => {
         SellerID: sellerId,
       };
 
-      console.log("Sending data to backend:", dataToSubmit);
+      // console.log("Sending data to backend:", dataToSubmit);
 
       const response = await submitStep1(dataToSubmit);
 
@@ -52,7 +52,7 @@ const InputForm = ({ sellerId, companyid }) => {
       response.Phone = form.phone;
       response.ZipCode = form.zip;
 
-      console.log("Response from server:", response);
+      // console.log("Response from server:", response);
       setstep1Data(response);
       setloading(false);
       if (companyid) {
@@ -62,7 +62,7 @@ const InputForm = ({ sellerId, companyid }) => {
       }
     } catch (error) {
       setloading(false);
-      console.error("Error submitting form:", error);
+      // console.error("Error submitting form:", error);
       setError(error);
     }
   };

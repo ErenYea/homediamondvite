@@ -66,7 +66,7 @@ const InputForm4 = ({ companyid }) => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Billing Data", billingData);
+    // console.log("Billing Data", billingData);
     setErrorMessage("");
     setLoading(true);
     if (isBillingDataValid()) {

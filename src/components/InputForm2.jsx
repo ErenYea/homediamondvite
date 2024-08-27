@@ -45,7 +45,7 @@ const InputForm2 = ({ companyid }) => {
     }
     setLoading(true);
     try {
-      console.log("This is the data being sent: ", formData);
+      // console.log("This is the data being sent: ", formData);
       const response = await submitStep2(formData);
 
       response.FirstName = formData.FirstName;
@@ -57,7 +57,7 @@ const InputForm2 = ({ companyid }) => {
       response.PropertyAddress2 = formData.PropertyAddress2;
       response.City = formData.City;
       response.StateID = formData.StateID;
-      console.log("API Response:", response);
+      // console.log("API Response:", response);
       setstep2Data(response);
       setLoading(false);
       sessionStorage.setItem("initialData", JSON.stringify(response));
@@ -68,13 +68,13 @@ const InputForm2 = ({ companyid }) => {
       // // navigate("/enrollment");
     } catch (error) {
       setLoading(false);
-      console.error("Error submitting Step 2:", error);
+      // console.error("Error submitting Step 2:", error);
       setError(error);
     }
   };
 
   useEffect(() => {
-    console.log("Received initialData:", initialData);
+    // console.log("Received initialData:", initialData);
     setFormData((prevData) => ({
       ...prevData,
       LeadID: initialData.LeadID || "",

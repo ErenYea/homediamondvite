@@ -26,7 +26,7 @@ const Enrollment = () => {
       : []
   );
   const navigate = useNavigate();
-  console.log(step1Data);
+  // console.log(step1Data);
   // const currentStep = 3;
   const currentStep = step4Data
     ? 5
