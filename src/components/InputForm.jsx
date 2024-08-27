@@ -46,8 +46,13 @@ const InputForm = ({ sellerId, companyid }) => {
 
       const response = await submitStep1(dataToSubmit);
 
-      console.log("Response from server:", response);
+      response.FirstName = form.firstName;
+      response.LastName = form.lastName;
+      response.Email = form.email;
+      response.Phone = form.phone;
+      response.ZipCode = form.zip;
 
+      console.log("Response from server:", response);
       setstep1Data(response);
       setloading(false);
       if (companyid) {

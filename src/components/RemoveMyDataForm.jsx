@@ -130,6 +130,7 @@ const RemoveMyDataForm = () => {
               type="text"
               id="zipCode"
               name="zipCode"
+              pattern="[0-9]{5}"
               value={form.zipCode}
               onChange={handleChange}
               className="text-black p-[5px] border w-full rounded box-border"
@@ -174,6 +175,7 @@ const RemoveMyDataForm = () => {
               type="text"
               id="homeZipCode"
               name="homeZipCode"
+              pattern="[0-9]{5}"
               value={form.homeZipCode}
               onChange={handleChange}
               className="text-black p-[5px] border w-full rounded box-border"

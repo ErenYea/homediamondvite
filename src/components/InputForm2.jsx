@@ -47,6 +47,16 @@ const InputForm2 = ({ companyid }) => {
     try {
       console.log("This is the data being sent: ", formData);
       const response = await submitStep2(formData);
+
+      response.FirstName = formData.FirstName;
+      response.LastName = formData.LastName;
+      response.Email = formData.Email;
+      response.ZipCode = formData.ZipCode;
+      response.PropertyType = formData.PropertyType;
+      response.PropertyAddress1 = formData.PropertyAddress1;
+      response.PropertyAddress2 = formData.PropertyAddress2;
+      response.City = formData.City;
+      response.StateID = formData.StateID;
       console.log("API Response:", response);
       setstep2Data(response);
       setLoading(false);
