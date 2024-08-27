@@ -304,6 +304,127 @@ export const translations = {
     errorpage: {
       title: "Something went wrong",
     },
+    privacy: {
+      title: "Privacy Notice",
+      date: "Effective date: May 2024",
+      heading: "Introduction",
+      description: `We at Diamond Home Protection, LLC (collectively referred to as “DHP,” “we,” “us,” or “our”) respect the privacy of our users and customers (each referred to as a “user,” “your,” or “you”). To demonstrate our commitment to the protection of your privacy, we have created this privacy notice (“Privacy Notice”). This Privacy Notice applies to www.diamondhomeprotetion.com whether accessed via computer, mobile device, or otherwise, and all related web pages (collectively the “Site”), as well as any services we offer (“Services”).<br/>
+      This Privacy Notice describes the personal information that we collect from you, or that you provide on this Site or through use of our Services, and how that information may be used or disclosed by us.
+      Our Site and Services are controlled, operated, and administered by DHP from its offices within the United States. We provide the Site for informational purposes regarding our Services, and there is not a guarantee that products or services may be available in your area. If you are accessing our Site from a location outside of the United States, you acknowledge and consent to the collection, storage, processing, and transfer of your personal information to our facilities in the United States and to those third parties with whom we share such information as described in this Privacy Notice. Any mobile numbers we receive from you via your opt-in to a specific marketing campaign from us will not be shared outside of DHP for any marketing or advertising purposes. You may request additional product information through our Site by submitting a request by e-mail to contact@diamondhomeprotection.com.<br/>
+      Please read this Privacy Notice carefully. By using or accessing our Site or Services, you acknowledge and agree to the terms of this Privacy Notice and the Terms of Use.<br/>
+      In addition to this Privacy Notice, you may receive and be covered by our Consumer Privacy Notice, as well as any other privacy disclosures that we provide to you with account-opening documents.
+      `,
+      subheading1: "What Kinds of Information Do We Collect About You?",
+      subdescription1: `We collect information as part of our business operations, to provide Services, to respond to requests and offer customer support, and to fulfill legal and contractual obligations. Through your use of the Site or Services, we may collect information that identifies you as an individual or relates to you as an individual (“Personal Information”). You voluntarily provide Personal Information directly to us, such as when you complete applications, service contracts, warranty contracts, or other forms. We also collect Personal Information as you navigate through the Site and from third parties.`,
+      subheading2: "Information You Provide",
+      subdescription2: `We may collect the following Personal Information that you voluntarily provide to us:`,
+      subdescription2bullets: [
+        `Information that you provide by filling in forms on our Site. This includes information provided at the time of submitting applications for home warranty coverage, service contracts, renewals, new home warranty enrollments, filing claims, or payments associated with any of these activities. For example, we may ask you to provide your first and last name, telephone number, e-mail address, password, physical address, and other information when registering for an account.`,
+        `Information you provide when you report a problem with our Site or request information about our products and Services.`,
+        `Details of transactions you carry out through our Site, including your credit card, debit card, or bank account information required to complete the transaction.`,
+        `Records and copies of your correspondence (including home addresses, e-mail addresses, and telephone numbers).`,
+        `If you choose to interact with our Site by sharing on a social media platform, we may collect the information that you post. Please note that your comments will also be visible to the public, so you should never share Personal Information that you would like to keep private.`,
+        `Information that you choose to provide if you apply for a job through the Site.`,
+        `Information that you provide if you use our e-mail services. For example, we may ask you to provide your name, e-mail address, or e-mail addresses for the recipients of the e-mail and a message. DHP may retain and monitor these messages.`,
+      ],
+      subheading3: "Information Provided by Third Parties",
+      subdescription3: `We may receive certain Personal Information about you from third parties. For example, a user may be requested to provide Personal Information of other individuals, such as builders and broker/agents, when filling in forms on the Site or when sending e-mails using our e-mail services. If you submit any Personal Information about another individual to our Site, you are responsible for making sure that you have the authority to do so and to allow us to use their Personal Information in accordance with this Privacy Notice.`,
+      subheading4: "Information as You Navigate Our Site",
+      subdescription4:
+        "We may automatically collect certain technical information through your use of the Site and Services, such as the following:",
+      subdescription4bullets: [
+        {
+          heading: "Usage Information",
+          description: `We collect certain information automatically through your use of the Site, such as which of the pages on the Site that you access, the frequency of access, and what you click on while on our Site. We may also collect information about your use of the Services, such as frequency of use.`,
+        },
+        {
+          heading: "Location Information",
+          description: `We may collect information about your actual location which may be determined from GPS and other sensors that may reveal information on nearby devices, Wi-Fi access points, and cell towers.`,
+        },
+        {
+          heading: "Device Information",
+          description: `We may collect information about the device you are using, such as hardware model, operating system, application version number, browser, and IP addresses.`,
+        },
+        {
+          heading: "Mobile Device Information",
+          description: `In addition to the Device Information listed above, when you access our Site via a browser on your mobile device, we may collect mobile network information including telephone number, the unique device identifier assigned to that device, mobile carrier, operating system, and other device attributes.`,
+        },
+      ],
+      subheading5: "How Do We Use “Cookies” and Other Tracking Technologies?",
+      subdescription5: `Our Site may use cookies and other tracking technologies (such as web beacons and pixel tags) to identify users who have previously used our Site so that the user is recognized upon returning. Cookies are small files created by websites, including our Site, that reside on your computer’s hard drive and that store information about your use of a particular website. As you navigate through the Site, we use cookies to collect any of the types of information noted above. This is aggregated statistical data about our users’ equipment, browsing actions, and patterns, and may be derived from your Personal Information. While this statistical or aggregated information does not directly identify you, it may become personally identifiable if combined with other information. <br/>Use of cookies helps us to improve our Site and to deliver more personal service by enabling us to:`,
+      subdescription5bullets: [
+        "Estimate our audience size and usage patterns",
+        "Store information about your preferences, allowing us to customize our Site according to your individual needs",
+        "Deliver advertisements tailored to your interests on third-party websites",
+        "Speed up your searches; and",
+        "Recognize you when you return to our Site.",
+      ],
+      subdescription5remaining: `Although most web browsers are initially set up to accept cookies, if you prefer, you may decline the placement of a cookie on your hard drive by using the appropriate features of your web browser software or deleting any existing cookies. Users should understand, however, that certain functions of this Site may not function properly if your web browser does not accept cookies.<br/>
+      You can find out more about cookies and how to manage them by visiting www.AboutCookies.org.
+      You can understand which third parties have currently enabled cookies for your browser or mobile device and how to opt out of some of those cookies by accessing the Network Advertising Initiative’s website or the Digital Advertising Alliance’s website or, if you are located in the European Union, at the Your Online Choices website. For more information on mobile specific opt-out choices, visit the Network Advertising Initiative’s Mobile Choices website.<br/>
+      We use Google Analytics, a web analytics service provided by Google, Inc. Google Analytics uses cookies or other tracking technologies to help us analyze how users interact with the Site, compile reports on the Site’s activity, and provide other services related to Site activity and usage. The technologies used by Google may collect information such as your IP address, time of visit, whether you are a return visitor, and any referring website. The technologies used by Google Analytics do not gather information that personally identifies you. The information generated by Google Analytics will be transmitted to and stored by Google and will be subject to Google’s privacy policies. To learn more about Google’s partner services and to learn how to opt out of tracking of analytics by Google, click here.<br/>
+      We have implemented certain third-party technologies, including Google Remarketing and Display Advertising features, to collect data about visitors to our Site in order to, among other things, deliver advertising content on sites across the Internet in a manner that is specifically directed toward the interests expressed by the visitors while on our Site. Third-party vendors, including Google, use cookies to serve ads based on someone’s past visits to the Site. You can opt out of Google’s use of cookies to serve ads based on your past visits to the Site via the following link: Google Ad Settings. We do not have access to, nor control over, third parties’ use of cookies or other tracking technologies.
+      `,
+      subheading6: "Does the Website Respond to “Do Not Track” Signals?",
+      subdescription6: `There is currently no industry agreed-upon response to a Do Not Track signal. At this time, our Site and Services do not respond differently based on a user’s Do Not Track signal.`,
+      subheading7: "How Do We Use the Information We Collect?",
+      subdescription7: `We may use information we collect about you or that you provide to us in the following ways:`,
+      subdescription7bullets: [
+        "To present our Site and its contents in a suitable and effective manner for you and for your device;",
+        "To provide you with information, products, or Services that you request from us;",
+        "To advertise products and Services that we think may be of interest to you;",
+        "To establish and manage accounts, including by collecting and processing payments and completing transactions;",
+        "To provide our e-mail services;",
+        "To provide customer support, troubleshoot issues, manage accounts, and respond to requests, questions, and comments;",
+        "To carry out our obligations and enforce our rights arising from any contracts entered into between you and us; and",
+        "To notify you about any additions, upgrades, or changes in our Services.",
+      ],
+      subheading8: "Whom Do We Share Information With?",
+      subdescription8: `We may share information we collect about you or that you provide to us in the following ways:`,
+      subdescription8bullets: [
+        "To our subsidiaries and affiliates;",
+        "With non-affiliated third-party contractors and service providers as necessary to process payments, process and settle claims, issue or renew and process home service contracts, issue and process builders’ new-home warranties, and to fulfill other related service or warranty obligations;",
+        "With non-affiliated third parties that may provide products or services that we think may be of interest to you;",
+        "To third-party service providers to prepare, deploy, and analyze advertising content;",
+        "To third parties to comply with a court order or other legal obligation, enforce or apply our Terms of Use, or to protect the rights, property, or safety of DHP, our customers, or others;",
+        "In connection with, or during negotiations for, an acquisition, merger, asset sale, or other similar business transfer that involves all or substantially all of our assets or functions where the information is transferred or shared as part of the business assets (provided that such party agrees to use or disclose the information consistent with this Notice or gains your consent for other uses or disclosures);",
+        "In the event of a bankruptcy, as part of a sale in connection with reorganization or liquidation processes; and",
+        "With your consent or at your direction, such as when you choose to share information or publicly post content and reviews (for example, social media posts).",
+      ],
+      subdescription8remaining:
+        "We do not sell, rent, or otherwise disclose mailing lists or other information obtained through our Site to any non-affiliated companies for their marketing purposes without your express permission.",
+      subheading9: "What Choices Do You Have About Your Personal Data?",
+      subheading9heading1: "Marketing Communications",
+      subheading9heading1description: `You may opt out of our e-mail marketing communications to you by following the unsubscribe instructions provided in such communications.`,
+      subheading9heading2: "Accuracy of Your Personal Information",
+      subheading9heading2description: `We strive to maintain the accuracy of your information. In order to help us maintain accuracy, you have the right to reasonably access your information and request changes. If you believe any of your information in our possession is inaccurate, you may request that we amend or delete the information that you believe to be erroneous. If we concur with your conclusion, we will amend or delete the information in question.<br/>
+      Please write to our Privacy Officer at the address listed below to request correction or deletion of inaccurate information, or to ask any other questions about this Privacy Notice.<br/>
+      Diamond Home Protection, LLC<br/>
+      Attn: Legal Department<br/>
+      P.O. Box 1295<br/>
+      O’Fallon, IL 62269<br/>
+      `,
+      subheading10: "California Privacy Rights",
+      subdescription10: `If you are a California user, you have certain rights with respect to the collection, use, transfer, and processing of your Personal Information, as defined by the California Consumer Privacy Act (“CCPA”). We reserve the right to limit these rights where permitted under applicable law, including where your identity cannot be reasonably verified or to the extent your rights adversely affect the rights and freedoms of others. To exercise any of the rights below, please contact us via the contact information below. Only you or a person registered with the California Secretary of State that you authorize to act on your behalf may make a verifiable consumer request related to your Personal Information. For more details on the CCPA, see here.`,
+      subheading11: "How Do We Safeguard Your Information?",
+      subdescription11: `The security and protection of personal information is important to us, and we take administrative, technical, and physical safeguards to protect the information from unauthorized access, misuse, accidental loss, or alteration.\n
+      Unfortunately, the transmission of information via the Internet is not completely secure. Although we do our best to protect your Personal Information, we cannot guarantee complete security of your Personal Information transmitted to our Site. Any transmission of such information is at your own risk.
+      `,
+      subheading12: "Data Retention",
+      subdescription12: `In order to have accurate records of whom we received direct communications from or whom we sent communications to, we may indefinitely store the information you provide us through the Site.`,
+      subheading13: "Third-Party Websites",
+      subdescription13: `Our Site may include content from third parties, or the Site may provide links to other websites that are not maintained or controlled by us. This does not imply endorsement of the linked site or service by us. Such third-party websites may include social media platform features, such as the “share” button for Facebook, LinkedIn, and Twitter. These third parties may use cookies or other tracking technologies to collect information about you when you use our Site. The information they collect may be associated with your Personal Information, or they may collect information, including Personal Information, about your online activities over time and across different websites and other online services.\n
+      We are not responsible for the privacy practices or the content of other websites, and we encourage you to review the privacy policies of any third-party websites you visit through any links on our Site.
+      `,
+      subheading14: "Children’s Privacy",
+      subdescription14: `Our Site is not intended for children under 13 years of age. No one under age 13 may provide any Personal Information to or on the Site. We do not knowingly collect Personal Information from children under 13. If you are under 13, please do not register on this Site, make any purchases through the Site, or send any information about yourself to us, including your name, address, telephone number, or e-mail address. In the event that we learn that we have collected Personal Information from a child under age 13 without verification of parental consent, we will immediately delete that information. If you believe that we might have any information from or about a child under 13, please contact our Privacy Officer by e-mail at contact@diamondhomeprotection.com.`,
+      subheading15: "Changes to This Privacy Notice",
+      subdescription15: `We may add to, delete, or change the terms of this Privacy Notice from time to time by posting a notice of the change or an amended Privacy Notice on the Site. Your continued use of the Site is deemed to be acceptance of such changes.`,
+      subheading16: "How to Contact Us",
+      subdescription16: `Please contact us at contact@diamondhomeprotection.com with any questions or concerns you may have about your privacy and our data protection practices.`,
+      subheading17: "Arbitration",
+      subdescription17: `By using the Site, you agree to submit any disputes arising from, related to, and/or concerning this Privacy Notice, including but not limited to disputes arising from or concerning the scope of this arbitration agreement, interpretation, violation, nullity, invalidity, non-performance ,or termination, as well as disputes about filling gaps in this Privacy Notice or its adaptation to newly arisen circumstances, to final and binding arbitration under the International Rules of Arbitration of the American Arbitration Association (“Rules”), by one or more arbitrators appointed in accordance with the said Rules. Notwithstanding the Rules, however, such proceeding shall be governed by the laws of the state of Illinois. Any award in an arbitration initiated under this clause shall be limited to monetary damages and shall include no injunction or direction to any party other than the direction to pay a monetary amount. Further, the arbitrator(s) shall have no authority to award punitive, consequential, or other damages in any arbitration initiated under this section, except as may be required by statute. This arbitration agreement is self-executing.`,
+    },
 
     // Add other sections here...
   },
