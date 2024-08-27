@@ -282,6 +282,9 @@ export const translations = {
       homeCity: "Home City",
       homeAddress: "Home Address",
     },
+    faqPage: {
+      faqHeading: "Frequently Asked Questions",
+    },
     productsPage: {
       mainText:
         "A Home Warranty PROTECTS Your Time and Money from Unexpected Repair Costs . . .",
@@ -522,6 +525,9 @@ export const translations = {
       homeZipCode: "Código postal de casa",
       homeCity: "Ciudad natal",
       homeAddress: "Dirección de casa",
+    },
+    faqPage: {
+      faqHeading: "Preguntas frecuentes",
     },
     productsPage: {
       mainText:

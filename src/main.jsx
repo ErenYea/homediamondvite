@@ -14,6 +14,7 @@ import NoWarrantiesYet from "./pages/NoWarrantiesYet/NoWarrantiesYet.jsx";
 import ErrorBoundary from "./components/ErrorBoundary.jsx";
 import RemoveMyData from "./pages/RemoveMyData/RemoveMyData.jsx";
 import Privacy from "./pages/Privacy/privacy.jsx";
+import FAQ from "./pages/FAQ/FAQ.jsx";
 
 const router = createBrowserRouter([
   {
@@ -68,6 +69,16 @@ const router = createBrowserRouter([
       <div className="w-full h-full">
         <NavBar />
         <Home />
+        <Footer />
+      </div>
+    ),
+  },
+  {
+    path: "/faq",
+    element: (
+      <div className="w-full h-full">
+        <NavBar />
+        <FAQ />
         <Footer />
       </div>
     ),

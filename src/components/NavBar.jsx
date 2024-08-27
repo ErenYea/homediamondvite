@@ -19,7 +19,7 @@ const NavBar = () => {
           <Link to="/products" className=" hover:underline">
             <TextBlock section="navbar" element="products" />
           </Link>
-          <Link to="/FAQ" className="hover:underline">
+          <Link to="/faq" className="hover:underline">
             <TextBlock section="navbar" element="faq" />
           </Link>
           <Link to="/contact-us" className=" hover:underline">
