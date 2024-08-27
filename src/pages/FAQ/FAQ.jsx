@@ -59,11 +59,11 @@ const FAQ = () => {
                 onClick={() => handleQuestionToggle(ind)}
               >
                 <div className="w-[90%] flex flex-col gap-5 transition-all">
-                  <span>
+                  <span className="font-semibold text-xl">
                     <TextBlock section="faq" element={`question${ind + 1}`} />
                   </span>
                   {openedQuestion === ind && (
-                    <span>
+                    <span className="text-lg">
                       <TextBlock section="faq" element={`answer${ind + 1}`} />
                     </span>
                   )}
