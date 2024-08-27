@@ -428,7 +428,61 @@ export const translations = {
       subheading17: "Arbitration",
       subdescription17: `By using the Site, you agree to submit any disputes arising from, related to, and/or concerning this Privacy Notice, including but not limited to disputes arising from or concerning the scope of this arbitration agreement, interpretation, violation, nullity, invalidity, non-performance ,or termination, as well as disputes about filling gaps in this Privacy Notice or its adaptation to newly arisen circumstances, to final and binding arbitration under the International Rules of Arbitration of the American Arbitration Association (“Rules”), by one or more arbitrators appointed in accordance with the said Rules. Notwithstanding the Rules, however, such proceeding shall be governed by the laws of the state of Illinois. Any award in an arbitration initiated under this clause shall be limited to monetary damages and shall include no injunction or direction to any party other than the direction to pay a monetary amount. Further, the arbitrator(s) shall have no authority to award punitive, consequential, or other damages in any arbitration initiated under this section, except as may be required by statute. This arbitration agreement is self-executing.`,
     },
-
+    terms: {
+      title: "Terms and Conditions",
+      date: "<strong>Last Update:</strong> April 19 2024",
+      description: `Welcome to diamondhomeprotection.com (the "Website"), operated by Diamond Home Protection, LLC ("we," "us," or "our"). These Terms & Conditions ("Terms") govern your access to and use of the Website, including any content, functionality, and services offered on or through the Website. By accessing or using the Website, you agree to be bound by these Terms. If you do not agree to these Terms, you may not access or use the Website.`,
+      subheading1: "User Eligibility",
+      subdescription1: `You must be at least eighteen (18) years old to use this Website. By using the Website, you represent and warrant that you are at least eighteen (18) years old.`,
+      subheading2: "Account Creation and Management",
+      subdescription2bullets: [
+        "You may be required to create an account to access certain features of the Website. You agree to provide accurate, current, and complete information during the registration process and to update such information to keep it accurate, current, and complete.",
+        "You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to notify us immediately of any unauthorized access to or use of your account.",
+      ],
+      subheading3: "Acceptable Use Policy",
+      subdescription3bullets: [
+        "You agree not to use the Website in any way that violates any applicable laws or regulations or infringes on the rights of others.",
+        "You agree not to engage in any conduct that could disable, overburden, damage, or impair the Website or interfere with any other party's use of the Website.",
+      ],
+      subheading4: "Intellectual Property Rights",
+      subdescription4bullets: [
+        "The Website and its entire contents, features, and functionality (including but not limited to all information, software, text, displays, images, video, and audio) are owned by us or our licensors and are protected by copyright, trademark, and other intellectual property laws.",
+        `You may not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store, or transmit any of the material on our Website without our prior written consent.`,
+      ],
+      subheading5: "Privacy Considerations",
+      subdescription5: `Your use of the Website is subject to our Privacy Policy [insert link to Privacy Policy], which is incorporated into these Terms by reference. By using the Website, you consent to the collection and use of your information as described in the Privacy Policy.`,
+      subheading6: "Limitation of Liability",
+      subdescription6: `To the fullest extent permitted by applicable law, we disclaim all warranties, express or implied, regarding the Website and your use thereof. We will not be liable for any damages of any kind arising from the use of the Website.`,
+      subheading7: "Dispute Resolution",
+      subdescription7: `Any dispute arising out of or relating to these Terms or your use of the Website shall be resolved through arbitration in accordance with its Commercial Arbitration Rules, and judgment on the award rendered by the arbitrator(s) may be entered in any court having jurisdiction thereof.`,
+      subheading8: "Updates to Terms",
+      subdescription8: `We may update these Terms from time to time. Any changes will be effective immediately upon posting the revised Terms on the Website. By continuing to use the Website after such changes are posted, you agree to be bound by the revised Terms.`,
+      subheading9: "Contact Us",
+      subdescription9: `If you have any questions or concerns about these Terms, please contact us at contact@diamondhomeprotection.com.<br/>
+      By using the Website, you acknowledge that you have read, understood, and agree to be bound by these Terms. If you do not agree to these Terms, you may not access or use the Website.
+      `,
+    },
+    faq: {
+      question1: "What does a home warranty cover?",
+      answer1:
+        "A home warranty may cover certain systems like central air conditioning, heating, plumbing, electrical, and water heaters, as well as appliances like refrigerators, stoves, washers, and dryers.",
+      question2: "Do you cover older appliances?",
+      answer2:
+        "Yes. If the covered system or appliance is in working order when you purchase a 2-10 HBW home warranty (i.e., doesn't have a pre-existing problem).",
+      question3:
+        "What's the difference between a home warranty and homeowners insurance?",
+      answer3:
+        "A home warranty is an annual contract that can help reduce the costs to repair or replace covered systems and appliances that break down from normal wear and tear. Homeowners insurance covers loss from incidents like fire, storms, or vandalism. The coverages provided by a home warranty and homeowners insurance typically don't overlap and often complement one another to provide comprehensive protection.",
+      question4: "What is a home warranty?",
+      answer4:
+        "A home warranty (or Home Warranty Service Agreement as we call it) is a powerful budget-protecting service contract for homeowners that can provide coverage for things that homeowners insurance doesn't.",
+      question5: "How do I request service or file a claim?",
+      answer5:
+        "To request service, log in to your Homeowner Portal account, select the system or appliance that needs service, answer a few questions, and we'll dispatch an authorized Service Contractor to your home.",
+      question6: "When can you purchase a home warranty?",
+      answer6:
+        "You can purchase a home warranty at any time for any house. While many home warranties are purchased by a buyer or a seller of a home during a real estate transaction, a home warranty can be purchased by any homeowner looking to protect their budget.",
+    },
     // Add other sections here...
   },
   es: {
@@ -660,6 +714,182 @@ export const translations = {
     },
     errorpage: {
       title: "Algo salió mal",
+    },
+    privacy: {
+      title: "Aviso de Privacidad",
+      date: "Fecha de vigencia: mayo de 2024",
+      heading: "Introducción",
+      description: `Nosotros en Diamond Home Protection, LLC (colectivamente referidos como "DHP", "nosotros", "nos" o "nuestro") respetamos la privacidad de nuestros usuarios y clientes (cada uno referido como "usuario", "su", o "usted"). Para demostrar nuestro compromiso con la protección de su privacidad, hemos creado este aviso de privacidad ("Aviso de Privacidad"). Este Aviso de Privacidad se aplica a www.diamondhomeprotection.com, ya sea que se acceda a través de una computadora, dispositivo móvil o de otra manera, y todas las páginas web relacionadas (colectivamente, el "Sitio"), así como a cualquier servicio que ofrezcamos ("Servicios").<br/>
+    Este Aviso de Privacidad describe la información personal que recopilamos de usted, o que usted proporciona en este Sitio o a través del uso de nuestros Servicios, y cómo esa información puede ser utilizada o divulgada por nosotros.
+    Nuestro Sitio y Servicios son controlados, operados y administrados por DHP desde sus oficinas dentro de los Estados Unidos. Proporcionamos el Sitio con fines informativos sobre nuestros Servicios, y no hay garantía de que los productos o servicios puedan estar disponibles en su área. Si está accediendo a nuestro Sitio desde una ubicación fuera de los Estados Unidos, usted reconoce y consiente la recopilación, almacenamiento, procesamiento y transferencia de su información personal a nuestras instalaciones en los Estados Unidos y a terceros con los que compartimos dicha información como se describe en este Aviso de Privacidad. Cualquier número de móvil que recibamos de usted a través de su participación en una campaña de marketing específica no se compartirá fuera de DHP para ningún propósito de marketing o publicidad. Puede solicitar información adicional sobre productos a través de nuestro Sitio enviando una solicitud por correo electrónico a contact@diamondhomeprotection.com.<br/>
+    Por favor, lea este Aviso de Privacidad detenidamente. Al usar o acceder a nuestro Sitio o Servicios, usted reconoce y acepta los términos de este Aviso de Privacidad y los Términos de Uso.<br/>
+    Además de este Aviso de Privacidad, puede recibir y estar cubierto por nuestro Aviso de Privacidad del Consumidor, así como por cualquier otra divulgación de privacidad que le proporcionemos con los documentos de apertura de cuenta.
+    `,
+      subheading1: "¿Qué tipo de información recopilamos sobre usted?",
+      subdescription1: `Recopilamos información como parte de nuestras operaciones comerciales, para proporcionar Servicios, para responder a solicitudes y ofrecer soporte al cliente, y para cumplir con obligaciones legales y contractuales. A través de su uso del Sitio o Servicios, podemos recopilar información que lo identifica como individuo o se relaciona con usted como individuo ("Información Personal"). Usted proporciona voluntariamente Información Personal directamente a nosotros, como cuando completa solicitudes, contratos de servicio, contratos de garantía u otros formularios. También recopilamos Información Personal mientras navega por el Sitio y de terceros.`,
+      subheading2: "Información que usted proporciona",
+      subdescription2: `Podemos recopilar la siguiente Información Personal que usted nos proporciona voluntariamente:`,
+      subdescription2bullets: [
+        `Información que usted proporciona al completar formularios en nuestro Sitio. Esto incluye la información proporcionada en el momento de enviar solicitudes de cobertura de garantía de hogar, contratos de servicio, renovaciones, nuevas inscripciones de garantía de hogar, presentación de reclamaciones o pagos asociados con cualquiera de estas actividades. Por ejemplo, podemos pedirle que proporcione su nombre y apellido, número de teléfono, dirección de correo electrónico, contraseña, dirección física y otra información al registrarse para una cuenta.`,
+        `Información que usted proporciona cuando informa un problema con nuestro Sitio o solicita información sobre nuestros productos y Servicios.`,
+        `Detalles de las transacciones que realiza a través de nuestro Sitio, incluida la información de su tarjeta de crédito, tarjeta de débito o cuenta bancaria necesaria para completar la transacción.`,
+        `Registros y copias de su correspondencia (incluyendo direcciones de casa, direcciones de correo electrónico y números de teléfono).`,
+        `Si elige interactuar con nuestro Sitio compartiendo en una plataforma de redes sociales, podemos recopilar la información que publica. Tenga en cuenta que sus comentarios también serán visibles para el público, por lo que nunca debe compartir Información Personal que desee mantener en privado.`,
+        `Información que elija proporcionar si solicita un trabajo a través del Sitio.`,
+        `Información que usted proporciona si utiliza nuestros servicios de correo electrónico. Por ejemplo, podemos pedirle que proporcione su nombre, dirección de correo electrónico o direcciones de correo electrónico de los destinatarios del correo electrónico y un mensaje. DHP puede retener y monitorear estos mensajes.`,
+      ],
+      subheading3: "Información proporcionada por terceros",
+      subdescription3: `Podemos recibir cierta Información Personal sobre usted de terceros. Por ejemplo, se puede solicitar a un usuario que proporcione Información Personal de otras personas, como constructores y agentes/corredores, al completar formularios en el Sitio o al enviar correos electrónicos utilizando nuestros servicios de correo electrónico. Si envía cualquier Información Personal sobre otra persona a nuestro Sitio, usted es responsable de asegurarse de que tiene la autoridad para hacerlo y de permitirnos usar su Información Personal de acuerdo con este Aviso de Privacidad.`,
+      subheading4: "Información mientras navega por nuestro Sitio",
+      subdescription4:
+        "Podemos recopilar automáticamente cierta información técnica a través de su uso del Sitio y Servicios, como lo siguiente:",
+      subdescription4bullets: [
+        {
+          heading: "Información de Uso",
+          description: `Recopilamos cierta información automáticamente a través de su uso del Sitio, como cuáles de las páginas del Sitio accede, la frecuencia de acceso y en qué hace clic mientras está en nuestro Sitio. También podemos recopilar información sobre su uso de los Servicios, como la frecuencia de uso.`,
+        },
+        {
+          heading: "Información de Ubicación",
+          description: `Podemos recopilar información sobre su ubicación real que puede determinarse a partir de GPS y otros sensores que pueden revelar información sobre dispositivos cercanos, puntos de acceso Wi-Fi y torres de telefonía móvil.`,
+        },
+        {
+          heading: "Información del Dispositivo",
+          description: `Podemos recopilar información sobre el dispositivo que está utilizando, como el modelo de hardware, el sistema operativo, el número de versión de la aplicación, el navegador y las direcciones IP.`,
+        },
+        {
+          heading: "Información del Dispositivo Móvil",
+          description: `Además de la Información del Dispositivo mencionada anteriormente, cuando acceda a nuestro Sitio a través de un navegador en su dispositivo móvil, podemos recopilar información de la red móvil, incluyendo el número de teléfono, el identificador único del dispositivo asignado a ese dispositivo, la operadora móvil, el sistema operativo y otros atributos del dispositivo.`,
+        },
+      ],
+      subheading5:
+        "¿Cómo utilizamos las “cookies” y otras tecnologías de seguimiento?",
+      subdescription5: `Nuestro Sitio puede utilizar cookies y otras tecnologías de seguimiento (como balizas web y etiquetas de píxel) para identificar a los usuarios que han utilizado previamente nuestro Sitio para que el usuario sea reconocido al regresar. Las cookies son pequeños archivos creados por sitios web, incluidos nuestro Sitio, que residen en el disco duro de su computadora y que almacenan información sobre su uso de un sitio web en particular. A medida que navega por el Sitio, utilizamos cookies para recopilar cualquiera de los tipos de información mencionados anteriormente. Esto es un dato estadístico agregado sobre el equipo de nuestros usuarios, acciones y patrones de navegación, y puede derivarse de su Información Personal. Aunque esta información estadística o agregada no lo identifica directamente, puede volverse personalmente identificable si se combina con otra información.<br/>El uso de cookies nos ayuda a mejorar nuestro Sitio y a ofrecer un servicio más personal al permitirnos:`,
+      subdescription5bullets: [
+        "Estimar el tamaño de nuestra audiencia y los patrones de uso",
+        "Almacenar información sobre sus preferencias, lo que nos permite personalizar nuestro Sitio según sus necesidades individuales",
+        "Ofrecer publicidad adaptada a sus intereses en sitios web de terceros",
+        "Acelerar sus búsquedas; y",
+        "Reconocerlo cuando regrese a nuestro Sitio.",
+      ],
+      subdescription5remaining: `Aunque la mayoría de los navegadores web están configurados inicialmente para aceptar cookies, si lo prefiere, puede rechazar la colocación de una cookie en su disco duro utilizando las funciones adecuadas del software de su navegador web o eliminando cualquier cookie existente. Sin embargo, los usuarios deben entender que ciertas funciones de este Sitio pueden no funcionar correctamente si su navegador web no acepta cookies.<br/>
+    Puede obtener más información sobre cookies y cómo administrarlas visitando www.AboutCookies.org.
+    Puede entender qué terceros han habilitado actualmente cookies para su navegador o dispositivo móvil y cómo optar por no participar en algunas de esas cookies accediendo al sitio web de Network Advertising Initiative o al sitio web de Digital Advertising Alliance o, si se encuentra en la Unión Europea, en el sitio web Your Online Choices. Para obtener más información sobre las opciones de exclusión específicas para móviles, visite el sitio web de Network Advertising Initiative’s Mobile Choices.<br/>
+    Utilizamos Google Analytics, un servicio de análisis web proporcionado por Google, Inc. Google Analytics utiliza cookies u otras tecnologías de seguimiento para ayudarnos a analizar cómo interactúan los usuarios con el Sitio, compilar informes sobre la actividad del Sitio y proporcionar otros servicios relacionados con la actividad y el uso del Sitio. Las tecnologías utilizadas por Google pueden recopilar información como su dirección IP, hora de visita, si es un visitante recurrente y cualquier sitio web de referencia. Las tecnologías utilizadas por Google Analytics no recopilan información que lo identifique personalmente. La información generada por Google Analytics será transmitida y almacenada por Google y estará sujeta a las políticas de privacidad de Google. Para obtener más información sobre los servicios asociados de Google y cómo optar por no participar en el seguimiento de análisis de Google, haga clic aquí.<br/>
+    Hemos implementado ciertas tecnologías de terceros, incluidas las características de Google Remarketing y Display Advertising, para recopilar datos sobre los visitantes de nuestro Sitio con el fin de, entre otras cosas, ofrecer contenido publicitario en sitios de Internet de manera que se dirija específicamente a los intereses expresados por los visitantes mientras están en nuestro Sitio. Los proveedores de terceros, incluidos Google, utilizan cookies para publicar anuncios basados en las visitas anteriores de una persona al Sitio. Puede optar por no participar en el uso de cookies de Google para mostrar anuncios basados en sus visitas anteriores al Sitio a través del siguiente enlace: Configuración de anuncios de Google. No tenemos acceso ni control sobre el uso de cookies u otras tecnologías de seguimiento por parte de terceros.
+    `,
+      subheading6: "¿Responde el sitio web a señales de “No rastrear”?",
+      subdescription6: `Actualmente, no existe una respuesta acordada por la industria a una señal de No rastrear. En este momento, nuestro Sitio y Servicios no responden de manera diferente según la señal de No rastrear de un usuario.`,
+      subheading7: "¿Cómo utilizamos la información que recopilamos?",
+      subdescription7: `Podemos utilizar la información que recopilamos sobre usted o que nos proporciona de las siguientes maneras:`,
+      subdescription7bullets: [
+        "Para presentar nuestro Sitio y su contenido de manera adecuada y efectiva para usted y su dispositivo;",
+        "Para proporcionarle información, productos o Servicios que nos solicite;",
+        "Para anunciar productos y Servicios que creemos que pueden ser de su interés;",
+        "Para establecer y gestionar cuentas, incluyendo la recopilación y procesamiento de pagos y la finalización de transacciones;",
+        "Para proporcionar nuestros servicios de correo electrónico;",
+        "Para proporcionar soporte al cliente, solucionar problemas, gestionar cuentas y responder a solicitudes, preguntas y comentarios;",
+        "Para cumplir con nuestras obligaciones y hacer cumplir nuestros derechos derivados de cualquier contrato celebrado entre usted y nosotros; y",
+        "Para notificarle sobre cualquier adición, actualización o cambio en nuestros Servicios.",
+      ],
+      subheading8: "¿Con quién compartimos información?",
+      subdescription8: `Podemos compartir la información que recopilamos sobre usted o que nos proporciona de las siguientes maneras:`,
+      subdescription8bullets: [
+        "Con nuestras subsidiarias y afiliados;",
+        "Con terceros contratistas y proveedores de servicios no afiliados según sea necesario para procesar pagos, procesar y resolver reclamaciones, emitir o renovar y procesar contratos de servicio para el hogar, emitir y procesar garantías para nuevos hogares de constructores, y cumplir con otras obligaciones de servicio o garantía relacionadas;",
+        "Con terceros no afiliados que pueden proporcionar productos o servicios que creemos que pueden ser de su interés;",
+        "Con proveedores de servicios de terceros para preparar, implementar y analizar contenido publicitario;",
+        "Con terceros para cumplir con una orden judicial u otra obligación legal, hacer cumplir o aplicar nuestros Términos de Uso, o para proteger los derechos, la propiedad o la seguridad de DHP, nuestros clientes u otros;",
+        "En relación con, o durante las negociaciones para, una adquisición, fusión, venta de activos u otra transferencia comercial similar que involucre todos o sustancialmente todos nuestros activos o funciones donde la información se transfiere o comparte como parte de los activos comerciales (siempre que dicha parte acuerde usar o divulgar la información de manera consistente con este Aviso o obtenga su consentimiento para otros usos o divulgaciones);",
+        "En el caso de una quiebra, como parte de una venta en relación con procesos de reorganización o liquidación; y",
+        "Con su consentimiento o bajo su dirección, como cuando elige compartir información o publicar contenido y comentarios públicamente (por ejemplo, publicaciones en redes sociales).",
+      ],
+      subdescription8remaining:
+        "No vendemos, alquilamos ni divulgamos de ninguna otra manera listas de correo u otra información obtenida a través de nuestro Sitio a ninguna empresa no afiliada para sus fines de marketing sin su permiso expreso.",
+      subheading9: "¿Qué opciones tiene sobre sus datos personales?",
+      subheading9heading1: "Comunicaciones de Marketing",
+      subheading9heading1description: `Puede optar por no recibir nuestras comunicaciones de marketing por correo electrónico siguiendo las instrucciones de cancelación de suscripción proporcionadas en dichas comunicaciones.`,
+      subheading9heading2: "Exactitud de su Información Personal",
+      subheading9heading2description: `Nos esforzamos por mantener la exactitud de su información. Para ayudarnos a mantener la precisión, usted tiene el derecho de acceder razonablemente a su información y solicitar cambios. Si cree que alguna de su información en nuestra posesión es inexacta, puede solicitar que modifiquemos o eliminemos la información que considera errónea. Si coincidimos con su conclusión, modificaremos o eliminaremos la información en cuestión.<br/>
+    Por favor, escriba a nuestro Oficial de Privacidad a la dirección que se indica a continuación para solicitar la corrección o eliminación de información inexacta, o para hacer cualquier otra pregunta sobre este Aviso de Privacidad.<br/>
+    Diamond Home Protection, LLC<br/>
+    Attn: Legal Department<br/>
+    P.O. Box 1295<br/>
+    O’Fallon, IL 62269<br/>
+    `,
+      subheading10: "Derechos de Privacidad de California",
+      subdescription10: `Si es un usuario de California, tiene ciertos derechos con respecto a la recopilación, uso, transferencia y procesamiento de su Información Personal, según lo definido por la Ley de Privacidad del Consumidor de California ("CCPA"). Nos reservamos el derecho de limitar estos derechos cuando lo permita la ley aplicable, incluyendo cuando no se pueda verificar razonablemente su identidad o en la medida en que sus derechos afecten negativamente los derechos y libertades de otros. Para ejercer cualquiera de los derechos a continuación, comuníquese con nosotros a través de la información de contacto que se proporciona a continuación. Solo usted o una persona registrada en la Secretaría de Estado de California a la que autorice a actuar en su nombre puede realizar una solicitud de consumidor verificable relacionada con su Información Personal. Para obtener más detalles sobre la CCPA, consulte aquí.`,
+      subheading11: "¿Cómo protegemos su información?",
+      subdescription11: `La seguridad y protección de la información personal es importante para nosotros, y tomamos medidas administrativas, técnicas y físicas para proteger la información del acceso no autorizado, uso indebido, pérdida accidental o alteración.\n
+    Desafortunadamente, la transmisión de información a través de Internet no es completamente segura. Aunque hacemos todo lo posible para proteger su Información Personal, no podemos garantizar la seguridad total de su Información Personal transmitida a nuestro Sitio. Cualquier transmisión de dicha información es bajo su propio riesgo.
+    `,
+      subheading12: "Retención de Datos",
+      subdescription12: `Para tener registros precisos de a quién recibimos comunicaciones directas o a quién enviamos comunicaciones, podemos almacenar indefinidamente la información que nos proporcione a través del Sitio.`,
+      subheading13: "Sitios Web de Terceros",
+      subdescription13: `Nuestro Sitio puede incluir contenido de terceros, o el Sitio puede proporcionar enlaces a otros sitios web que no son mantenidos ni controlados por nosotros. Esto no implica la aprobación del sitio o servicio vinculado por parte de nosotros. Estos sitios web de terceros pueden incluir funciones de plataformas de redes sociales, como el botón "compartir" para Facebook, LinkedIn y Twitter. Estos terceros pueden usar cookies u otras tecnologías de seguimiento para recopilar información sobre usted cuando utiliza nuestro Sitio. La información que recopilan puede estar asociada con su Información Personal, o pueden recopilar información, incluida Información Personal, sobre sus actividades en línea a lo largo del tiempo y a través de diferentes sitios web y otros servicios en línea.\n
+    No somos responsables de las prácticas de privacidad ni del contenido de otros sitios web, y lo alentamos a revisar las políticas de privacidad de cualquier sitio web de terceros que visite a través de cualquier enlace en nuestro Sitio.
+    `,
+      subheading14: "Privacidad Infantil",
+      subdescription14: `Nuestro Sitio no está destinado a niños menores de 13 años. Ninguna persona menor de 13 años puede proporcionar Información Personal a o en el Sitio. No recopilamos deliberadamente Información Personal de niños menores de 13 años. Si tiene menos de 13 años, no se registre en este Sitio, no realice compras a través del Sitio ni nos envíe información sobre usted, incluyendo su nombre, dirección, número de teléfono o dirección de correo electrónico. En caso de que nos enteremos de que hemos recopilado Información Personal de un niño menor de 13 años sin la verificación del consentimiento de los padres, eliminaremos inmediatamente esa información. Si cree que podríamos tener información de o sobre un niño menor de 13 años, comuníquese con nuestro Oficial de Privacidad por correo electrónico a contact@diamondhomeprotection.com.`,
+      subheading15: "Cambios a este Aviso de Privacidad",
+      subdescription15: `Podemos agregar, eliminar o cambiar los términos de este Aviso de Privacidad de vez en cuando publicando un aviso del cambio o un Aviso de Privacidad modificado en el Sitio. Su uso continuo del Sitio se considera como aceptación de dichos cambios.`,
+      subheading16: "Cómo Contactarnos",
+      subdescription16: `Por favor, contáctenos en contact@diamondhomeprotection.com si tiene alguna pregunta o inquietud sobre su privacidad y nuestras prácticas de protección de datos.`,
+      subheading17: "Arbitraje",
+      subdescription17: `Al utilizar el Sitio, usted acepta someter cualquier disputa que surja de, esté relacionada con y/o concierna a este Aviso de Privacidad, incluidas, entre otras, disputas que surjan de o se relacionen con el alcance de este acuerdo de arbitraje, interpretación, violación, nulidad, invalidez, incumplimiento o terminación, así como disputas sobre cómo llenar vacíos en este Aviso de Privacidad o su adaptación a circunstancias surgidas recientemente, al arbitraje final y vinculante bajo las Reglas Internacionales de Arbitraje de la Asociación Americana de Arbitraje ("Reglas"), por uno o más árbitros designados de acuerdo con dichas Reglas. No obstante las Reglas, dicho procedimiento se regirá por las leyes del estado de Illinois. Cualquier laudo en un arbitraje iniciado bajo esta cláusula se limitará a daños monetarios y no incluirá ninguna medida cautelar o dirección a ninguna parte que no sea la dirección de pagar una cantidad monetaria. Además, los árbitros no tendrán autoridad para otorgar daños punitivos, consecuentes u otros daños en cualquier arbitraje iniciado bajo esta sección, salvo que lo exija un estatuto. Este acuerdo de arbitraje es autoejecutable.`,
+    },
+    terms: {
+      title: "Términos y Condiciones",
+      date: "<strong>Última Actualización:</strong> 19 de abril de 2024",
+      description: `Bienvenido a diamondhomeprotection.com (el "Sitio Web"), operado por Diamond Home Protection, LLC ("nosotros", "nuestro" o "nos"). Estos Términos y Condiciones ("Términos") rigen su acceso y uso del Sitio Web, incluyendo cualquier contenido, funcionalidad y servicios ofrecidos en o a través del Sitio Web. Al acceder o utilizar el Sitio Web, usted acepta estar sujeto a estos Términos. Si no está de acuerdo con estos Términos, no podrá acceder ni usar el Sitio Web.`,
+      subheading1: "Elegibilidad del Usuario",
+      subdescription1: `Debe tener al menos dieciocho (18) años de edad para utilizar este Sitio Web. Al usar el Sitio Web, usted declara y garantiza que tiene al menos dieciocho (18) años de edad.`,
+      subheading2: "Creación y Gestión de Cuenta",
+      subdescription2bullets: [
+        "Es posible que se le requiera crear una cuenta para acceder a ciertas funciones del Sitio Web. Usted acepta proporcionar información precisa, actual y completa durante el proceso de registro y actualizar dicha información para mantenerla precisa, actual y completa.",
+        "Usted es responsable de mantener la confidencialidad de las credenciales de su cuenta y de todas las actividades que ocurran bajo su cuenta. Usted acepta notificarnos de inmediato cualquier acceso no autorizado a su cuenta o uso de la misma.",
+      ],
+      subheading3: "Política de Uso Aceptable",
+      subdescription3bullets: [
+        "Usted acepta no utilizar el Sitio Web de ninguna manera que viole las leyes o regulaciones aplicables o que infrinja los derechos de terceros.",
+        "Usted acepta no participar en ninguna conducta que pueda deshabilitar, sobrecargar, dañar o perjudicar el Sitio Web o interferir con el uso del Sitio Web por parte de otros usuarios.",
+      ],
+      subheading4: "Derechos de Propiedad Intelectual",
+      subdescription4bullets: [
+        "El Sitio Web y todo su contenido, características y funcionalidades (incluyendo, pero no limitado a, toda la información, software, texto, pantallas, imágenes, video y audio) son propiedad nuestra o de nuestros licenciantes y están protegidos por leyes de derechos de autor, marcas registradas y otras leyes de propiedad intelectual.",
+        "Usted no puede reproducir, distribuir, modificar, crear obras derivadas, mostrar públicamente, ejecutar públicamente, republicar, descargar, almacenar o transmitir cualquier material de nuestro Sitio Web sin nuestro consentimiento previo por escrito.",
+      ],
+      subheading5: "Consideraciones de Privacidad",
+      subdescription5: `Su uso del Sitio Web está sujeto a nuestra Política de Privacidad [insertar enlace a la Política de Privacidad], que se incorpora en estos Términos por referencia. Al usar el Sitio Web, usted consiente la recopilación y uso de su información según se describe en la Política de Privacidad.`,
+      subheading6: "Limitación de Responsabilidad",
+      subdescription6: `En la máxima medida permitida por la ley aplicable, renunciamos a todas las garantías, expresas o implícitas, respecto al Sitio Web y su uso del mismo. No seremos responsables por ningún daño de ningún tipo que surja del uso del Sitio Web.`,
+      subheading7: "Resolución de Disputas",
+      subdescription7: `Cualquier disputa que surja de o esté relacionada con estos Términos o su uso del Sitio Web se resolverá mediante arbitraje de acuerdo con sus Reglas de Arbitraje Comercial, y el fallo dictado por el árbitro(s) podrá ser registrado en cualquier tribunal que tenga jurisdicción.`,
+      subheading8: "Actualizaciones de los Términos",
+      subdescription8: `Podemos actualizar estos Términos de vez en cuando. Cualquier cambio será efectivo de inmediato al publicar los Términos revisados en el Sitio Web. Al continuar usando el Sitio Web después de que se publiquen dichos cambios, usted acepta estar sujeto a los Términos revisados.`,
+      subheading9: "Contáctenos",
+      subdescription9: `Si tiene alguna pregunta o inquietud acerca de estos Términos, por favor contáctenos en contact@diamondhomeprotection.com.<br/>
+    Al usar el Sitio Web, usted reconoce que ha leído, comprendido y acepta estar sujeto a estos Términos. Si no está de acuerdo con estos Términos, no podrá acceder ni usar el Sitio Web.`,
+    },
+    faq: {
+      question1: "¿Qué cubre una garantía de hogar?",
+      answer1:
+        "Una garantía de hogar puede cubrir ciertos sistemas como aire acondicionado central, calefacción, plomería, electricidad y calentadores de agua, así como electrodomésticos como refrigeradores, estufas, lavadoras y secadoras.",
+      question2: "¿Cubren electrodomésticos antiguos?",
+      answer2:
+        "Sí. Si el sistema o electrodoméstico cubierto está en funcionamiento cuando compra una garantía de hogar 2-10 HBW (es decir, no tiene un problema preexistente).",
+      question3:
+        "¿Cuál es la diferencia entre una garantía de hogar y un seguro de hogar?",
+      answer3:
+        "Una garantía de hogar es un contrato anual que puede ayudar a reducir los costos de reparación o reemplazo de sistemas y electrodomésticos cubiertos que se descomponen por el desgaste normal. El seguro de hogar cubre pérdidas por incidentes como incendios, tormentas o vandalismo. Las coberturas proporcionadas por una garantía de hogar y un seguro de hogar generalmente no se superponen y, a menudo, se complementan para brindar una protección integral.",
+      question4: "¿Qué es una garantía de hogar?",
+      answer4:
+        "Una garantía de hogar (o Acuerdo de Servicio de Garantía de Hogar como lo llamamos) es un poderoso contrato de servicio que protege el presupuesto de los propietarios y que puede proporcionar cobertura para cosas que el seguro de hogar no cubre.",
+      question5: "¿Cómo solicito servicio o presento un reclamo?",
+      answer5:
+        "Para solicitar servicio, inicie sesión en su cuenta del Portal del Propietario, seleccione el sistema o electrodoméstico que necesita servicio, responda algunas preguntas y enviaremos un Contratista de Servicio autorizado a su hogar.",
+      question6: "¿Cuándo se puede comprar una garantía de hogar?",
+      answer6:
+        "Puede comprar una garantía de hogar en cualquier momento para cualquier casa. Si bien muchas garantías de hogar son compradas por un comprador o vendedor de una casa durante una transacción inmobiliaria, cualquier propietario que desee proteger su presupuesto puede comprar una garantía de hogar.",
     },
     // Add other sections here...
   },

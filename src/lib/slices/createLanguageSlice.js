@@ -9,7 +9,7 @@ export const createLanguageSlice = (set, get) => ({
     set({ language });
   },
   getText: (section, element, index) => {
-    console.log(index);
+    // console.log(index);
     if (index !== undefined && index !== null) {
       // console.log(translations.en[section][element][index].heading);
       return (

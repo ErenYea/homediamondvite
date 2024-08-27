@@ -15,6 +15,7 @@ import ErrorBoundary from "./components/ErrorBoundary.jsx";
 import RemoveMyData from "./pages/RemoveMyData/RemoveMyData.jsx";
 import Privacy from "./pages/Privacy/privacy.jsx";
 import FAQ from "./pages/FAQ/FAQ.jsx";
+import TermsAndCondition from "./pages/TermsAndCondition/TermsAndCondition.jsx";
 
 const router = createBrowserRouter([
   {
@@ -68,7 +69,7 @@ const router = createBrowserRouter([
     element: (
       <div className="w-full h-full">
         <NavBar />
-        <Home />
+        <TermsAndCondition />
         <Footer />
       </div>
     ),

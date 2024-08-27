@@ -49,26 +49,34 @@ const FAQ = () => {
         <span className="subheading text-[#2E7Eb5] !font-extrabold !text-3xl text-center">
           <TextBlock section="faqPage" element="faqHeading" />
         </span>
-        <div className="w-full p-5 rounded-lg bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex flex-col gap-5">
-          {faqs.map((faq, ind) => (
-            <div
-              key={ind}
-              className="w-full flex justify-between bg-white text-[#2E7Eb5] p-5 rounded-lg cursor-pointer transition-all duration-300"
-              onClick={() => handleQuestionToggle(ind)}
-            >
-              <div className="w-[90%] flex flex-col gap-5">
-                <span>{faq.question}</span>
-                {openedQuestion === ind && <span>{faq.answer}</span>}
+        <div className="w-full p-5 rounded-lg transition-all bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex flex-col gap-5">
+          {Array(6)
+            .fill(1)
+            .map((_, ind) => (
+              <div
+                key={ind}
+                className="w-full flex justify-between bg-white  text-[#2E7Eb5] p-5 rounded-lg cursor-pointer transition-all duration-300"
+                onClick={() => handleQuestionToggle(ind)}
+              >
+                <div className="w-[90%] flex flex-col gap-5 transition-all">
+                  <span>
+                    <TextBlock section="faq" element={`question${ind + 1}`} />
+                  </span>
+                  {openedQuestion === ind && (
+                    <span>
+                      <TextBlock section="faq" element={`answer${ind + 1}`} />
+                    </span>
+                  )}
+                </div>
+                <div className="transition-transform duration-300 ">
+                  {openedQuestion === ind ? (
+                    <MinusIcon className="text-[#2E7Eb5] w-6 h-6" />
+                  ) : (
+                    <PlusIcon className="text-[#2E7Eb5] w-6 h-6" />
+                  )}
+                </div>
               </div>
-              <div className="transition-transform duration-300">
-                {openedQuestion === ind ? (
-                  <MinusIcon className="text-[#2E7Eb5] w-6 h-6" />
-                ) : (
-                  <PlusIcon className="text-[#2E7Eb5] w-6 h-6" />
-                )}
-              </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </div>

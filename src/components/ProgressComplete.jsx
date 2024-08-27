@@ -25,7 +25,7 @@ const ProgressComplete = () => {
         </Link>
       </div> */}
       <div className="cursor-pointer text-blue-400 font-bold">
-        <Link to={"/policy"}>
+        <Link to={"/privacy"}>
           <TextBlock section="processCompleted" element={`subHeadingLink2`} />
         </Link>
       </div>

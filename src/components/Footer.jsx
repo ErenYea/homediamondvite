@@ -26,7 +26,7 @@ const Footer = () => {
         </Link>
 
         <Link
-          to="/terms-and-conditions"
+          to="/terms-and-condition"
           className="text-base subheading border-r border-r-[#2E7Eb5] px-2 lg:!text-sm"
         >
           <TextBlock section="footer" element="termsAndConditions" />

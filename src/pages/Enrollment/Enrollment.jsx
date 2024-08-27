@@ -79,15 +79,27 @@ const Enrollment = () => {
   ];
 
   const params = useParams();
-  const { step1Data, step2Data, step3Data, step4Data } = useAppStore();
-  const [formData, setFormData] = useState(
-    step2Data
-      ? step2Data.Options?.map((option) => ({
-          ...option,
-          selected: false,
-        })) || []
-      : []
-  );
+  const {
+    step1Data,
+    step2Data,
+    step3Data,
+    step4Data,
+    additionalOptions,
+    setAdditionalOptions,
+  } = useAppStore();
+
+  useEffect(() => {
+    if (additionalOptions.length == 0) {
+      setAdditionalOptions(
+        step2Data
+          ? step2Data.Options?.map((option) => ({
+              ...option,
+              selected: false,
+            })) || []
+          : []
+      );
+    }
+  }, [step2Data]);
   const navigate = useNavigate();
   // console.log(step1Data);
   // const currentStep = 3;
@@ -112,14 +124,14 @@ const Enrollment = () => {
         navigate("/");
       }
     }
-    if (currentStep >= 3) {
-      setFormData(
-        step2Data.Options?.map((option) => ({
-          ...option,
-          selected: false,
-        }))
-      );
-    }
+    // if (currentStep >= 3) {
+    //   setFormData(
+    //     step2Data.Options?.map((option) => ({
+    //       ...option,
+    //       selected: false,
+    //     }))
+    //   );
+    // }
   }, [currentStep]);
 
   return (
@@ -133,7 +145,9 @@ const Enrollment = () => {
 
       <div
         className={`grid transition-all ${
-          currentStep !== 3 ? "grid-cols-[2fr_3fr]" : "grid-cols-[2fr_3fr_2fr]"
+          currentStep !== 3 && currentStep !== 4
+            ? "grid-cols-[2fr_3fr]"
+            : "grid-cols-[2fr_3fr_2fr]"
         }  gap-4 w-[80%] h-full `}
       >
         <div className="flex justify-center transition-all items-start  text-black">
@@ -143,10 +157,7 @@ const Enrollment = () => {
         </div>
         {currentStep === 3 && (
           <div className="flex justify-center transition-all items-start  text-black">
-            <OptionsCheckBoxContainer
-              setFormData={setFormData}
-              formData={formData}
-            />
+            <OptionsCheckBoxContainer />
           </div>
         )}
         <div
@@ -158,15 +169,14 @@ const Enrollment = () => {
             <InputForm sellerId={1} companyid={params?.id} />
           )}
           {currentStep === 2 && <InputForm2 companyid={params?.id} />}
-          {currentStep === 3 && (
-            <InputForm3
-              setSelectedData={setFormData}
-              selectedData={formData}
-              companyid={params?.id}
-            />
-          )}
+          {currentStep === 3 && <InputForm3 companyid={params?.id} />}
           {currentStep === 4 && <InputForm4 companyid={params?.id} />}
           {currentStep === 5 && <ProcessCompleted companyid={params?.id} />}
+        </div>
+        <div>
+          {currentStep == 4 && (
+            <InputForm3 companyid={params?.id} showonlyData={true} />
+          )}
         </div>
       </div>
       <div className="flex justify-center h-full gap-5  w-full items-start pt-[30px] flex-col">

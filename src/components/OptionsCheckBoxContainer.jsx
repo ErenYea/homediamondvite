@@ -2,17 +2,17 @@ import React, { useEffect, useState } from "react";
 import TextBlock from "./TextBlock";
 import { useAppStore } from "../lib/store";
 
-const OptionsCheckBoxContainer = ({ setFormData, formData }) => {
-  const { step2Data } = useAppStore();
+const OptionsCheckBoxContainer = () => {
+  const { setAdditionalOptions, additionalOptions } = useAppStore();
   const handleCheckboxChange = (event, optionId) => {
     // Handle checkbox change
     // event.target.checked will be true or false depending on the checkbox state
     // console.log(
     //   `Option ${optionId} is ${event.target.checked ? "checked" : "unchecked"}`
     // );
-    const newOptions = [...formData];
+    const newOptions = [...additionalOptions];
     newOptions[optionId].selected = !newOptions[optionId].selected;
-    setFormData(newOptions);
+    setAdditionalOptions(newOptions);
   };
 
   return (
@@ -21,7 +21,7 @@ const OptionsCheckBoxContainer = ({ setFormData, formData }) => {
         <TextBlock section="checkboxContainer" element="title" />
       </h2>
       <div className="flex flex-col gap-1">
-        {formData.map((option, index) => (
+        {additionalOptions.map((option, index) => (
           <div key={index} className=" gap-5 w-full grid grid-cols-2">
             <div className="flex items-center space-x-2">
               <input

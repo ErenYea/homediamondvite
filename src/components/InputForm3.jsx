@@ -4,15 +4,16 @@ import { useAppStore } from "../lib/store";
 import { submitStep3 } from "../lib/step3";
 import { LoadingButton } from "@mui/lab";
 
-const InputForm3 = ({ selectedData, setSelectedData, companyid }) => {
-  const { step2Data, setstep3Data } = useAppStore();
+const InputForm3 = ({ companyid, showonlyData }) => {
+  const { step2Data, setstep3Data, setAdditionalOptions, additionalOptions } =
+    useAppStore();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const initialData = useMemo(() => step2Data || {}, [step2Data]);
   const [formData, setFormData] = useState({
     LeadID: initialData.RateQuoted?.[0]?.LeadID || "",
     RateQuoted: initialData.RateQuoted?.[0]?.RateQuote || "",
-    Options: selectedData,
+    Options: additionalOptions,
     Total:
       initialData.RateQuoted?.reduce((acc, curr) => acc + curr?.RateQuote, 0) ||
       0,
@@ -48,6 +49,7 @@ const InputForm3 = ({ selectedData, setSelectedData, companyid }) => {
 
     try {
       const response = await submitStep3(dataToSubmit);
+      // setAdditionalOptions(selectedData.filter((data) => data.selected));
       setstep3Data({ ...response, totalAmount: formData.Total });
       setLoading(false);
     } catch (error) {
@@ -62,7 +64,7 @@ const InputForm3 = ({ selectedData, setSelectedData, companyid }) => {
       ...prevData,
       LeadID: initialData.RateQuoted?.[0]?.LeadID || "",
       RateQuoted: initialData.RateQuoted?.[0]?.RateQuote || "",
-      Options: selectedData,
+      Options: additionalOptions,
       Total:
         initialData.RateQuoted?.reduce(
           (acc, curr) => acc + curr?.RateQuote,
@@ -74,13 +76,13 @@ const InputForm3 = ({ selectedData, setSelectedData, companyid }) => {
   useEffect(() => {
     const total =
       formData.RateQuoted +
-      selectedData.reduce(
+      additionalOptions.reduce(
         (acc, option) => acc + (option?.selected ? option?.ReserveAmount : 0),
         0
       );
     setFormData((prevData) => ({ ...prevData, Total: total }));
-  }, [selectedData, formData.RateQuoted]);
-
+  }, [additionalOptions, formData.RateQuoted]);
+  // console.log(selectedData);
   if (error) {
     throw error;
   }
@@ -106,6 +108,23 @@ const InputForm3 = ({ selectedData, setSelectedData, companyid }) => {
                 formData.Total.toFixed(2) - formData.RateQuoted.toFixed(2)
               ).toFixed(2)}
             </div>
+            {showonlyData && (
+              <div className="w-full flex flex-col col-span-2 max-h-[200px] overflow-y-auto  gap-2">
+                {additionalOptions
+                  .filter((data) => data.selected)
+                  .map((data) => (
+                    <div
+                      key={data.ReserveId}
+                      className="grid grid-cols-3  rounded-full p-2 bg-[#63A8AE] text-white text-base"
+                    >
+                      <div className="col-span-2">
+                        {data.ReserveDescription}
+                      </div>
+                      <div className="text-end">$ {data.ReserveAmount}</div>
+                    </div>
+                  ))}
+              </div>
+            )}
           </div>
           <h4 className="font-bold text-3xl subheading">Your Price</h4>
           <div className="grid grid-cols-2 w-full gap-2">
@@ -117,22 +136,18 @@ const InputForm3 = ({ selectedData, setSelectedData, companyid }) => {
               $ {formData.Total.toFixed(2)}
             </div>
           </div>
-          <div className="flex w-full justify-center text-white mt-[5%]">
-            <LoadingButton
-              loading={loading}
-              variant="contained"
-              type="submit"
-              className="!bg-[#63A8AE] w-[150px] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all "
-            >
-              <TextBlock section="inputForm3" element="submit" />
-            </LoadingButton>
-            {/* <button
-              type="submit"
-              className="bg-[#7ec8e3] text-white border-none py-[10px] px-[20px] transition-all rounded cursor-pointer hover:bg-[#0056b3]"
-            >
-              <TextBlock section="inputForm3" element="submit" />
-            </button> */}
-          </div>
+          {!showonlyData && (
+            <div className="flex w-full justify-center text-white mt-[5%]">
+              <LoadingButton
+                loading={loading}
+                variant="contained"
+                type="submit"
+                className="!bg-[#63A8AE] w-[150px] text-white border-none py-[10px] px-[20px] rounded cursor-pointer transition-all "
+              >
+                <TextBlock section="inputForm3" element="submit" />
+              </LoadingButton>
+            </div>
+          )}
         </form>
       </div>
     </div>

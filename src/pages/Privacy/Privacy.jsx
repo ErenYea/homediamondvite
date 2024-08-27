@@ -6,7 +6,7 @@ const Privacy = () => {
   const { getText } = useAppStore();
   const formatText = (section, element, index, cond) => {
     const data = getText(section, element, index);
-    console.log(cond);
+    // console.log(cond);
     if (cond) {
       return (
         <div>
