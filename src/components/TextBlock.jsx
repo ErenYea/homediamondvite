@@ -53,6 +53,7 @@ const translations = {
     footer: {
       termsAndConditions: "Terms and Conditions",
       privacy: "Privacy",
+      removeMyData: "Remove My Data",
       copyright: "© 2024 Diamond Home Protection. All rights reserved.",
     },
     inputForm2: {
@@ -286,6 +287,7 @@ const translations = {
     footer: {
       termsAndConditions: "Términos y Condiciones",
       privacy: "Privacidad",
+      removeMyData: "Eliminar mis datos",
       copyright:
         "© 2024 Diamond Home Protection. Todos los derechos reservados.",
     },
