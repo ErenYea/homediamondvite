@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from "react";
 import TextBlock from "./TextBlock";
 import { useNavigate } from "react-router-dom";
 import { useAppStore } from "../lib/store";
-import { submitStep2 } from "../lib/step2";
+import { getProperty, submitStep2 } from "../lib/step2";
 import { states } from "../lib/constant";
 import { LoadingButton } from "@mui/lab";
 
@@ -10,6 +10,7 @@ const InputForm2 = ({ companyid }) => {
   const navigate = useNavigate();
   const { step1Data, setstep2Data } = useAppStore();
   const [loading, setLoading] = useState(false);
+  const [propertyTypes, setPropertyType] = useState([]);
   const initialData = useMemo(() => step1Data || {}, [step1Data]);
   const initialSellerID = useMemo(() => step1Data?.SellerID || "", [step1Data]);
   const [error, setError] = useState(null);
@@ -29,11 +30,7 @@ const InputForm2 = ({ companyid }) => {
     StateID: 1,
     SqFt: 0,
   });
-  const propertyTypes = [
-    { id: 1, name: "Single Family" },
-    { id: 2, name: "Condominium" },
-    { id: 3, name: "Multi Family" },
-  ];
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -72,9 +69,11 @@ const InputForm2 = ({ companyid }) => {
       setError(error);
     }
   };
-
+  const fetchPropertyType = async () => {
+    const response = await getProperty();
+    setPropertyType(response.PropertyType);
+  };
   useEffect(() => {
-    // console.log("Received initialData:", initialData);
     setFormData((prevData) => ({
       ...prevData,
       LeadID: initialData.LeadID || "",
@@ -88,6 +87,10 @@ const InputForm2 = ({ companyid }) => {
       City: initialData.CityName || "",
     }));
   }, [initialData, initialSellerID]);
+
+  useEffect(() => {
+    fetchPropertyType();
+  }, []);
   if (error) {
     throw error;
   }
@@ -181,9 +184,12 @@ const InputForm2 = ({ companyid }) => {
                   required
                   className="text-black p-[7px] border w-full rounded box-border"
                 >
-                  {propertyTypes.map((type) => (
-                    <option key={type.id} value={type.id}>
-                      {type.name}
+                  {propertyTypes?.map((type) => (
+                    <option
+                      key={type.PropertyTypeID}
+                      value={type.PropertyTypeID}
+                    >
+                      {type.PropertyTypeName}
                     </option>
                   ))}
                 </select>

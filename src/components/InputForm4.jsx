@@ -20,9 +20,12 @@ const InputForm4 = ({ companyid }) => {
     BillingZip: step2Data.ZipCode || "",
     BillingPhone: step1Data.Phone || "",
     BillingEmail: step2Data.Email || "",
-    ccnumber: "4111111111111111",
-    ccexp: "1212",
-    cvv: "999",
+    ccnumber: "",
+    ccexp: "",
+    cvv: "",
+    // ccnumber: "4111111111111111",
+    // ccexp: "1212",
+    // cvv: "999",
     LeadID: LeadID,
     LeadUID: LeadUID,
     totalAmount: step3Data.totalAmount || -1,
@@ -36,6 +39,9 @@ const InputForm4 = ({ companyid }) => {
   const [errorMessage, setErrorMessage] = useState("");
   const isBillingDataValid = () => {
     for (const key in billingData) {
+      if (key == "BillingAddress2") {
+        continue;
+      }
       if (billingData.hasOwnProperty(key)) {
         if (
           billingData[key] === "" ||
