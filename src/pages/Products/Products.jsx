@@ -8,8 +8,10 @@ import PremiumProductText from "../../components/PremiumProductText";
 import { useNavigate } from "react-router-dom";
 import { ChevronLeftIcon } from "@heroicons/react/16/solid";
 import { ChevronRightIcon } from "@heroicons/react/16/solid";
+import { useAppStore } from "../../lib/store";
 
 const Products = () => {
+  const { language } = useAppStore();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
@@ -79,7 +81,7 @@ const Products = () => {
     },
   ];
 
-  const testimonials = [
+  const testimonialsEn = [
     {
       message:
         "My Refrigerator stopped working and would not stay cold. I called Diamond Home Protection and a gentleman quickly had someone come out and replaced the part. Everyone from customer service to the service repair technician was very knowledgeable and friendly.",
@@ -97,10 +99,39 @@ const Products = () => {
     },
     {
       message:
-        "I am a single mother, and my garage door would not open with my car stuck in the garage. I called Diamond Home Protection and they had someone come out the next morning. The technician replaced the wire that went from the opener to the keypad.   The technician was very prompt and friendly. I would recommend Diamond Home Protection.",
+        "I am a single mother, and my garage door would not open with my car stuck in the garage. I called Diamond Home Protection and they had someone come out the next morning. The technician replaced the wire that went from the opener to the keypad. The technician was very prompt and friendly. I would recommend Diamond Home Protection.",
       name: "Barbara M., North Dakota",
     },
   ];
+
+  const testimonialsEs = [
+    {
+      message:
+        "Mi refrigerador dejó de funcionar y no se mantenía frío. Llamé a Diamond Home Protection y un caballero rápidamente hizo que alguien viniera y reemplazara la pieza. Todos, desde el servicio al cliente hasta el técnico de reparación, eran muy conocedores y amigables.",
+      name: "Christina G., Arkansas",
+    },
+    {
+      message:
+        "Llamé a Diamond Home debido a que mi aire acondicionado no enfriaba correctamente. En un día, tuvieron un técnico de reparación que me informó que necesitábamos un condensador nuevo. La pieza fue ordenada y reemplazada 24 horas después. Los recomendaría a todos mis amigos y familiares.",
+      name: "Jason Z., Texas",
+    },
+    {
+      message:
+        "Mi sistema de aspiración central no encendía. Diamond Home envió un técnico para revisarlo. El técnico me informó que necesitábamos un motor nuevo, y tenía uno en el camión para reemplazarlo de inmediato. El servicio que recibí fue superior a todo lo que había experimentado en el pasado con otras compañías.",
+      name: "Andrew S., New Hampshire",
+    },
+    {
+      message:
+        "Soy madre soltera y mi puerta del garaje no se abría con mi coche atrapado dentro. Llamé a Diamond Home Protection y enviaron a alguien a la mañana siguiente. El técnico reemplazó el cable que iba del abridor al teclado. El técnico fue muy puntual y amable. Recomendaría Diamond Home Protection.",
+      name: "Barbara M., North Dakota",
+    },
+  ];
+
+  const [testimonials, setTestimonials] = useState(testimonialsEn);
+
+  useEffect(() => {
+    setTestimonials(language === "es" ? testimonialsEs : testimonialsEn);
+  }, [language]);
 
   const gotohome = () => {
     navigate("/");
@@ -123,10 +154,10 @@ const Products = () => {
             style={{
               clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
               width: "calc(30% )", // Expand the width to cover the extra clipped area
-              marginLeft: "-20%", // Shift the div to the left by the amount that was clipped
+              marginLeft: "-10%", // Shift the div to the left by the amount that was clipped
             }}
           ></div>
-          <div className="w-full text-white mr-[50px]">
+          <div className="w-full text-white mr-[70px]">
             {/* <PremiumHomeText /> */}
             <PremiumProductText />
           </div>
@@ -178,7 +209,7 @@ const Products = () => {
       </div>
 
       <div className="flex items-start w-full h-[400px] relative">
-        <div className="z-0 w-[50%] h-[400px] bg-white">
+        <div className="z-0 w-[60%] h-[400px] bg-white">
           <div className="w-full h-full flex flex-col pt-6 items-center">
             <img src="/dhp_home_logo.jpg" alt="" className="w-[350px]" />
             <div
@@ -195,7 +226,7 @@ const Products = () => {
             style={{
               clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
               width: "calc(30%)", // Expand the width to cover the extra clipped area
-              marginLeft: "-20%", // Shift the div to the left by the amount that was clipped
+              marginLeft: "-10%", // Shift the div to the left by the amount that was clipped
             }}
           ></div>
           <div className="w-full  text-white">

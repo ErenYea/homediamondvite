@@ -68,7 +68,7 @@ const NoWarrantiesYet = () => {
             style={{
               clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
               width: "calc(30%)", // Expand the width to cover the extra clipped area
-              marginLeft: "-20%", // Shift the div to the left by the amount that was clipped
+              marginLeft: "-10%", // Shift the div to the left by the amount that was clipped
             }}
           ></div>
           <div className="w-full  text-white">
