@@ -172,7 +172,7 @@ const Home = () => {
       </div>
 
       <div className="flex items-start w-full h-[400px] relative">
-        <div className="z-0 w-[50%] h-[400px] bg-white">
+        <div className="z-0 w-[70%] h-[400px] bg-white">
           <div className="w-full h-full flex flex-col pt-6 items-center">
             <img src="/dhp_home_logo.jpg" alt="" className="w-[350px]" />
             <div
