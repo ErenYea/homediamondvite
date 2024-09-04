@@ -146,7 +146,7 @@ const InputForm = ({ sellerId, companyid }) => {
               loading={loading}
               variant="contained"
               type="submit"
-              className="!bg-[#63A8AE] w-[150px] text-white border-none text-lg py-[10px] px-[20px] rounded cursor-pointer transition-all"
+              className="!bg-[#63A8AE] w-fit text-white border-none text-lg py-[10px] px-[20px] rounded cursor-pointer transition-all "
             >
               <TextBlock section="inputForm" element="submitButton" />
             </LoadingButton>
