@@ -149,7 +149,7 @@ const InputForm2 = ({ companyid }) => {
                   onChange={handleChange}
                   placeholder="Phone (10 digits)"
                   className="text-black p-[5px] border w-full rounded box-border"
-                  pattern="[0-9]{11}"
+                  // pattern="[0-9]{11}"
                   required
                 />
               </div>
