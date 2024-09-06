@@ -192,6 +192,15 @@ const Enrollment = () => {
           {currentStep === 2 && <WarrantyBenefits />}
           {currentStep === 3 && <PremiumCoverage />}
           {currentStep === 5 && <ProgressComplete />}
+          {currentStep === 4 && (
+            <div className="h-full">
+              <img
+                src="/df5f93dbb6efd678934806a81895e925_1200_80.webp"
+                alt=""
+                className="h-full object-cover"
+              />
+            </div>
+          )}
         </div>
         {currentStep === 3 && (
           <div className="flex justify-center transition-all items-start  text-black">

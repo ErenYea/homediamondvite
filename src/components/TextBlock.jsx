@@ -4,11 +4,12 @@ import { translations } from "../lib/constant";
 
 const TextBlock = ({ section, element }) => {
   const { language } = useAppStore();
-  return (
+  const text =
     translations[language]?.[section]?.[element] ||
     translations.en[section][element] ||
-    "Text not found"
-  );
+    "Text not found";
+
+  return <span dangerouslySetInnerHTML={{ __html: text }} />;
 };
 
 export default TextBlock;

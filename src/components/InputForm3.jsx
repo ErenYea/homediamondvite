@@ -109,7 +109,7 @@ const InputForm3 = ({ companyid, showonlyData }) => {
               ).toFixed(2)}
             </div>
             {showonlyData && (
-              <div className="w-full flex flex-col col-span-2 max-h-[200px] overflow-y-auto  gap-2">
+              <div className="w-full flex flex-col col-span-2  gap-2">
                 {additionalOptions
                   .filter((data) => data.selected)
                   .map((data) => (

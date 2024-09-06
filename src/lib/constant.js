@@ -231,15 +231,15 @@ export const translations = {
     warrantyBenefits: {
       title: "Top reasons for having a DHP Warranty!",
       financialProtection:
-        "Financial Protection: A home warranty can save you from unexpected repair costs. For example, the average repair cost for a heating system can range from $600 to $2,400.",
+        "<strong style='color:#2E7EB5;'>Financial Protection:</strong> A home warranty can save you from unexpected repair costs. For example, the average repair cost for a heating system can range from $600 to $2,400.",
       comprehensiveCoverage:
-        "Comprehensive Coverage: Home warranties often cover a wide range of home systems and appliances, such as electrical systems, plumbing, and major kitchen appliances. This comprehensive coverage ensures peace of mind.",
+        "<strong style='color:#2E7EB5;'>Comprehensive Coverage:</strong> Home warranties often cover a wide range of home systems and appliances, such as electrical systems, plumbing, and major kitchen appliances. This comprehensive coverage ensures peace of mind.",
       costSavings:
-        "Cost Savings: Homeowners can save significantly on repairs and replacements. For instance, repairing a pool pump can cost around $1,200 to $2,400 without a warranty.",
+        "<strong style='color:#2E7EB5;'>Cost Savings:</strong> Homeowners can save significantly on repairs and replacements. For instance, repairing a pool pump can cost around $1,200 to $2,400 without a warranty.",
       convenience:
-        "Convenience: With a home warranty, you only need to contact your warranty provider to schedule a repair. They handle finding a qualified technician, saving you time and hassle.",
+        "<strong style='color:#2E7EB5;'>Convenience:</strong> With a home warranty, you only need to contact your warranty provider to schedule a repair. They handle finding a qualified technician, saving you time and hassle.",
       increasedHomeValue:
-        "Increased Home Value: Having a home warranty can make your property more attractive to potential buyers, as it offers them protection and reduces their risk of unexpected repair costs. Replacing a central air conditioning system can cost between $7,000 and $15,000 on average, which can be a selling point for buyers if covered by a warranty.",
+        "<strong style='color:#2E7EB5;'>Increased Home Value:</strong> Having a home warranty can make your property more attractive to potential buyers, as it offers them protection and reduces their risk of unexpected repair costs. Replacing a central air conditioning system can cost between $7,000 and $15,000 on average, which can be a selling point for buyers if covered by a warranty.",
     },
     checkboxContainer: {
       title: "Click To Select Additional Coverage Options:",
@@ -649,15 +649,15 @@ export const translations = {
     warrantyBenefits: {
       title: "¡Razones principales para tener una garantía de DHP!",
       financialProtection:
-        "Protección Financiera: Una garantía para el hogar puede ahorrarle costos de reparación inesperados. Por ejemplo, el costo promedio de reparación de un sistema de calefacción puede variar de $600 a $2,400.",
+        "<strong style='color:#2E7EB5;'>Protección Financiera:</strong> Una garantía para el hogar puede ahorrarle costos de reparación inesperados. Por ejemplo, el costo promedio de reparación de un sistema de calefacción puede variar de $600 a $2,400.",
       comprehensiveCoverage:
-        "Cobertura Integral: Las garantías para el hogar suelen cubrir una amplia gama de sistemas y electrodomésticos, como sistemas eléctricos, plomería y electrodomésticos principales. Esta cobertura integral asegura tranquilidad.",
+        "<strong style='color:#2E7EB5;'>Cobertura Integral:</strong> Las garantías para el hogar suelen cubrir una amplia gama de sistemas y electrodomésticos, como sistemas eléctricos, plomería y electrodomésticos principales. Esta cobertura integral asegura tranquilidad.",
       costSavings:
-        "Ahorro de Costos: Los propietarios pueden ahorrar significativamente en reparaciones y reemplazos. Por ejemplo, reparar una bomba de piscina puede costar entre $1,200 y $2,400 sin una garantía.",
+        "<strong style='color:#2E7EB5;'>Ahorro de Costos:</strong> Los propietarios pueden ahorrar significativamente en reparaciones y reemplazos. Por ejemplo, reparar una bomba de piscina puede costar entre $1,200 y $2,400 sin una garantía.",
       convenience:
-        "Comodidad: Con una garantía para el hogar, solo necesita contactar a su proveedor de garantía para programar una reparación. Ellos se encargan de encontrar un técnico calificado, ahorrándole tiempo y molestias.",
+        "<strong style='color:#2E7EB5;'>Comodidad:</strong> Con una garantía para el hogar, solo necesita contactar a su proveedor de garantía para programar una reparación. Ellos se encargan de encontrar un técnico calificado, ahorrándole tiempo y molestias.",
       increasedHomeValue:
-        "Aumento del Valor de la Vivienda: Tener una garantía para el hogar puede hacer que su propiedad sea más atractiva para los posibles compradores, ya que les ofrece protección y reduce su riesgo de costos de reparación inesperados. Reemplazar un sistema de aire acondicionado central puede costar entre $7,000 y $15,000 en promedio, lo cual puede ser un punto de venta para los compradores si está cubierto por una garantía.",
+        "<strong style='color:#2E7EB5;'>Aumento del Valor de la Vivienda:</strong> Tener una garantía para el hogar puede hacer que su propiedad sea más atractiva para los posibles compradores, ya que les ofrece protección y reduce su riesgo de costos de reparación inesperados. Reemplazar un sistema de aire acondicionado central puede costar entre $7,000 y $15,000 en promedio, lo cual puede ser un punto de venta para los compradores si está cubierto por una garantía.",
     },
 
     checkboxContainer: {
