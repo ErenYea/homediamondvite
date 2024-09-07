@@ -260,6 +260,35 @@ const Enrollment = () => {
             </div>
           </div>
         </div>
+
+        <div className="w-full flex h-fit justify-center mb-8 bg-gray-300 py-4">
+          <div className="w-[90%] h-full flex items-center justify-around">
+            <div
+              onClick={handlePrev}
+              className="w-12 h-12 rounded-full bg-[#2E7Eb5] flex items-center justify-center cursor-pointer"
+            >
+              <ChevronLeftIcon className="text-gray-300" />
+            </div>
+            <div
+              className={` w-[80%] rounded-xl h-[60%] flex flex-col justify-center items-center p-8 transition-opacity duration-500 ease-in-out transform ${
+                fadeOut ? "opacity-0" : "opacity-100"
+              }`}
+            >
+              <p className="text-lg text-[#2E7Eb5] text-center mb-4">
+                {testimonials[currentIndex].message} -{" "}
+                <span className="font-bold">
+                  {testimonials[currentIndex].name}
+                </span>
+              </p>
+            </div>
+            <div
+              onClick={handleNext}
+              className="w-12 h-12 rounded-full bg-[#2E7Eb5] flex items-center justify-center cursor-pointer"
+            >
+              <ChevronRightIcon className="text-gray-300" />
+            </div>
+          </div>
+        </div>
         <div className="flex items-start w-full h-[400px] relative">
           <div className="z-0 w-[50%] h-[400px] bg-white">
             <div className="w-full h-full flex flex-col pt-6 items-center">

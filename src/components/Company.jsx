@@ -134,7 +134,12 @@ const Company = () => {
         </div>
         <div className="flex items-start w-full h-full">
           <div className="z-0 w-[50%]  h-[400px]">
-            <ImageSlider />
+            {/* <ImageSlider /> */}
+            <img
+              src="public\Worry-Free Warranty (DHP Page1).png"
+              alt=""
+              className="w-full h-full object-cover"
+            />
           </div>
           <div className="z-10 h-[400px] flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
             <div
