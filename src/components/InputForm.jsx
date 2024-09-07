@@ -9,7 +9,7 @@ import SaveIcon from "@mui/icons-material/Save";
 
 const InputForm = ({ sellerId, companyid }) => {
   const navigate = useNavigate();
-  const { setstep1Data } = useAppStore();
+  const { setstep1Data,incrementStep } = useAppStore();
   const [loading, setloading] = useState(false);
   const [error, setError] = useState(null);
 
@@ -53,6 +53,7 @@ const InputForm = ({ sellerId, companyid }) => {
       response.ZipCode = form.zip;
 
       // console.log("Response from server:", response);
+      incrementStep()
       setstep1Data(response);
       setloading(false);
       if (companyid) {

@@ -9,7 +9,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
 import { useAppStore } from "../../lib/store";
 
 const Home = () => {
-  const { language } = useAppStore();
+  const { language,clearData } = useAppStore();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
@@ -110,6 +110,7 @@ const Home = () => {
   };
   useEffect(() => {
     scrolltoContainer();
+    clearData()
   }, []);
   return params?.id ? (
     <Outlet />
