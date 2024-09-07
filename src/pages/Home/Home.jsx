@@ -148,7 +148,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="lg:w-[80%] w-[100%] xl:w-[60%] h-full bg-white flex items-center justify-around">
+        {/* <div className="lg:w-[80%] w-[100%] xl:w-[60%] h-full bg-white flex items-center justify-around">
           <div
             onClick={handlePrev}
             className="w-12 h-12 rounded-full bg-[#E7E6EA] flex items-center justify-center cursor-pointer"
@@ -173,9 +173,37 @@ const Home = () => {
           >
             <ChevronRightIcon className="text-[#2E7Eb5]" />
           </div>
-        </div>
+        </div> */}
       </div>
 
+      <div className="w-full flex h-40 justify-center mb-8 bg-gray-300 py-4">
+        <div className="w-[90%] h-full flex items-center justify-around">
+          <div
+            onClick={handlePrev}
+            className="w-12 h-12 rounded-full bg-[#2E7Eb5] flex items-center justify-center cursor-pointer"
+          >
+            <ChevronLeftIcon className="text-gray-300" />
+          </div>
+          <div
+            className={` w-[80%] rounded-xl h-[60%] flex flex-col justify-center items-center p-8 transition-opacity duration-500 ease-in-out transform ${
+              fadeOut ? "opacity-0" : "opacity-100"
+            }`}
+          >
+            <p className="text-lg text-[#2E7Eb5] text-center mb-4">
+              {testimonials[currentIndex].message} -{" "}
+              <span className="font-bold">
+                {testimonials[currentIndex].name}
+              </span>
+            </p>
+          </div>
+          <div
+            onClick={handleNext}
+            className="w-12 h-12 rounded-full bg-[#2E7Eb5] flex items-center justify-center cursor-pointer"
+          >
+            <ChevronRightIcon className="text-gray-300" />
+          </div>
+        </div>
+      </div>
       <div className="md:w-full lg:w-[90%] xl:[w-80%] mx-auto flex flex-col gap-6 mb-8">
         <span className="w-full text-center font-bold text-[#2E7Eb5] text-3xl">
           How it works... Easy as 1, 2, 3

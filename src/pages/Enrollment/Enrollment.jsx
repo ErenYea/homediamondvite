@@ -231,7 +231,7 @@ const Enrollment = () => {
           <TextBlock section="enrollementpage" element={`question`} />
         </div>
 
-        <div className="w-full flex h-[500px] justify-center mb-8">
+        {/* <div className="w-full flex h-[500px] justify-center mb-8">
           <div className="w-[60%] h-full bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center justify-around">
             <div
               onClick={handlePrev}
@@ -258,15 +258,15 @@ const Enrollment = () => {
               <ChevronRightIcon className="text-[#2E7Eb5]" />
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="w-full flex h-fit justify-center mb-8 bg-gray-300 py-4">
+        <div className="w-full flex h-fit justify-center mb-8 bg-white py-4">
           <div className="w-[90%] h-full flex items-center justify-around">
             <div
               onClick={handlePrev}
               className="w-12 h-12 rounded-full bg-[#2E7Eb5] flex items-center justify-center cursor-pointer"
             >
-              <ChevronLeftIcon className="text-gray-300" />
+              <ChevronLeftIcon className="text-white" />
             </div>
             <div
               className={` w-[80%] rounded-xl h-[60%] flex flex-col justify-center items-center p-8 transition-opacity duration-500 ease-in-out transform ${
@@ -284,7 +284,7 @@ const Enrollment = () => {
               onClick={handleNext}
               className="w-12 h-12 rounded-full bg-[#2E7Eb5] flex items-center justify-center cursor-pointer"
             >
-              <ChevronRightIcon className="text-gray-300" />
+              <ChevronRightIcon className="text-white" />
             </div>
           </div>
         </div>
