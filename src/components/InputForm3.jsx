@@ -5,7 +5,7 @@ import { submitStep3 } from "../lib/step3";
 import { LoadingButton } from "@mui/lab";
 
 const InputForm3 = ({ companyid, showonlyData }) => {
-  const { step2Data, setstep3Data, setAdditionalOptions, additionalOptions } =
+  const { step2Data, setstep3Data, setAdditionalOptions, additionalOptions,incrementStep } =
     useAppStore();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -50,6 +50,7 @@ const InputForm3 = ({ companyid, showonlyData }) => {
     try {
       const response = await submitStep3(dataToSubmit);
       // setAdditionalOptions(selectedData.filter((data) => data.selected));
+      incrementStep()
       setstep3Data({ ...response, totalAmount: formData.Total });
       setLoading(false);
     } catch (error) {

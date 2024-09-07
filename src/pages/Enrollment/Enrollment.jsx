@@ -17,7 +17,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
 
 const Enrollment = () => {
   const { language } = useAppStore();
-  const [currentIndex, setCurrentIndex] = useState(0);
+  // const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
 
@@ -124,6 +124,7 @@ const Enrollment = () => {
     step4Data,
     additionalOptions,
     setAdditionalOptions,
+    currentStep
   } = useAppStore();
 
   useEffect(() => {
@@ -141,15 +142,15 @@ const Enrollment = () => {
   const navigate = useNavigate();
   // console.log(step1Data);
   // const currentStep = 3;
-  const currentStep = step4Data
-    ? 5
-    : step3Data
-    ? 4
-    : step2Data
-    ? 3
-    : step1Data
-    ? 2
-    : 1;
+  // const currentStep = step4Data
+  //   ? 5
+  //   : step3Data
+  //   ? 4
+  //   : step2Data
+  //   ? 3
+  //   : step1Data
+  //   ? 2
+  //   : 1;
 
   const gotoContact = () => {
     navigate("/contact-us");

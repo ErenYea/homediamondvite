@@ -8,7 +8,7 @@ import { LoadingButton } from "@mui/lab";
 
 const InputForm2 = ({ companyid }) => {
   const navigate = useNavigate();
-  const { step1Data, setstep2Data } = useAppStore();
+  const { step1Data, setstep2Data,incrementStep } = useAppStore();
   const [loading, setLoading] = useState(false);
   const [propertyTypes, setPropertyType] = useState([]);
   const initialData = useMemo(() => step1Data || {}, [step1Data]);
@@ -59,6 +59,7 @@ const InputForm2 = ({ companyid }) => {
       response.City = formData.City;
       response.StateID = formData.StateID;
       // console.log("API Response:", response);
+      incrementStep()
       setstep2Data(response);
       setLoading(false);
       sessionStorage.setItem("initialData", JSON.stringify(response));

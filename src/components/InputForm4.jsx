@@ -6,7 +6,7 @@ import { submitStep4 } from "../lib/step4";
 import { LoadingButton } from "@mui/lab";
 
 const InputForm4 = ({ companyid }) => {
-  const { step1Data, step3Data, step2Data, setstep4Data } = useAppStore();
+  const { step1Data, step3Data, step2Data, setstep4Data,incrementStep } = useAppStore();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
   const customerIdObject = step1Data || {};
@@ -82,6 +82,7 @@ const InputForm4 = ({ companyid }) => {
           response;
 
         if (response_code === "1" || response_code === "100") {
+          incrementStep()
           setstep4Data({
             orderID: orderid,
             transactionID: transactionid,

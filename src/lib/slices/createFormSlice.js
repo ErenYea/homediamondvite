@@ -3,7 +3,8 @@ export const createFormSlice = (set, get) => ({
   step2Data: null,
   step3Data: null,
   step4Data: null,
-  companyid: null,
+  companydata: null,
+  currentStep: 1,
   additionalOptions: [],
   setstep1Data: (step1Data) => {
     set({ step1Data });
@@ -17,8 +18,14 @@ export const createFormSlice = (set, get) => ({
   setstep4Data: (step4Data) => {
     set({ step4Data });
   },
-  setCompanyId: (companyid) => {
-    set({ companyid });
+  setCompanyData: (companydata) => {
+    set({ companydata });
+  },
+  incrementStep:()=>{
+    set({currentStep:currentStep+1})
+  },
+  decrementStep:()=>{
+    set({currentStep:currentStep-1})
   },
   setAdditionalOptions: (additionalOptions) => {
     set({ additionalOptions });

@@ -4,16 +4,19 @@ import InputForm from "./InputForm";
 import MarqueeComponent from "./MarqueeComponent";
 import ImageSlider from "./ImageSlider";
 import { useParams } from "react-router-dom";
-import { companies } from "../lib/constant";
+// import { companies } from "../lib/constant";
+
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
 import { useAppStore } from "../lib/store";
+import {companyData} from "../lib/companyData"
 
 const Company = () => {
-  const { language } = useAppStore();
+  const { language,companydata,setCompanyData } = useAppStore();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
-
+  const [error,setError] = useState(null)
+  // const [companydata,setCompanydata] = useState(null)
   const handlePrev = () => {
     if (animating) return;
     setFadeOut(true);
@@ -108,12 +111,23 @@ const Company = () => {
       behavior: "smooth", // Optional: Add smooth scrolling
     });
   };
-  const companyData = useMemo(
-    () => companies.find((ob) => ob.id == params.id) || null,
-    [params.id]
-  );
+  const fetchData = async () => {
+    const name = params.id
+    const result = await companyData(name)
+    if (result ==null){
+      setError("Company Not Found")
+    }
+    setCompanyData(result)
+  }
+  useEffect(()=>{
+    fetchData()
+  },[])
+  if (error){
+    throw Error(error)
+  }
+
   return (
-    companyData && (
+    companydata && (
       <div className=" w-full transition-all flex flex-col mt-[100px] pb-[50px]">
         <div className="">
           <MarqueeComponent />
@@ -139,17 +153,17 @@ const Company = () => {
         <div className="w-full h-[450px] flex relative top-[-100px] z-[900] ">
           <div className=" w-[450px] h-full ml-[10rem] ">
             <div className="bg-[#2E7EB5] p-[10px] rounded-lg box-border">
-              <InputForm sellerId={1} companyid={params.id} />
+              <InputForm sellerId={companydata.SellerID} companyid={params.id} />
             </div>
           </div>
           <div className="w-full h-full flex justify-evenly space-x-5 mt-5  items-center">
-            <img src={companyData.logo} alt="" className=" w-48 " />
+            <img src={companydata.SellerLogo} alt="" className=" w-48 " />
             {/* <div className="text-2xl font-bold">{companyData.name}</div> */}
             <div className="text-2xl font-semibold max-w-[50%]">
               {" "}
               We have some fantastic news to share! At{" "}
               <span className="font-bold text-teal-500">
-                {companyData.name}
+                {companydata.SellerFriendlyName}
               </span>{" "}
               we are committed to supporting not just your career but also your
               personal life. We are thrilled to announce that we have added a
