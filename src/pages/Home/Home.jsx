@@ -177,6 +177,22 @@ const Home = () => {
         </div>
       </div>
 
+      <div className="md:w-full lg:w-[90%] xl:[w-80%] mx-auto flex flex-col gap-6 mb-8">
+        <span className="w-full text-center font-bold text-[#2E7Eb5] text-3xl">
+          How it works... Easy as 1, 2, 3
+        </span>
+        <video
+          src="public\30 second customer video_2.mp4"
+          controls
+          className="w-full h-[70vh]"
+        ></video>
+        <div className="flex items-center justify-center gap-6 font-bold text-[#2E7Eb5] text-2xl">
+          <span>1. You Report A Claim 24/7</span>
+          <span>2. We Assign A Professional</span>
+          <span>3. The Repair is Complete</span>
+        </div>
+      </div>
+
       <div className="flex items-start w-full h-[400px] relative">
         <div className="z-0 w-[70%] h-[400px] bg-white">
           <div className="w-full h-full flex flex-col pt-6 items-center">
