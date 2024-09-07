@@ -9,7 +9,7 @@ import Enrollment from "./pages/Enrollment/Enrollment.jsx";
 import ContactUs from "./pages/ContactUs/ContactUs.jsx";
 import Company from "./components/Company.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
-import Products from "./pages/Products/Products.jsx";
+
 import NoWarrantiesYet from "./pages/NoWarrantiesYet/NoWarrantiesYet.jsx";
 import ErrorBoundary from "./components/ErrorBoundary.jsx";
 import RemoveMyData from "./pages/RemoveMyData/RemoveMyData.jsx";
@@ -80,16 +80,6 @@ const router = createBrowserRouter([
       <div className="w-full h-full">
         <NavBar />
         <FAQ />
-        <Footer />
-      </div>
-    ),
-  },
-  {
-    path: "/products",
-    element: (
-      <div className="w-full h-full">
-        <NavBar />
-        <Products />
         <Footer />
       </div>
     ),

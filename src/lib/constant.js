@@ -182,6 +182,11 @@ export const translations = {
       furtherAssistanceText:
         "If you have any questions or need further assistance, please don't hesitate to reach out to our support team.",
     },
+    newQuotes: {
+      quote1: "NEW Voluntary Benefit",
+      quote2: "Get Access To Discounted Group Rates",
+      quote3: "Enrollment Is Open For A Limited Time",
+    },
     quotes: {
       quote1:
         "Diamond Home Protection is affordable and provides great peace of mind. - John D.",
@@ -594,6 +599,11 @@ export const translations = {
       subHeadingLink2: "[Ver política]",
       furtherAssistanceText:
         "Si tiene alguna pregunta o necesita más ayuda, no dude en comunicarse con nuestro equipo de soporte.",
+    },
+    newQuotes: {
+      quote1: "NUEVO Beneficio Voluntario",
+      quote2: "Accede a Tarifas Grupales con Descuento",
+      quote3: "La Inscripción Está Abierta por Tiempo Limitado",
     },
     quotes: {
       quote1:

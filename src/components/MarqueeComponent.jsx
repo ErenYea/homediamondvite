@@ -5,9 +5,9 @@ import Marquee from "react-fast-marquee";
 
 const MarqueeComponent = () => {
   const { language } = useAppStore();
-  const quotes = Array.from({ length: 25 }, (_, i) => (
+  const quotes = Array.from({ length: 3 }, (_, i) => (
     <span key={i} className="mr-[50px]">
-      <TextBlock section="quotes" element={`quote${i + 1}`} />
+      <TextBlock section="newQuotes" element={`quote${i + 1}`} />
     </span>
   ));
   return (
