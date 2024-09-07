@@ -122,7 +122,7 @@ const Home = () => {
         <div className="z-0 w-[50%]  h-[400px]">
           {/* <ImageSlider /> */}
           <img
-            src="/56ebb5e051381fbf99398cea78a84b36_1200_80.webp"
+            src="public\Worry-Free Warranty (DHP Page1).png"
             alt=""
             className="w-full h-full object-cover"
           />
