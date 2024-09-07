@@ -17,7 +17,7 @@ import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
 
 const Enrollment = () => {
   const { language } = useAppStore();
-  // const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
 

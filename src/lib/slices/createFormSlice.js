@@ -22,10 +22,15 @@ export const createFormSlice = (set, get) => ({
     set({ companydata });
   },
   incrementStep:()=>{
+    const currentStep = get().currentStep;
     set({currentStep:currentStep+1})
   },
   decrementStep:()=>{
+    const currentStep = get().currentStep;
     set({currentStep:currentStep-1})
+  },
+  clearData: ()=>{
+    set({currentStep:1,companydata:null,step4Data:null,step3Data:null,step2Data:null,step1Data:null})
   },
   setAdditionalOptions: (additionalOptions) => {
     set({ additionalOptions });
