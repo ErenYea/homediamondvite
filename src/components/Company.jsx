@@ -138,7 +138,7 @@ const Company = () => {
           <div className="z-0 w-[50%]  h-[400px]">
             {/* <ImageSlider /> */}
             <img
-              src="public\Worry-Free Warranty (DHP Page1).png"
+              src="Worry-Free Warranty (DHP Page1).png"
               alt=""
               className="w-full h-full object-cover"
             />

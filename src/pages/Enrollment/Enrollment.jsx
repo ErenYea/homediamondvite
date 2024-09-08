@@ -204,7 +204,7 @@ const Enrollment = () => {
           {currentStep === 4 && (
             <div className="h-full">
               <img
-                src="public\Worry-Free Warranty (DHP Page1).png"
+                src="Worry-Free Warranty (DHP Page1).png"
                 alt=""
                 className="h-full object-cover"
               />

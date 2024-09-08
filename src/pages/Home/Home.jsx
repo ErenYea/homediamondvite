@@ -148,7 +148,7 @@ const Home = () => {
         <div className="z-0 w-[50%]  h-[400px]">
           {/* <ImageSlider /> */}
           <img
-            src="public\Worry-Free Warranty (DHP Page1).png"
+            src="Worry-Free Warranty (DHP Page1).png"
             alt=""
             className="w-full h-full object-cover"
           />
@@ -235,7 +235,7 @@ const Home = () => {
           How it works... Easy as 1, 2, 3
         </span>
         <video
-          src="public\30 second customer video_2.mp4"
+          src="30 second customer video_2.mp4"
           controls
           className="w-full h-[70vh]"
           autoPlay
