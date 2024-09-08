@@ -170,7 +170,7 @@ const Home = () => {
       <div className="w-full h-full relative top-[-60px] z-[900] flex items-center">
         <div className=" w-[450px] h-full ml-[10rem] ">
           <div className="bg-[#2E7EB5] p-[10px] rounded-lg box-border">
-            <InputForm sellerId={1} />
+            <InputForm />
           </div>
         </div>
 

@@ -5,10 +5,10 @@ import { submitStep3 } from "../lib/step3";
 import { LoadingButton } from "@mui/lab";
 
 const InputForm3 = ({ companyid, showonlyData }) => {
-  const { step2Data, setstep3Data, setAdditionalOptions, additionalOptions,incrementStep } =
+  const { step2Data, setstep3Data, setAdditionalOptions, additionalOptions,incrementStep,error,setError } =
     useAppStore();
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
   const initialData = useMemo(() => step2Data || {}, [step2Data]);
   const [formData, setFormData] = useState({
     LeadID: initialData.RateQuoted?.[0]?.LeadID || "",
@@ -84,9 +84,7 @@ const InputForm3 = ({ companyid, showonlyData }) => {
     setFormData((prevData) => ({ ...prevData, Total: total }));
   }, [additionalOptions, formData.RateQuoted]);
   // console.log(selectedData);
-  if (error) {
-    throw error;
-  }
+
 
   return (
     <div className="flex justify-center transition-all items-center box-border w-full h-full text-white">

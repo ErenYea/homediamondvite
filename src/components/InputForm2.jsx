@@ -8,12 +8,12 @@ import { LoadingButton } from "@mui/lab";
 
 const InputForm2 = ({ companyid }) => {
   const navigate = useNavigate();
-  const { step1Data, setstep2Data,incrementStep } = useAppStore();
+  const { step1Data, setstep2Data,incrementStep,error,setError,sellerId } = useAppStore();
   const [loading, setLoading] = useState(false);
   const [propertyTypes, setPropertyType] = useState([]);
   const initialData = useMemo(() => step1Data || {}, [step1Data]);
   const initialSellerID = useMemo(() => step1Data?.SellerID || "", [step1Data]);
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
   const [formData, setFormData] = useState({
     LeadID: initialData.LeadID || "",
     LeadUID: initialData.LeadUID || "",
@@ -22,7 +22,7 @@ const InputForm2 = ({ companyid }) => {
     Phone: initialData.Phone || "",
     Email: initialData.Email || "",
     ZipCode: initialData.ZipCode || "",
-    SellerID: 1,
+    SellerID: sellerId,
     PropertyType: 1,
     PropertyAddress1: "",
     PropertyAddress2: "",
@@ -102,9 +102,7 @@ const InputForm2 = ({ companyid }) => {
   useEffect(() => {
     fetchPropertyType();
   }, []);
-  if (error) {
-    throw error;
-  }
+
   return (
     <div className="flex justify-center transition-all items-center box-border w-full ">
       <div className="bg-[#2E7EB5] w-full max-w-[400px] rounded-md box-border px-2 py-1">

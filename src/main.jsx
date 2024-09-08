@@ -56,13 +56,13 @@ const router = createBrowserRouter([
         element: "",
       },
     ],
-    errorElement: (
-      <div className="w-full h-full">
-        <NavBar />
-        <ErrorPage />
-        <Footer />
-      </div>
-    ),
+    // errorElement: (
+    //   <div className="w-full h-full">
+    //     <NavBar />
+    //     <ErrorPage />
+    //     <Footer />
+    //   </div>
+    // ),
   },
   {
     path: "/terms-and-condition",

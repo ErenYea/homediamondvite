@@ -7,11 +7,11 @@ import { submitStep1 } from "../lib/step1";
 import { LoadingButton } from "@mui/lab";
 import SaveIcon from "@mui/icons-material/Save";
 
-const InputForm = ({ sellerId, companyid }) => {
+const InputForm = ({companyid}) => {
   const navigate = useNavigate();
-  const { setstep1Data,incrementStep } = useAppStore();
+  const { setstep1Data,incrementStep,error,setError,sellerId } = useAppStore();
   const [loading, setloading] = useState(false);
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
 
   const [form, setForm] = useState({
     firstName: "",
@@ -42,7 +42,7 @@ const InputForm = ({ sellerId, companyid }) => {
         SellerID: sellerId,
       };
 
-      // console.log("Sending data to backend:", dataToSubmit);
+       console.log("Sending data to backend:", dataToSubmit);
 
       const response = await submitStep1(dataToSubmit);
 
@@ -67,9 +67,7 @@ const InputForm = ({ sellerId, companyid }) => {
       setError(error);
     }
   };
-  if (error) {
-    throw error;
-  }
+
   return (
     <div className="flex justify-center  transition-all items-center box-border w-full">
       <div className="bg-[#2E7EB5] w-full max-w-[400px] rounded-md box-border px-2 py-1">

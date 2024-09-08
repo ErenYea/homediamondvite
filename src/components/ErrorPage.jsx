@@ -2,8 +2,11 @@ import React from "react";
 import PremiumHomeText2 from "./PremiumHomeText2";
 import { Link, NavLink, useNavigate, useParams } from "react-router-dom";
 import TextBlock from "./TextBlock";
+import { Button } from "@mui/material";
+import { useAppStore } from "../lib/store";
 
 const ErrorPage = () => {
+  const {setError} = useAppStore()
   const params = useParams();
   const navigate = useNavigate();
   const gotohome = () => {
@@ -38,6 +41,9 @@ const ErrorPage = () => {
             />
           </span>
         </div>
+        <Button onClick={()=>setError(null)}>
+          Go Back
+        </Button>
         <Link to="/contact-us">
           <div className="flex justify-center w-fit mx-auto bg-[#63A8AE] items-center py-2 px-6 text-2xl cursor-pointer  transition-all rounded-lg shadow-md border text-white">
             <span className="w-fit">

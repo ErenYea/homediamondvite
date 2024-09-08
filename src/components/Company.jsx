@@ -11,7 +11,7 @@ import { useAppStore } from "../lib/store";
 import {companyData} from "../lib/companyData"
 
 const Company = () => {
-  const { language,companydata,setCompanyData } = useAppStore();
+  const { language,companydata,setCompanyData,setSellerid } = useAppStore();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
@@ -116,8 +116,10 @@ const Company = () => {
     const result = await companyData(name)
     if (result ==null){
       setError("Company Not Found")
+    }else{
+      setSellerid(result.SellerID)
+      setCompanyData(result)
     }
-    setCompanyData(result)
   }
   useEffect(()=>{
     fetchData()
@@ -158,7 +160,7 @@ const Company = () => {
         <div className="w-full h-[450px] flex relative top-[-100px] z-[900] ">
           <div className=" w-[450px] h-full ml-[10rem] ">
             <div className="bg-[#2E7EB5] p-[10px] rounded-lg box-border">
-              <InputForm sellerId={companydata.SellerID} companyid={params.id} />
+              <InputForm  companyid={params.id} />
             </div>
           </div>
           <div className="w-full h-full flex justify-evenly space-x-5 mt-5  items-center">

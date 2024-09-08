@@ -6,9 +6,9 @@ import { submitStep4 } from "../lib/step4";
 import { LoadingButton } from "@mui/lab";
 
 const InputForm4 = ({ companyid }) => {
-  const { step1Data, step3Data, step2Data, setstep4Data,incrementStep } = useAppStore();
+  const { step1Data, step3Data, step2Data, setstep4Data,incrementStep,error,setError } = useAppStore();
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
   const customerIdObject = step1Data || {};
   const { LeadID, LeadUID } = customerIdObject;
   const [billingData, setBillingData] = useState({
@@ -107,9 +107,7 @@ const InputForm4 = ({ companyid }) => {
       setLoading(false);
     }
   };
-  if (error) {
-    throw error;
-  }
+
   return (
     <div className="flex justify-center transition-all items-center box-border   w-full ">
       <div className="bg-[#2E7EB5] w-full max-w-[400px] rounded-md box-border px-2 py-1">

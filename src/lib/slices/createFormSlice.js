@@ -5,6 +5,8 @@ export const createFormSlice = (set, get) => ({
   step4Data: null,
   companydata: null,
   currentStep: 1,
+  sellerId:1,
+  error:null,
   additionalOptions: [],
   setstep1Data: (step1Data) => {
     set({ step1Data });
@@ -30,11 +32,17 @@ export const createFormSlice = (set, get) => ({
     set({currentStep:currentStep-1})
   },
   clearData: ()=>{
-    set({currentStep:1,companydata:null,step4Data:null,step3Data:null,step2Data:null,step1Data:null})
+    set({currentStep:1,companydata:null,step4Data:null,step3Data:null,step2Data:null,step1Data:null,error:null,sellerId:1})
   },
   setAdditionalOptions: (additionalOptions) => {
     set({ additionalOptions });
   },
+  setError:(error)=>{
+    set({error})
+  },
+  setSellerid:(id)=>{
+    set({sellerId:id})
+  }
   // setData:(firstName,) => {
 
   // }

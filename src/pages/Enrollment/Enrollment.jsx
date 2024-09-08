@@ -13,10 +13,12 @@ import OptionsCheckBoxContainer from "../../components/OptionsCheckBoxContainer"
 import TextBlock from "../../components/TextBlock";
 import ProgressComplete from "../../components/ProgressComplete";
 import PremiumHomeText2 from "../../components/PremiumHomeText2";
+import Button from '@mui/material/Button';
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
+import ErrorPage from "../../components/ErrorPage";
 
 const Enrollment = () => {
-  const { language } = useAppStore();
+  const { language , error} = useAppStore();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
@@ -124,7 +126,8 @@ const Enrollment = () => {
     step4Data,
     additionalOptions,
     setAdditionalOptions,
-    currentStep
+    currentStep,
+    decrementStep
   } = useAppStore();
 
   useEffect(() => {
@@ -140,6 +143,9 @@ const Enrollment = () => {
     }
   }, [step2Data]);
   const navigate = useNavigate();
+  const gotopreviousstep = ()=>{
+    decrementStep()
+  }
   // console.log(step1Data);
   // const currentStep = 3;
   // const currentStep = step4Data
@@ -172,7 +178,9 @@ const Enrollment = () => {
     //   );
     // }
   }, [currentStep]);
-
+ if (error){
+  return <ErrorPage/>
+ }
   return (
     <div className="flex flex-col items-center mt-[100px] transition-all overflow-x-hidden right-[1%] pb-[50px]">
       <div className="bg-[#63A8AE] text-white transition-all font-semibold text-xl lg:text-2xl w-full text-center py-2 subheading">
@@ -214,12 +222,12 @@ const Enrollment = () => {
           }`}
         >
           {currentStep === 1 && (
-            <InputForm sellerId={1} companyid={params?.id} />
+            <InputForm  />
           )}
-          {currentStep === 2 && <InputForm2 companyid={params?.id} />}
-          {currentStep === 3 && <InputForm3 companyid={params?.id} />}
-          {currentStep === 4 && <InputForm4 companyid={params?.id} />}
-          {currentStep === 5 && <ProcessCompleted companyid={params?.id} />}
+          {currentStep === 2 && <InputForm2  />}
+          {currentStep === 3 && <InputForm3/>}
+          {currentStep === 4 && <InputForm4  />}
+          {currentStep === 5 && <ProcessCompleted  />}
         </div>
         <div>
           {currentStep == 4 && (
@@ -227,6 +235,20 @@ const Enrollment = () => {
           )}
         </div>
       </div>
+      {/* {currentStep> 1 ? (
+         <div className="flex justify-center text-white mt-[5%]">
+         <Button
+           
+           variant="contained"
+           onClick={gotopreviousstep}
+           className="!bg-[#63A8AE] w-fit text-white border-none text-lg py-[10px] px-[20px] rounded cursor-pointer transition-all "
+         >
+           Previous Step
+           
+         </Button>
+       </div>
+      ) : ""} */}
+     
       <div className="flex justify-center h-full gap-5  w-full items-start pt-[30px] flex-col">
         <div className="bg-[#63A8AE] text-white transition-all font-semibold text-xl lg:text-2xl w-full text-center py-2 subheading">
           <TextBlock section="enrollementpage" element={`question`} />
