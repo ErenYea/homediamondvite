@@ -121,6 +121,11 @@ export const translations = {
       mainHomePageSecondBullet:
         "Comprehensive Coverage Beyond Typical Insurance",
       mainHomePageThirdBullet: "Hassle-Free Claims Processing",
+      whatishomedaimond: "What is a Home Warranty",
+      whatishomedaimondtext1:
+        "A home warranty is a service contract that covers the repair or replacement of important appliances and systems components that break down over time.",
+      whatishomedaimondtext2:
+        "Without a Home Warranty you may be faced with some of the following expenses...",
     },
     footer: {
       termsAndConditions: "Terms and Conditions",
@@ -538,6 +543,11 @@ export const translations = {
       mainHomePageSecondBullet: "Cobertura integral más allá del seguro típico",
       mainHomePageThirdBullet:
         "Procesamiento de reclamaciones sin complicaciones",
+      whatishomedaimond: "¿Qué es una garantía de vivienda?",
+      whatishomedaimondtext1:
+        "Una garantía de vivienda es un contrato de servicio que cubre la reparación o el reemplazo de electrodomésticos y componentes importantes del sistema que se descomponen con el tiempo.",
+      whatishomedaimondtext2:
+        "Sin una garantía de vivienda, es posible que se enfrente a algunos de los siguientes gastos...",
     },
     footer: {
       termsAndConditions: "Términos y Condiciones",

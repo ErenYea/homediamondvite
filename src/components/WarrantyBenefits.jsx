@@ -7,7 +7,7 @@ const WarrantyBenefits = () => {
       <h2 className="mb-[10px] text-2xl !font-bold heading-times-bold-uppercase subheading">
         <TextBlock section="warrantyBenefits" element="title" />
       </h2>
-      <ul className="pl-[20px] list-disc text-lg">
+      <ul className="pl-[20px] list-disc text-lg space-y-4">
         <li className="mb-[5px]">
           <TextBlock section="warrantyBenefits" element="financialProtection" />
         </li>

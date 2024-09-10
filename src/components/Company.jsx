@@ -8,14 +8,17 @@ import { useParams } from "react-router-dom";
 
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
 import { useAppStore } from "../lib/store";
-import {companyData} from "../lib/companyData"
+import { companyData } from "../lib/companyData";
+import PremiumHomeText2 from "./PremiumHomeText2";
+import PremiumProductText from "./PremiumProductText";
+import TextBlock from "./TextBlock";
 
 const Company = () => {
-  const { language,companydata,setCompanyData,setSellerid } = useAppStore();
+  const { language, companydata, setCompanyData, setSellerid } = useAppStore();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
-  const [error,setError] = useState(null)
+  const [error, setError] = useState(null);
   // const [companydata,setCompanydata] = useState(null)
   const handlePrev = () => {
     if (animating) return;
@@ -42,7 +45,39 @@ const Company = () => {
       setFadeOut(false);
     }, 500); // Match this with the CSS transition duration
   };
+  const products = [
+    {
+      title: "Plumbing System",
+      averageRepairCost: "$300",
+      averageReplaceCost: "$3500",
+    },
+    {
+      title: "AC, Average Repair",
+      averageRepairCost: "$350",
+      averageReplaceCost: "$5500",
+    },
+    {
+      title: "Heat",
+      averageRepairCost: "$350",
+      averageReplaceCost: "$4500",
+    },
+    {
+      title: "Water Heater",
+      averageRepairCost: "$275",
+      averageReplaceCost: "$1500",
+    },
 
+    {
+      title: "Washer",
+      averageRepairCost: "$285",
+      averageReplaceCost: "$650",
+    },
+    {
+      title: "Oven",
+      averageRepairCost: "$285",
+      averageReplaceCost: "$900",
+    },
+  ];
   useEffect(() => {
     if (!fadeOut) {
       const timeout = setTimeout(() => {
@@ -112,20 +147,20 @@ const Company = () => {
     });
   };
   const fetchData = async () => {
-    const name = params.id
-    const result = await companyData(name)
-    if (result ==null){
-      setError("Company Not Found")
-    }else{
-      setSellerid(result.SellerID)
-      setCompanyData(result)
+    const name = params.id;
+    const result = await companyData(name);
+    if (result == null) {
+      setError("Company Not Found");
+    } else {
+      setSellerid(result.SellerID);
+      setCompanyData(result);
     }
-  }
-  useEffect(()=>{
-    fetchData()
-  },[])
-  if (error){
-    throw Error(error)
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
+  if (error) {
+    throw Error(error);
   }
 
   return (
@@ -160,7 +195,7 @@ const Company = () => {
         <div className="w-full h-[450px] flex relative top-[-100px] z-[900] ">
           <div className=" w-[450px] h-full ml-[10rem] ">
             <div className="bg-[#2E7EB5] p-[10px] rounded-lg box-border">
-              <InputForm  companyid={params.id} />
+              <InputForm companyid={params.id} />
             </div>
           </div>
           <div className="w-full h-full flex justify-evenly space-x-5 mt-5  items-center">
@@ -180,36 +215,111 @@ const Company = () => {
           </div>
         </div>
 
-        <div className="w-full flex h-[500px] justify-center mb-8">
-          <div className="w-[60%] h-full bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center justify-around">
+        <div className="w-full flex h-40 justify-center mb-8 bg-gray-300 py-4">
+          <div className="w-[90%] h-full flex items-center justify-around">
             <div
               onClick={handlePrev}
-              className="w-12 h-12 rounded-full bg-white flex items-center justify-center cursor-pointer"
+              className="w-12 h-12 rounded-full bg-[#2E7Eb5] flex items-center justify-center cursor-pointer"
             >
-              <ChevronLeftIcon className="text-[#2E7Eb5]" />
+              <ChevronLeftIcon className="text-gray-300" />
             </div>
             <div
-              className={`bg-white w-[60%] rounded-xl h-[60%] flex flex-col justify-center items-center p-8 transition-opacity duration-500 ease-in-out transform ${
+              className={` w-[80%] rounded-xl h-[60%] flex flex-col justify-center items-center p-8 transition-opacity duration-500 ease-in-out transform ${
                 fadeOut ? "opacity-0" : "opacity-100"
               }`}
             >
-              <p className="text-lg text-gray-700 text-center mb-4">
-                {testimonials[currentIndex].message}
-              </p>
-              <p className="text-base text-gray-500 text-center subheading">
-                - {testimonials[currentIndex].name}
+              <p className="text-lg text-[#2E7Eb5] text-center mb-4">
+                {testimonials[currentIndex].message} -{" "}
+                <span className="font-bold">
+                  {testimonials[currentIndex].name}
+                </span>
               </p>
             </div>
             <div
               onClick={handleNext}
-              className="w-12 h-12 rounded-full bg-white flex items-center justify-center cursor-pointer"
+              className="w-12 h-12 rounded-full bg-[#2E7Eb5] flex items-center justify-center cursor-pointer"
             >
-              <ChevronRightIcon className="text-[#2E7Eb5]" />
+              <ChevronRightIcon className="text-gray-300" />
             </div>
           </div>
         </div>
+        <div className="md:w-full lg:w-[90%] xl:[w-80%] mx-auto flex flex-col gap-6 mb-8">
+          <span className="w-full text-center font-bold text-[#2E7Eb5] text-3xl">
+            How it works... Easy as 1, 2, 3
+          </span>
+          <video
+            src="30 second customer video_2.mp4"
+            controls
+            className="w-full h-[70vh]"
+          ></video>
+          <div className="flex items-center justify-center gap-6 font-bold text-[#2E7Eb5] text-2xl">
+            <span>1. You Report A Claim 24/7</span>
+            <span>2. We Assign A Professional</span>
+            <span>3. The Repair is Complete</span>
+          </div>
+        </div>
+
+        <div className="flex items-start w-full h-full">
+          <div className="z-0 md:w-full lg:w-[80%] h-[400px]">
+            <img
+              src="/56ebb5e051381fbf99398cea78a84b36_1200_80.webp"
+              alt=""
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="z-10 h-[400px] flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
+            <div
+              className="cutBox bg-gradient-to-r from-[#63A8AE] to-[#5fa4af] h-full"
+              style={{
+                clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
+                width: "calc(30% )", // Expand the width to cover the extra clipped area
+                marginLeft: "-10%", // Shift the div to the left by the amount that was clipped
+              }}
+            ></div>
+            <div className="w-full text-white mr-[70px]">
+              {/* <PremiumHomeText /> */}
+              <PremiumProductText />
+            </div>
+          </div>
+        </div>
+        <div className="w-full flex flex-col items-center justify-center p-10 gap-2">
+          <div className="subheading text-xl !font-bold">
+            <TextBlock section="homeInfoText" element="whatishomedaimond" />
+          </div>
+          <div className="text-lg">
+            <TextBlock
+              section="homeInfoText"
+              element="whatishomedaimondtext1"
+            />
+          </div>
+          <div className="text-lg">
+            <TextBlock
+              section="homeInfoText"
+              element="whatishomedaimondtext2"
+            />
+          </div>
+        </div>
+        <div className="w-full flex justify-center p-10">
+          <div className="grid grid-cols-2 gap-4 w-fit">
+            {products.map((product, ind) => (
+              <div
+                key={ind}
+                className="col-span-1 flex flex-col items-center justify-center gap-2 bg-gradient-to-b from-white to-[#63A8AE] py-6 w-fit px-6 min-w-[500px] min-h-[200px] subheading "
+              >
+                <span className="font-bold text-xl tracking-wide leading-normal">{`${product.title}`}</span>
+                <span className="text-lg font-medium leading-normal">{`Avg. repair cost: ${product.averageRepairCost}`}</span>
+                <span className="text-lg font-medium leading-normal">{`Avg. replace cost: ${product.averageReplaceCost}`}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mb-8">
+          <MarqueeComponent />
+        </div>
+
         <div className="flex items-start w-full h-[400px] relative">
-          <div className="z-0 w-[50%] h-[400px] bg-white">
+          <div className="z-0 w-[70%] h-[400px] bg-white">
             <div className="w-full h-full flex flex-col pt-6 items-center">
               <img src="/dhp_home_logo.jpg" alt="" className="w-[350px]" />
               <div
@@ -230,7 +340,7 @@ const Company = () => {
               }}
             ></div>
             <div className="w-full  text-white">
-              <PremiumHomeText />
+              <PremiumHomeText2 />
             </div>
           </div>
         </div>

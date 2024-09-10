@@ -37,6 +37,17 @@ const Home = () => {
       averageRepairCost: "$275",
       averageReplaceCost: "$1500",
     },
+
+    {
+      title: "Washer",
+      averageRepairCost: "$285",
+      averageReplaceCost: "$650",
+    },
+    {
+      title: "Oven",
+      averageRepairCost: "$285",
+      averageReplaceCost: "$900",
+    },
   ];
 
   const testimonialsEn = [
@@ -238,7 +249,6 @@ const Home = () => {
           src="30 second customer video_2.mp4"
           controls
           className="w-full h-[70vh]"
-          autoPlay
         ></video>
         <div className="flex items-center justify-center gap-6 font-bold text-[#2E7Eb5] text-2xl">
           <span>1. You Report A Claim 24/7</span>
@@ -270,7 +280,17 @@ const Home = () => {
           </div>
         </div>
       </div>
-
+      <div className="w-full flex flex-col items-center justify-center p-10 gap-2">
+        <div className="subheading text-xl !font-bold">
+          <TextBlock section="homeInfoText" element="whatishomedaimond" />
+        </div>
+        <div className="text-lg">
+          <TextBlock section="homeInfoText" element="whatishomedaimondtext1" />
+        </div>
+        <div className="text-lg">
+          <TextBlock section="homeInfoText" element="whatishomedaimondtext2" />
+        </div>
+      </div>
       <div className="w-full flex justify-center p-10">
         <div className="grid grid-cols-2 gap-4 w-fit">
           {products.map((product, ind) => (
