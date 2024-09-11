@@ -179,39 +179,29 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-full relative top-[-60px] z-[900] flex items-center">
+      <div className="w-full h-[450px] flex relative top-[-100px] z-[900] ">
         <div className=" w-[450px] h-full ml-[10rem] ">
           <div className="bg-[#2E7EB5] p-[10px] rounded-lg box-border">
             <InputForm />
           </div>
         </div>
-
-        {/* <div className="lg:w-[80%] w-[100%] xl:w-[60%] h-full bg-white flex items-center justify-around">
-          <div
-            onClick={handlePrev}
-            className="w-12 h-12 rounded-full bg-[#E7E6EA] flex items-center justify-center cursor-pointer"
-          >
-            <ChevronLeftIcon className="text-[#2E7Eb5]" />
+        <div className="w-full h-full flex justify-evenly space-x-5 mt-7  items-center">
+          {/* <div className="text-2xl font-bold">{companyData.name}</div> */}
+          <div className="text-2xl font-semibold max-w-[50%]">
+            {" "}
+            <TextBlock
+              section={"homeInfoText"}
+              element={"formcontainertext"}
+            />{" "}
+            <span className="font-bold text-teal-500">
+              Diamond Home Protection
+            </span>
+            <TextBlock
+              section={"homeInfoText"}
+              element={"formcontainertext2"}
+            />
           </div>
-          <div
-            className={`bg-gradient-to-r shadow-lg from-[#63A8AE] to-[#2E7Eb5] w-[60%] rounded-xl h-[60%] flex flex-col justify-center items-center p-8 transition-opacity duration-500 ease-in-out transform ${
-              fadeOut ? "opacity-0" : "opacity-100"
-            }`}
-          >
-            <p className="text-lg text-[#E7E6EA] text-center mb-4">
-              {testimonials[currentIndex].message}
-            </p>
-            <p className="text-base text-[#E7E6EA] text-center subheading">
-              - {testimonials[currentIndex].name}
-            </p>
-          </div>
-          <div
-            onClick={handleNext}
-            className="w-12 h-12 rounded-full bg-[#E7E6EA] flex items-center justify-center cursor-pointer"
-          >
-            <ChevronRightIcon className="text-[#2E7Eb5]" />
-          </div>
-        </div> */}
+        </div>
       </div>
 
       <div className="w-full flex h-40 justify-center mb-8 bg-gray-300 py-4">

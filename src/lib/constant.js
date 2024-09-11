@@ -91,6 +91,9 @@ export const translations = {
       submitButton: "Free Quote",
     },
     homeInfoText: {
+      formcontainertext: "At",
+      formcontainertext2:
+        ", we believe that homeownership should come with confidence, not unexpected expenses. That’s why we’ve created a premium home warranty option that offers comprehensive coverage for your home systems and appliances, all at a cost-effective group discount. With hassle-free claims processing and coverage that goes beyond typical insurance, you can enjoy peace of mind knowing you’re protected against the high costs of unexpected repairs.",
       aboutUs: "About Us",
       bbbRating: "BBB Rating of A+",
       licensedProvider:
@@ -513,6 +516,9 @@ export const translations = {
       submitButton: "Cotización Gratis",
     },
     homeInfoText: {
+      formcontainertext: "En",
+      formcontainertext2:
+        ", creemos que ser propietario de una vivienda debe venir con confianza, no con gastos inesperados. Es por eso que hemos creado una opción de garantía premium para el hogar que ofrece una cobertura integral para los sistemas y electrodomésticos de su hogar, todo con un descuento grupal rentable. Con un procesamiento de reclamos sin complicaciones y una cobertura que va más allá del seguro típico, puede disfrutar de la tranquilidad de saber que está protegido contra los altos costos de reparaciones inesperadas.",
       aboutUs: "Sobre Nosotros",
       bbbRating: "Calificación BBB de A+",
       licensedProvider:
