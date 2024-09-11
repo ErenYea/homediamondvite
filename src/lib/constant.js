@@ -481,17 +481,17 @@ export const translations = {
         "A home warranty may cover certain systems like central air conditioning, heating, plumbing, electrical, and water heaters, as well as appliances like refrigerators, stoves, washers, and dryers.",
       question2: "Do you cover older appliances?",
       answer2:
-        "Yes. If the covered system or appliance is in working order when you purchase a 2-10 HBW home warranty (i.e., doesn't have a pre-existing problem).",
+        "Yes. If the covered system or appliance is in working order when you purchase a Diamond Home Protection home warranty (i.e., doesn’t have a pre-existing problem).",
       question3:
         "What's the difference between a home warranty and homeowners insurance?",
       answer3:
         "A home warranty is an annual contract that can help reduce the costs to repair or replace covered systems and appliances that break down from normal wear and tear. Homeowners insurance covers loss from incidents like fire, storms, or vandalism. The coverages provided by a home warranty and homeowners insurance typically don't overlap and often complement one another to provide comprehensive protection.",
       question4: "What is a home warranty?",
       answer4:
-        "A home warranty (or Home Warranty Service Agreement as we call it) is a powerful budget-protecting service contract for homeowners that can provide coverage for things that homeowners insurance doesn't.",
+        "A home warranty (or Home Service Contract as we call it) is a powerful budget-protecting service contract for homeowners that can provide coverage for things that homeowners insurance doesn’t. ",
       question5: "How do I request service or file a claim?",
       answer5:
-        "To request service, log in to your Homeowner Portal account, select the system or appliance that needs service, answer a few questions, and we'll dispatch an authorized Service Contractor to your home.",
+        "To request service, simply call our 800 number listed in your home warranty contract. After collecting a service call fee of $75, we’ll dispatch an authorized Service Contractor to your home.",
       question6: "When can you purchase a home warranty?",
       answer6:
         "You can purchase a home warranty at any time for any house. While many home warranties are purchased by a buyer or a seller of a home during a real estate transaction, a home warranty can be purchased by any homeowner looking to protect their budget.",
@@ -902,17 +902,17 @@ export const translations = {
         "Una garantía de hogar puede cubrir ciertos sistemas como aire acondicionado central, calefacción, plomería, electricidad y calentadores de agua, así como electrodomésticos como refrigeradores, estufas, lavadoras y secadoras.",
       question2: "¿Cubren electrodomésticos antiguos?",
       answer2:
-        "Sí. Si el sistema o electrodoméstico cubierto está en funcionamiento cuando compra una garantía de hogar 2-10 HBW (es decir, no tiene un problema preexistente).",
+        "Sí. Si el sistema o electrodoméstico cubierto funciona correctamente cuando compra una garantía para el hogar de Diamond Home Protection (es decir, no tiene un problema preexistente).",
       question3:
         "¿Cuál es la diferencia entre una garantía de hogar y un seguro de hogar?",
       answer3:
         "Una garantía de hogar es un contrato anual que puede ayudar a reducir los costos de reparación o reemplazo de sistemas y electrodomésticos cubiertos que se descomponen por el desgaste normal. El seguro de hogar cubre pérdidas por incidentes como incendios, tormentas o vandalismo. Las coberturas proporcionadas por una garantía de hogar y un seguro de hogar generalmente no se superponen y, a menudo, se complementan para brindar una protección integral.",
       question4: "¿Qué es una garantía de hogar?",
       answer4:
-        "Una garantía de hogar (o Acuerdo de Servicio de Garantía de Hogar como lo llamamos) es un poderoso contrato de servicio que protege el presupuesto de los propietarios y que puede proporcionar cobertura para cosas que el seguro de hogar no cubre.",
+        "Una garantía para el hogar (o contrato de servicio para el hogar, como lo llamamos) es un poderoso contrato de servicio para propietarios de viviendas que protege el presupuesto y que puede brindar cobertura para cosas que el seguro para propietarios de viviendas no cubre.",
       question5: "¿Cómo solicito servicio o presento un reclamo?",
       answer5:
-        "Para solicitar servicio, inicie sesión en su cuenta del Portal del Propietario, seleccione el sistema o electrodoméstico que necesita servicio, responda algunas preguntas y enviaremos un Contratista de Servicio autorizado a su hogar.",
+        "Para solicitar servicio, simplemente llame a nuestro número 800 que figura en el contrato de garantía de su hogar. Después de cobrar una tarifa de llamada de servicio de $75, enviaremos un contratista de servicio autorizado a su hogar.",
       question6: "¿Cuándo se puede comprar una garantía de hogar?",
       answer6:
         "Puede comprar una garantía de hogar en cualquier momento para cualquier casa. Si bien muchas garantías de hogar son compradas por un comprador o vendedor de una casa durante una transacción inmobiliaria, cualquier propietario que desee proteger su presupuesto puede comprar una garantía de hogar.",
