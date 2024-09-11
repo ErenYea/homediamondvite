@@ -1,22 +1,46 @@
 import React, { useEffect, useState } from "react";
-import MarqueeComponent from "../../components/MarqueeComponent";
-import ImageSlider from "../../components/ImageSlider";
-import PremiumHomeText from "../../components/PremiumHomeText";
-import InputForm from "../../components/InputForm";
-import { Outlet, useParams } from "react-router-dom";
-import PremiumHomeText2 from "../../components/PremiumHomeText2";
+import { useAppStore } from "../lib/store";
+import PremiumHomeText2 from "./PremiumHomeText2";
+import MarqueeComponent from "./MarqueeComponent";
+import TextBlock from "./TextBlock";
+import PremiumProductText from "./PremiumProductText";
 import { ChevronLeftIcon, ChevronRightIcon } from "@heroicons/react/16/solid";
-import { useAppStore } from "../../lib/store";
-import TextBlock from "../../components/TextBlock";
-import PremiumProductText from "../../components/PremiumProductText";
-import FAQ from "../FAQ/FAQ";
+import PremiumHomeText from "./PremiumHomeText";
+import InputForm from "./InputForm";
+import FAQ from "../pages/FAQ/FAQ";
 
-const Home = () => {
-  const { language, clearData } = useAppStore();
+const YourCompany = () => {
+  const { language, companydata, setCompanyData, setSellerid } = useAppStore();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
+  const [error, setError] = useState(null);
+  // const [companydata,setCompanydata] = useState(null)
+  const handlePrev = () => {
+    if (animating) return;
+    setFadeOut(true);
+    setAnimating(true);
 
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
+      );
+      setFadeOut(false);
+    }, 500); // Match this with the CSS transition duration
+  };
+
+  const handleNext = () => {
+    if (animating) return;
+    setFadeOut(true);
+    setAnimating(true);
+
+    setTimeout(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      );
+      setFadeOut(false);
+    }, 500); // Match this with the CSS transition duration
+  };
   const products = [
     {
       title: "Plumbing System",
@@ -50,6 +74,14 @@ const Home = () => {
       averageReplaceCost: "$900",
     },
   ];
+  useEffect(() => {
+    if (!fadeOut) {
+      const timeout = setTimeout(() => {
+        setAnimating(false);
+      }, 500); // Duration of the transition should match this timeout
+      return () => clearTimeout(timeout);
+    }
+  }, [fadeOut]);
 
   const testimonialsEn = [
     {
@@ -102,57 +134,14 @@ const Home = () => {
   useEffect(() => {
     setTestimonials(language === "es" ? testimonialsEs : testimonialsEn);
   }, [language]);
-
-  const handlePrev = () => {
-    if (animating) return;
-    setFadeOut(true);
-    setAnimating(true);
-
-    setTimeout(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
-      );
-      setFadeOut(false);
-    }, 500); // Match this with the CSS transition duration
-  };
-
-  const handleNext = () => {
-    if (animating) return;
-    setFadeOut(true);
-    setAnimating(true);
-
-    setTimeout(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-      );
-      setFadeOut(false);
-    }, 500); // Match this with the CSS transition duration
-  };
-
-  useEffect(() => {
-    if (!fadeOut) {
-      const timeout = setTimeout(() => {
-        setAnimating(false);
-      }, 500); // Duration of the transition should match this timeout
-      return () => clearTimeout(timeout);
-    }
-  }, [fadeOut]);
-
-  const params = useParams();
   const scrolltoContainer = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth", // Optional: Add smooth scrolling
     });
   };
-  useEffect(() => {
-    scrolltoContainer();
-    clearData();
-  }, []);
-  return params?.id ? (
-    <Outlet />
-  ) : (
-    <div className="w-full flex flex-col mt-[100px] transition-all pb-[50px]">
+  return (
+    <div className=" w-full transition-all flex flex-col mt-[100px] pb-[50px]">
       <div className="">
         <MarqueeComponent />
       </div>
@@ -167,7 +156,7 @@ const Home = () => {
         </div>
         <div className="z-10 h-[400px] flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
           <div
-            className="cutBox  h-full bg-gradient-to-r from-[#63A8AE] to-[#5fa4af]"
+            className="cutBox bg-gradient-to-r from-[#63A8AE] to-[#5fa4af] h-full"
             style={{
               clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
               width: "calc(30% )", // Expand the width to cover the extra clipped area
@@ -179,39 +168,25 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="w-full h-full relative top-[-60px] z-[900] flex items-center">
+      <div className="w-full h-[450px] flex relative top-[-100px] z-[900] ">
         <div className=" w-[450px] h-full ml-[10rem] ">
           <div className="bg-[#2E7EB5] p-[10px] rounded-lg box-border">
-            <InputForm />
+            <InputForm companyid={"yourcompany"} />
           </div>
         </div>
-
-        {/* <div className="lg:w-[80%] w-[100%] xl:w-[60%] h-full bg-white flex items-center justify-around">
-          <div
-            onClick={handlePrev}
-            className="w-12 h-12 rounded-full bg-[#E7E6EA] flex items-center justify-center cursor-pointer"
-          >
-            <ChevronLeftIcon className="text-[#2E7Eb5]" />
+        <div className="w-full h-full flex justify-evenly space-x-5 mt-5  items-center">
+          <img src={"gallagerlogo.jpg"} alt="" className=" w-48 " />
+          {/* <div className="text-2xl font-bold">{companyData.name}</div> */}
+          <div className="text-2xl font-semibold max-w-[50%]">
+            {" "}
+            We have some fantastic news to share! At{" "}
+            <span className="font-bold text-teal-500">Your Company</span> we are
+            committed to supporting not just your career but also your personal
+            life. We are thrilled to announce that we have added a new voluntary
+            benefit to your package – Diamond Home Protection’s Home Warranty
+            Service
           </div>
-          <div
-            className={`bg-gradient-to-r shadow-lg from-[#63A8AE] to-[#2E7Eb5] w-[60%] rounded-xl h-[60%] flex flex-col justify-center items-center p-8 transition-opacity duration-500 ease-in-out transform ${
-              fadeOut ? "opacity-0" : "opacity-100"
-            }`}
-          >
-            <p className="text-lg text-[#E7E6EA] text-center mb-4">
-              {testimonials[currentIndex].message}
-            </p>
-            <p className="text-base text-[#E7E6EA] text-center subheading">
-              - {testimonials[currentIndex].name}
-            </p>
-          </div>
-          <div
-            onClick={handleNext}
-            className="w-12 h-12 rounded-full bg-[#E7E6EA] flex items-center justify-center cursor-pointer"
-          >
-            <ChevronRightIcon className="text-[#2E7Eb5]" />
-          </div>
-        </div> */}
+        </div>
       </div>
 
       <div className="w-full flex h-40 justify-center mb-8 bg-gray-300 py-4">
@@ -341,4 +316,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default YourCompany;

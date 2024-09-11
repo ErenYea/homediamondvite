@@ -12,6 +12,7 @@ import { companyData } from "../lib/companyData";
 import PremiumHomeText2 from "./PremiumHomeText2";
 import PremiumProductText from "./PremiumProductText";
 import TextBlock from "./TextBlock";
+import FAQ from "../pages/FAQ/FAQ";
 
 const Company = () => {
   const { language, companydata, setCompanyData, setSellerid } = useAppStore();
@@ -243,14 +244,14 @@ const Company = () => {
             </div>
           </div>
         </div>
-        <div className="md:w-full lg:w-[90%] xl:[w-80%] mx-auto flex flex-col gap-6 mb-8">
+        <div className="md:w-full lg:w-[90%] xl:[w-80%] mx-auto flex flex-col items-center gap-10 mb-8">
           <span className="w-full text-center font-bold text-[#2E7Eb5] text-3xl">
             How it works... Easy as 1, 2, 3
           </span>
           <video
             src="30 second customer video_2.mp4"
             controls
-            className="w-full h-[70vh]"
+            className="w-[70vw] h-[70vh] rounded-xl"
           ></video>
           <div className="flex items-center justify-center gap-6 font-bold text-[#2E7Eb5] text-2xl">
             <span>1. You Report A Claim 24/7</span>
@@ -317,7 +318,7 @@ const Company = () => {
         <div className="mb-8">
           <MarqueeComponent />
         </div>
-
+        <FAQ />
         <div className="flex items-start w-full h-[400px] relative">
           <div className="z-0 w-[70%] h-[400px] bg-white">
             <div className="w-full h-full flex flex-col pt-6 items-center">

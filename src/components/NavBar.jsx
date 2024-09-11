@@ -16,9 +16,9 @@ const NavBar = () => {
           <img src={"/dhp_home_logo.jpg"} alt="Logo" className="w-[150px]" />
         </Link>
         <div className="ml-[20px]  mt-2 space-x-5 font-semibold">
-          <Link to="/faq" className="hover:underline">
+          {/* <Link to="/faq" className="hover:underline">
             <TextBlock section="navbar" element="faq" />
-          </Link>
+          </Link> */}
           <Link to="/contact-us" className=" hover:underline">
             <TextBlock section="navbar" element="contact" />
           </Link>

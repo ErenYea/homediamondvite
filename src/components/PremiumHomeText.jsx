@@ -12,7 +12,7 @@ const PremiumHomeText = () => {
 
       <div className="flex flex-col xl:gap-4 lg:gap-2 gap-1">
         <div className="max-w-[80%]">
-          <span className="xl:text-xl text-lg  italic">
+          <span className="xl:text-xl text-lg font-bold italic">
             <TextBlock section="homeInfoText" element="mainHomePageParagraph" />
           </span>
         </div>

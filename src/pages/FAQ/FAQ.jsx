@@ -42,18 +42,18 @@ const FAQ = () => {
   const handleQuestionToggle = (ind) => {
     setOpenedQuestion((prevIndex) => (prevIndex === ind ? null : ind));
   };
-  const scrolltoContainer = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth", // Optional: Add smooth scrolling
-    });
-  };
-  useEffect(() => {
-    scrolltoContainer();
-  }, []);
+  // const scrolltoContainer = () => {
+  //   window.scrollTo({
+  //     top: 0,
+  //     behavior: "smooth", // Optional: Add smooth scrolling
+  //   });
+  // };
+  // useEffect(() => {
+  //   scrolltoContainer();
+  // }, []);
 
   return (
-    <div className="mt-[100px] pb-[50px] text-black h-screen w-full flex justify-center items-center">
+    <div className=" pb-[30px] text-black h-full w-full flex justify-center items-center">
       <div className="flex flex-col h-fit gap-8 w-[70%]">
         <span className="subheading text-[#2E7Eb5] !font-extrabold !text-3xl text-center">
           <TextBlock section="faqPage" element="faqHeading" />

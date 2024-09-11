@@ -16,6 +16,7 @@ import RemoveMyData from "./pages/RemoveMyData/RemoveMyData.jsx";
 import FAQ from "./pages/FAQ/FAQ.jsx";
 import TermsAndCondition from "./pages/TermsAndCondition/TermsAndCondition.jsx";
 import PrivacyPage from "./pages/PrivacyPage/PrivacyPage.jsx";
+import YourCompany from "./components/YourCompany.jsx";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +41,23 @@ const router = createBrowserRouter([
         element: <Company />,
       },
     ],
+  },
+  {
+    path: "/yourcompany",
+    element: (
+      <div className="w-full h-full">
+        <NavBar />
+        <YourCompany />
+        <Footer />
+      </div>
+    ),
+    errorElement: (
+      <div className="w-full h-full">
+        <NavBar />
+        <ErrorPage />
+        <Footer />
+      </div>
+    ),
   },
   {
     path: "/enrollment",
@@ -74,16 +92,16 @@ const router = createBrowserRouter([
       </div>
     ),
   },
-  {
-    path: "/faq",
-    element: (
-      <div className="w-full h-full">
-        <NavBar />
-        <FAQ />
-        <Footer />
-      </div>
-    ),
-  },
+  // {
+  //   path: "/faq",
+  //   element: (
+  //     <div className="w-full h-full">
+  //       <NavBar />
+  //       <FAQ />
+  //       <Footer />
+  //     </div>
+  //   ),
+  // },
   {
     path: "/privacy",
     element: (
