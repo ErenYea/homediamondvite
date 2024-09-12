@@ -5,8 +5,15 @@ import { submitStep3 } from "../lib/step3";
 import { LoadingButton } from "@mui/lab";
 
 const InputForm3 = ({ companyid, showonlyData }) => {
-  const { step2Data, setstep3Data, setAdditionalOptions, additionalOptions,incrementStep,error,setError } =
-    useAppStore();
+  const {
+    step2Data,
+    setstep3Data,
+    setAdditionalOptions,
+    additionalOptions,
+    incrementStep,
+    error,
+    setError,
+  } = useAppStore();
   const [loading, setLoading] = useState(false);
   // const [error, setError] = useState(null);
   const initialData = useMemo(() => step2Data || {}, [step2Data]);
@@ -50,7 +57,7 @@ const InputForm3 = ({ companyid, showonlyData }) => {
     try {
       const response = await submitStep3(dataToSubmit);
       // setAdditionalOptions(selectedData.filter((data) => data.selected));
-      incrementStep()
+      incrementStep();
       setstep3Data({ ...response, totalAmount: formData.Total });
       setLoading(false);
     } catch (error) {
@@ -85,7 +92,6 @@ const InputForm3 = ({ companyid, showonlyData }) => {
   }, [additionalOptions, formData.RateQuoted]);
   // console.log(selectedData);
 
-
   return (
     <div className="flex justify-center transition-all items-center box-border w-full h-full text-white">
       <div className="bg-[#2E7EB5] w-full h-full flex items-start justify-start max-w-[400px] rounded-md box-border px-2 py-1">
@@ -119,7 +125,9 @@ const InputForm3 = ({ companyid, showonlyData }) => {
                       <div className="col-span-2">
                         {data.ReserveDescription}
                       </div>
-                      <div className="text-end">$ {data.ReserveAmount}</div>
+                      <div className="text-end">
+                        $ {data.ReserveAmount.toFixed(2)}
+                      </div>
                     </div>
                   ))}
               </div>

@@ -41,7 +41,9 @@ const OptionsCheckBoxContainer = () => {
               </label>
             </div>
 
-            <div className="text-gray-700">${option.ReserveAmount}</div>
+            <div className="text-gray-700">
+              ${option.ReserveAmount.toFixed(2)}
+            </div>
           </div>
         ))}
       </div>

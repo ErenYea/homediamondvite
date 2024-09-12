@@ -6,7 +6,15 @@ import { submitStep4 } from "../lib/step4";
 import { LoadingButton } from "@mui/lab";
 
 const InputForm4 = ({ companyid }) => {
-  const { step1Data, step3Data, step2Data, setstep4Data,incrementStep,error,setError } = useAppStore();
+  const {
+    step1Data,
+    step3Data,
+    step2Data,
+    setstep4Data,
+    incrementStep,
+    error,
+    setError,
+  } = useAppStore();
   const [loading, setLoading] = useState(false);
   // const [error, setError] = useState(null);
   const customerIdObject = step1Data || {};
@@ -82,7 +90,7 @@ const InputForm4 = ({ companyid }) => {
           response;
 
         if (response_code === "1" || response_code === "100") {
-          incrementStep()
+          incrementStep();
           setstep4Data({
             orderID: orderid,
             transactionID: transactionid,
@@ -100,7 +108,9 @@ const InputForm4 = ({ companyid }) => {
         setErrorMessage(
           "An error occurred while processing your payment. Please try again later."
         );
-        setError(error);
+        setError({
+          text: "An error occurred while processing your payment. Please try again later.",
+        });
       }
     } else {
       setErrorMessage("Please Fill all Field");

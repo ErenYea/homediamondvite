@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { NavLink, useNavigate, useParams } from "react-router-dom";
 import TextBlock from "../../components/TextBlock";
 import PremiumHomeText2 from "../../components/PremiumHomeText2";
@@ -13,6 +13,15 @@ const NoWarrantiesYet = () => {
       navigate("/");
     }
   };
+  const scrolltoContainer = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Optional: Add smooth scrolling
+    });
+  };
+  useEffect(() => {
+    scrolltoContainer();
+  }, []);
   return (
     <div className="w-full h-full flex flex-col items-center justify-center my-auto mt-[100px] pb-[50px] gap-10">
       <div className="bg-[#63A8AE] text-white transition-all font-semibold text-xl lg:text-2xl w-full text-center py-2 ">

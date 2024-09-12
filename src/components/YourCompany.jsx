@@ -10,7 +10,8 @@ import InputForm from "./InputForm";
 import FAQ from "../pages/FAQ/FAQ";
 
 const YourCompany = () => {
-  const { language, companydata, setCompanyData, setSellerid } = useAppStore();
+  const { language, companydata, setCompanyData, setSellerid, clearData } =
+    useAppStore();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
@@ -140,6 +141,10 @@ const YourCompany = () => {
       behavior: "smooth", // Optional: Add smooth scrolling
     });
   };
+  useEffect(() => {
+    scrolltoContainer();
+    clearData();
+  }, []);
   return (
     <div className=" w-full transition-all flex flex-col mt-[100px] pb-[50px]">
       <div className="">

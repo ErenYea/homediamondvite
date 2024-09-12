@@ -6,7 +6,7 @@ import { Button } from "@mui/material";
 import { useAppStore } from "../lib/store";
 
 const ErrorPage = () => {
-  const {setError} = useAppStore()
+  const { setError, error } = useAppStore();
   const params = useParams();
   const navigate = useNavigate();
   const gotohome = () => {
@@ -19,7 +19,11 @@ const ErrorPage = () => {
   return (
     <div className="w-full h-full flex flex-col items-center justify-center my-auto mt-[100px] pb-[50px] gap-10">
       <div className="bg-[#63A8AE] text-white transition-all subheading font-semibold text-xl lg:text-2xl w-full text-center py-2 ">
-        <TextBlock section="errorpage" element={`title`} />
+        {error.text ? (
+          error.text
+        ) : (
+          <TextBlock section="errorpage" element={`title`} />
+        )}
       </div>
       <div className="w-[40%] flex flex-col gap-6">
         <div className="flex flex-col items-start">
@@ -41,9 +45,15 @@ const ErrorPage = () => {
             />
           </span>
         </div>
-        <Button onClick={()=>setError(null)}>
-          Go Back
-        </Button>
+        <div className="flex justify-center text-white mt-[5%]">
+          <Button
+            variant="contained"
+            className="!bg-[#63A8AE] w-fit text-white border-none text-lg py-[10px] px-[20px] rounded cursor-pointer transition-all "
+            onClick={() => setError(null)}
+          >
+            Go Back
+          </Button>
+        </div>
         <Link to="/contact-us">
           <div className="flex justify-center w-fit mx-auto bg-[#63A8AE] items-center py-2 px-6 text-2xl cursor-pointer  transition-all rounded-lg shadow-md border text-white">
             <span className="w-fit">

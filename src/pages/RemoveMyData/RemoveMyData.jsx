@@ -1,9 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import TextBlock from "../../components/TextBlock";
 import ContactUsForm from "../../components/ContactUsForm";
 import RemoveMyDataForm from "../../components/RemoveMyDataForm";
 
 const RemoveMyData = () => {
+  const scrolltoContainer = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // Optional: Add smooth scrolling
+    });
+  };
+  useEffect(() => {
+    scrolltoContainer();
+  }, []);
   return (
     <div className="mt-[100px] pb-[50px] text-black h-full">
       <div className="flex items-start w-full h-full relative">
