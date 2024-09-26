@@ -10,9 +10,10 @@ import { useAppStore } from "../../lib/store";
 import TextBlock from "../../components/TextBlock";
 import PremiumProductText from "../../components/PremiumProductText";
 import FAQ from "../FAQ/FAQ";
+import ErrorPage from "../../components/ErrorPage";
 
 const Home = () => {
-  const { language, clearData } = useAppStore();
+  const { language, clearData, error } = useAppStore();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
   const [fadeOut, setFadeOut] = useState(false);
@@ -149,6 +150,9 @@ const Home = () => {
     scrolltoContainer();
     clearData();
   }, []);
+  if (error) {
+    return <ErrorPage />;
+  }
   return params?.id ? (
     <Outlet />
   ) : (
@@ -187,7 +191,7 @@ const Home = () => {
         </div>
         <div className="w-full h-full flex justify-evenly space-x-5 mt-7  items-center">
           {/* <div className="text-2xl font-bold">{companyData.name}</div> */}
-          <div className="text-2xl font-semibold max-w-[50%]">
+          <div className="text-2xl font-semibold 2xl:max-w-[50%] mx-auto max-w-[90%] text-justify">
             {" "}
             <TextBlock
               section={"homeInfoText"}

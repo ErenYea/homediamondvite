@@ -7,9 +7,10 @@ import { submitStep1 } from "../lib/step1";
 import { LoadingButton } from "@mui/lab";
 import SaveIcon from "@mui/icons-material/Save";
 
-const InputForm = ({companyid}) => {
+const InputForm = ({ companyid }) => {
   const navigate = useNavigate();
-  const { setstep1Data,incrementStep,error,setError,sellerId } = useAppStore();
+  const { setstep1Data, incrementStep, error, setError, sellerId } =
+    useAppStore();
   const [loading, setloading] = useState(false);
   // const [error, setError] = useState(null);
 
@@ -42,7 +43,7 @@ const InputForm = ({companyid}) => {
         SellerID: sellerId,
       };
 
-       console.log("Sending data to backend:", dataToSubmit);
+      console.log("Sending data to backend:", dataToSubmit);
 
       const response = await submitStep1(dataToSubmit);
 
@@ -53,7 +54,7 @@ const InputForm = ({companyid}) => {
       response.ZipCode = form.zip;
 
       // console.log("Response from server:", response);
-      incrementStep()
+      incrementStep();
       setstep1Data(response);
       setloading(false);
       if (companyid) {
@@ -62,6 +63,7 @@ const InputForm = ({companyid}) => {
         navigate(`/enrollment`);
       }
     } catch (error) {
+      console.log("Error", error);
       setloading(false);
       // console.error("Error submitting form:", error);
       setError(error);

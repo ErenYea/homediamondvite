@@ -20,7 +20,22 @@ const ErrorPage = () => {
     <div className="w-full h-full flex flex-col items-center justify-center my-auto mt-[100px] pb-[50px] gap-10">
       <div className="bg-[#63A8AE] text-white transition-all subheading font-semibold text-xl lg:text-2xl w-full text-center py-2 ">
         {error.text ? (
-          error.text
+          error.type == 1 ? (
+            <div className="flex justify-center space-x-2">
+              <div>{error.text}</div>
+              <div> Click here to </div>
+              <Button
+                variant="contained"
+                className="!bg-white w-fit !text-[#63A8AE] border-none text-lg py-[10px] px-[20px] rounded cursor-pointer transition-all "
+                onClick={() => setError(null)}
+              >
+                Go Back
+              </Button>
+              <div> to the page.</div>
+            </div>
+          ) : (
+            error.text
+          )
         ) : (
           <TextBlock section="errorpage" element={`title`} />
         )}
@@ -45,15 +60,20 @@ const ErrorPage = () => {
             />
           </span>
         </div>
-        <div className="flex justify-center text-white mt-[5%]">
-          <Button
-            variant="contained"
-            className="!bg-[#63A8AE] w-fit text-white border-none text-lg py-[10px] px-[20px] rounded cursor-pointer transition-all "
-            onClick={() => setError(null)}
-          >
-            Go Back
-          </Button>
-        </div>
+        {error.type == 1 ? (
+          <></>
+        ) : (
+          <div className="flex justify-center text-white mt-[5%]">
+            <Button
+              variant="contained"
+              className="!bg-[#63A8AE] w-fit text-white border-none text-lg py-[10px] px-[20px] rounded cursor-pointer transition-all "
+              onClick={() => setError(null)}
+            >
+              Go Back
+            </Button>
+          </div>
+        )}
+
         <Link to="/contact-us">
           <div className="flex justify-center w-fit mx-auto bg-[#63A8AE] items-center py-2 px-6 text-2xl cursor-pointer  transition-all rounded-lg shadow-md border text-white">
             <span className="w-fit">

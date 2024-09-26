@@ -12,7 +12,7 @@ const MarqueeComponent = () => {
   ));
   return (
     <div className="text-white bg-[#2E7EB5]">
-      <Marquee pauseOnHover gradient={false}>
+      <Marquee pauseOnHover gradient={false} autoFill>
         {quotes}
       </Marquee>
     </div>

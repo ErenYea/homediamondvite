@@ -318,7 +318,7 @@ export const translations = {
       quote: "Testimonial Quote. . . . . Tiffany to provide",
     },
     errorpage: {
-      title: "Something went wrong",
+      title: "Something went wrong. Please try again later.",
     },
     privacy: {
       title: "Privacy Notice",
@@ -739,7 +739,7 @@ export const translations = {
       quote: "Testimonial Quote. . . . . Tiffany to provide",
     },
     errorpage: {
-      title: "Algo salió mal",
+      title: "Algo salió mal. Por favor, inténtelo de nuevo más tarde.",
     },
     privacy: {
       title: "Aviso de Privacidad",

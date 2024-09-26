@@ -109,7 +109,8 @@ const InputForm4 = ({ companyid }) => {
           "An error occurred while processing your payment. Please try again later."
         );
         setError({
-          text: "An error occurred while processing your payment. Please try again later.",
+          text: "An error occurred while processing your payment.",
+          type: 1,
         });
       }
     } else {
