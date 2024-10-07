@@ -182,7 +182,7 @@ const YourCompany = () => {
         <div className="w-full h-full flex justify-evenly space-x-5 mt-5  items-center">
           <img src={"gallagerlogo.jpg"} alt="" className=" w-48 " />
           {/* <div className="text-2xl font-bold">{companyData.name}</div> */}
-          <div className="text-2xl font-semibold 2xl:max-w-[50%] mx-auto max-w-[90%] text-justify">
+          <div className="text-2xl 3xl:max-w-[50%] 2xl:w-[80%] mx-auto max-w-[90%] text-justify">
             {" "}
             We have some fantastic news to share! At{" "}
             <span className="font-bold text-teal-500">Your Company</span> we are

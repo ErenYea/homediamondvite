@@ -191,7 +191,7 @@ const Home = () => {
         </div>
         <div className="w-full h-full flex justify-evenly space-x-5 mt-7  items-center">
           {/* <div className="text-2xl font-bold">{companyData.name}</div> */}
-          <div className="text-2xl font-semibold 2xl:max-w-[50%] mx-auto max-w-[90%] text-justify">
+          <div className="text-2xl  3xl:max-w-[50%] 2xl:w-[80%] mx-auto max-w-[90%] text-justify">
             {" "}
             <TextBlock
               section={"homeInfoText"}

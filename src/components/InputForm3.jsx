@@ -53,9 +53,10 @@ const InputForm3 = ({ companyid, showonlyData }) => {
     ];
 
     const dataToSubmit = { RateQuoted: rateQuoted };
-
+    console.log("Data to submit: ", dataToSubmit);
     try {
       const response = await submitStep3(dataToSubmit);
+      console.log(response);
       // setAdditionalOptions(selectedData.filter((data) => data.selected));
       incrementStep();
       setstep3Data({ ...response, totalAmount: formData.Total });

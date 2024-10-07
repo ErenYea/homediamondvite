@@ -56,7 +56,7 @@ const Enrollment = () => {
   };
   useEffect(() => {
     scrolltoContainer();
-  }, []);
+  }, [currentIndex]);
   useEffect(() => {
     if (!fadeOut) {
       const timeout = setTimeout(() => {
