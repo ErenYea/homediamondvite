@@ -153,7 +153,7 @@ export const translations = {
     },
     inputForm3: {
       baseWarrantyRate: "Base Warranty Rate:",
-      total: "Total:",
+      total: "Monthly Total:",
       submit: "Next",
       additionaloptions: "Additional Options",
     },
@@ -579,7 +579,7 @@ export const translations = {
     },
     inputForm3: {
       baseWarrantyRate: "Tarifa de Garantía Base:",
-      total: "Total:",
+      total: "Monthly Total:",
       submit: "Siguiente",
       additionaloptions: "Opciones adicionales",
     },

@@ -22,7 +22,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <div className="w-full h-full">
+      <div className="w-screen h-full">
         <NavBar />
         <Home />
         <Footer />

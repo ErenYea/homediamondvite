@@ -35,10 +35,11 @@ const InputForm3 = ({ companyid, showonlyData }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    const selectedOptions = formData.Options.filter(
+    // console.log(formData);
+    const selectedOptions = additionalOptions.filter(
       (option) => option?.selected
     );
-
+    // console.log(selectedOptions);
     const rateQuoted = [
       {
         LeadID: formData.LeadID,
@@ -54,6 +55,7 @@ const InputForm3 = ({ companyid, showonlyData }) => {
 
     const dataToSubmit = { RateQuoted: rateQuoted };
     console.log("Data to submit: ", dataToSubmit);
+    // setLoading(false);
     try {
       const response = await submitStep3(dataToSubmit);
       console.log(response);

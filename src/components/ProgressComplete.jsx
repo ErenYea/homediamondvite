@@ -24,10 +24,10 @@ const ProgressComplete = () => {
           <TextBlock section="processCompleted" element={`subHeadingLink1`} />
         </Link>
       </div> */}
-      <div className="cursor-pointer text-blue-400 font-bold">
-        <Link to={"/privacy"}>
-          <TextBlock section="processCompleted" element={`subHeadingLink2`} />
-        </Link>
+      <div className=" text-blue-400 font-bold">
+        {/* <Link to={"/privacy"}> */}
+        <TextBlock section="processCompleted" element={`subHeadingLink2`} />
+        {/* </Link> */}
       </div>
       <div>
         <TextBlock
