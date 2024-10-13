@@ -8,7 +8,8 @@ import { LoadingButton } from "@mui/lab";
 
 const InputForm2 = ({ companyid }) => {
   const navigate = useNavigate();
-  const { step1Data, setstep2Data,incrementStep,error,setError,sellerId } = useAppStore();
+  const { step1Data, setstep2Data, incrementStep, error, setError, sellerId } =
+    useAppStore();
   const [loading, setLoading] = useState(false);
   const [propertyTypes, setPropertyType] = useState([]);
   const initialData = useMemo(() => step1Data || {}, [step1Data]);
@@ -59,7 +60,7 @@ const InputForm2 = ({ companyid }) => {
       response.City = formData.City;
       response.StateID = formData.StateID;
       // console.log("API Response:", response);
-      incrementStep()
+      incrementStep();
       setstep2Data(response);
       setLoading(false);
       sessionStorage.setItem("initialData", JSON.stringify(response));
@@ -105,7 +106,7 @@ const InputForm2 = ({ companyid }) => {
 
   return (
     <div className="flex justify-center transition-all items-center box-border w-full ">
-      <div className="bg-[#2E7EB5] w-full max-w-[400px] rounded-md box-border px-2 py-1">
+      <div className="bg-[#2E7EB5] w-full sm:max-w-[400px] rounded-md box-border px-2 py-1">
         <form onSubmit={handleSubmit}>
           <div className="flex flex-col mb-[5px] gap-2 ">
             <div className="w-full flex flex-row space-x-2">

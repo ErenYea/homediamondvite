@@ -182,27 +182,27 @@ const Enrollment = () => {
     return <ErrorPage />;
   }
   return (
-    <div className="flex flex-col items-center mt-[100px] transition-all overflow-x-hidden right-[1%] pb-[50px]">
-      <div className="bg-[#63A8AE] text-white transition-all font-semibold text-xl lg:text-2xl w-full text-center py-2 subheading">
+    <div className="flex flex-col h-full items-center mt-[100px] transition-all overflow-x-hidden right-[1%]  sm:pb-[50px]">
+      <div className="bg-[#63A8AE] text-white transition-all font-semibold text-lg sm:text-xl lg:text-2xl w-full text-center py-2 subheading">
         <TextBlock section="progressBanner" element={`step${currentStep}`} />
       </div>
-      <div className="w-[50%] transition-all">
+      <div className="w-full sm:w-[50%] transition-all">
         <ProgressBar step={currentStep} /> {/* Pass currentStep directly */}
       </div>
 
       <div
         className={`grid transition-all ${
           currentStep !== 3 && currentStep !== 4
-            ? "grid-cols-[2fr_3fr]"
-            : "grid-cols-[2fr_3fr_2fr]"
-        }  gap-4 w-[80%] h-full `}
+            ? "sm:grid-cols-[2fr_3fr]"
+            : "sm:grid-cols-[2fr_3fr_2fr]"
+        }  gap-4 w-full px-2 sm:px-0 sm:w-[80%] h-full `}
       >
         <div className="flex justify-center transition-all items-start  text-black">
           {currentStep === 2 && <WarrantyBenefits />}
           {currentStep === 3 && <PremiumCoverage />}
           {currentStep === 5 && <ProgressComplete />}
           {currentStep === 4 && (
-            <div className="h-full">
+            <div className="hidden sm:flex h-full">
               <img
                 src="/Worry-Free Warranty (DHP Page1).png"
                 alt=""
@@ -212,7 +212,7 @@ const Enrollment = () => {
           )}
         </div>
         {currentStep === 3 && (
-          <div className="flex justify-center transition-all items-start  text-black">
+          <div className="flex justify-center w-full transition-all items-start  text-black">
             <OptionsCheckBoxContainer />
           </div>
         )}
@@ -248,38 +248,9 @@ const Enrollment = () => {
       )}
 
       <div className="flex justify-center h-full gap-5  w-full items-start pt-[30px] flex-col">
-        <div className="bg-[#63A8AE] text-white transition-all font-semibold text-xl lg:text-2xl w-full text-center py-2 subheading">
+        <div className="bg-[#63A8AE] text-white transition-all font-semibold text-lg sm:text-xl lg:text-2xl w-full text-center py-2 subheading">
           <TextBlock section="enrollementpage" element={`question`} />
         </div>
-
-        {/* <div className="w-full flex h-[500px] justify-center mb-8">
-          <div className="w-[60%] h-full bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center justify-around">
-            <div
-              onClick={handlePrev}
-              className="w-12 h-12 rounded-full bg-white flex items-center justify-center cursor-pointer"
-            >
-              <ChevronLeftIcon className="text-[#2E7Eb5]" />
-            </div>
-            <div
-              className={`bg-white w-[60%] rounded-xl h-[60%] flex flex-col justify-center items-center p-8 transition-opacity duration-500 ease-in-out transform ${
-                fadeOut ? "opacity-0" : "opacity-100"
-              }`}
-            >
-              <p className="text-lg text-gray-700 text-center mb-4">
-                {testimonials[currentIndex].message}
-              </p>
-              <p className="text-base text-gray-500 text-center subheading">
-                - {testimonials[currentIndex].name}
-              </p>
-            </div>
-            <div
-              onClick={handleNext}
-              className="w-12 h-12 rounded-full bg-white flex items-center justify-center cursor-pointer"
-            >
-              <ChevronRightIcon className="text-[#2E7Eb5]" />
-            </div>
-          </div>
-        </div> */}
 
         <div className="w-full flex h-fit justify-center mb-8 bg-white py-4">
           <div className="w-[90%] h-full flex items-center justify-around">
@@ -294,7 +265,7 @@ const Enrollment = () => {
                 fadeOut ? "opacity-0" : "opacity-100"
               }`}
             >
-              <p className="text-lg text-[#2E7Eb5] text-center mb-4">
+              <p className="text-sm sm:text-lg text-[#2E7Eb5] text-center  mb-4">
                 {testimonials[currentIndex].message} -{" "}
                 <span className="font-bold">
                   {testimonials[currentIndex].name}
@@ -309,8 +280,8 @@ const Enrollment = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-start w-full h-[400px] relative">
-          <div className="z-0 w-[50%] h-[400px] bg-white">
+        <div className="flex sm:flex-row flex-col items-start w-full h-[400px] relative gap-2 sm:gap-0">
+          <div className="z-0 w-full sm:w-[50%] h-[400px] bg-white">
             <div className="w-full h-full flex flex-col pt-6 items-center">
               <img src="/dhp_home_logo.jpg" alt="" className="w-[350px]" />
               <div
@@ -330,7 +301,7 @@ const Enrollment = () => {
                 marginLeft: "-10%", // Shift the div to the left by the amount that was clipped
               }}
             ></div>
-            <div className="w-full  text-white">
+            <div className="w-full hidden sm:flex  text-white ">
               <PremiumHomeText2 />
             </div>
           </div>

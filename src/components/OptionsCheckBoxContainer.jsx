@@ -16,14 +16,14 @@ const OptionsCheckBoxContainer = () => {
   };
 
   return (
-    <div className="flex flex-col gap-2 md:gap-4">
+    <div className="flex flex-col w-full gap-2 md:gap-4">
       <h2 className="text-lg lg:text-xl xl:text-2xl text-[#2E7EB5] subheading text-wrap ">
         <TextBlock section="checkboxContainer" element="title" />
       </h2>
       <div className="flex flex-col gap-1">
         {additionalOptions.map((option, index) => (
-          <div key={index} className=" gap-5 w-full grid grid-cols-2">
-            <div className="flex items-center space-x-2">
+          <div key={index} className=" gap-5 w-full flex flex-row">
+            <div className="flex flex-1 items-center space-x-2">
               <input
                 type="checkbox"
                 id={`option-${option.ReserveId}`}

@@ -4,10 +4,10 @@ import TextBlock from "./TextBlock";
 const WarrantyBenefits = () => {
   return (
     <div className="text-black ">
-      <h2 className="mb-[10px] text-2xl !font-bold heading-times-bold-uppercase subheading">
+      <h2 className="mb-[10px] text-lg  sm:text-2xl !font-bold heading-times-bold-uppercase subheading">
         <TextBlock section="warrantyBenefits" element="title" />
       </h2>
-      <ul className="pl-[20px] list-disc text-lg space-y-4">
+      <ul className="pl-[20px] list-disc text-base sm:text-lg space-y-4">
         <li className="mb-[5px]">
           <TextBlock section="warrantyBenefits" element="financialProtection" />
         </li>

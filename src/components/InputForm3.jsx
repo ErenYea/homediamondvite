@@ -99,18 +99,20 @@ const InputForm3 = ({ companyid, showonlyData }) => {
     <div className="flex justify-center transition-all items-center box-border w-full h-full text-white">
       <div className="bg-[#2E7EB5] w-full h-full flex items-start justify-start max-w-[400px] rounded-md box-border px-2 py-1">
         <form onSubmit={handleSubmit} className="space-y-4 w-full">
-          <h3 className="font-bold text-3xl subheading">Your Custom Plan</h3>
+          <h3 className="font-bold text-xl sm:text-3xl subheading">
+            Your Custom Plan
+          </h3>
           <div className="grid grid-cols-2 w-full gap-2">
-            <div className="text-white text-xl  ">
+            <div className="text-white text-lg sm:text-xl  ">
               <TextBlock section="inputForm3" element="baseWarrantyRate" />
             </div>
-            <div className="text-end text-xl">
+            <div className="text-end text-lg sm:text-xl">
               $ {formData.RateQuoted.toFixed(2)}
             </div>
-            <div className="text-white text-xl ">
+            <div className="text-white text-lg sm:text-xl">
               <TextBlock section="inputForm3" element="additionaloptions" />
             </div>
-            <div className="text-end text-xl">
+            <div className="text-end text-lg sm:text-xl">
               ${" "}
               {(
                 formData.Total.toFixed(2) - formData.RateQuoted.toFixed(2)
@@ -136,9 +138,11 @@ const InputForm3 = ({ companyid, showonlyData }) => {
               </div>
             )}
           </div>
-          <h4 className="font-bold text-3xl subheading">Your Price</h4>
+          <h4 className="font-bold text-xl sm:text-3xl subheading">
+            Your Price
+          </h4>
           <div className="grid grid-cols-2 w-full gap-2">
-            <div className="text-white text-xl ">
+            <div className="text-white text-lg sm:text-xl">
               <TextBlock section="inputForm3" element="total" />
             </div>
             <div className="text-end text-xl">

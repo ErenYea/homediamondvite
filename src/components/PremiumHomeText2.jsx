@@ -5,13 +5,13 @@ const PremiumHomeText2 = () => {
   return (
     <div className="flex flex-col xl:gap-6 lg:gap-4 gap-2 ">
       <div className="max-w-[90%]">
-        <span className=" font-extrabold xl:text-4xl text-3xl xl:leading-normal subheading leading-snug tracking-wide heading-times-bold-uppercase">
+        <span className=" font-extrabold xl:text-4xl text-lg sm:text-3xl xl:leading-normal subheading leading-snug tracking-wide heading-times-bold-uppercase">
           <TextBlock section="premiumHomeText" element="title" />
         </span>
       </div>
 
       <div className="flex flex-col xl:gap-4 lg:gap-2 gap-1 max-w-[90%] ">
-        <ul className="list-disc ml-6 xl:text-xl text-lg font-light">
+        <ul className="list-disc ml-6 xl:text-xl text-base sm:text-lg font-light">
           <li className="ml-4">
             <TextBlock section="premiumHomeText" element="bbbRating" />
           </li>

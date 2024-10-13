@@ -13,7 +13,7 @@ const NavBar = () => {
   };
   return (
     <div className="fixed top-0 h-[100px] shadow-xl w-full  z-[1000] transition-all bg-white box-border text-[#2E7Eb5] uppercase flex justify-between items-center">
-      <div className="flex items-center justify-between w-full">
+      <div className="flex items-center justify-between sm:justify-start w-full">
         <Link to={"/"}>
           <img src={"/dhp_home_logo.jpg"} alt="Logo" className="w-[200px]" />
         </Link>
@@ -33,7 +33,7 @@ const NavBar = () => {
           )}
         </div>
       </div>
-      <div className="mr-2 hidden sm:flex">
+      <div className="mr-2 hidden sm:flex sm:items-center">
         <span className="subheading">English</span>
         <Switch checked={language === "es"} onChange={handleLanguageToggle} />
         <span className="subheading">Español</span>

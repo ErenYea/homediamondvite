@@ -20,7 +20,7 @@ const PremiumCoverage = () => {
         {options.map((option, ind) => (
           <div key={ind} className="flex items-center gap-4 lg:gap-5 ">
             <CheckIcon className="w-4 h-4 lg:w-5 lg:h-5 text-blue-600" />
-            <span className="text-lg font-semibold">
+            <span className="text-sm sm:text-lg font-semibold">
               <TextBlock section="premiumCoverage" element={`${option}`} />
             </span>
           </div>
