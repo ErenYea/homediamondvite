@@ -17,11 +17,11 @@ const ContactUs = () => {
       <div className="bg-[#63A8AE]  text-white transition-all subheading font-semibold capitalize text-xl lg:text-2xl w-full text-center py-2 ">
         <TextBlock section="contactUsPage" element={`contactUsHeading`} />
       </div>
-      <div className="flex items-start w-full h-full relative">
-        <div className="z-0 w-[50%]  h-[80%]">
+      <div className="flex flex-col sm:flex-row items-start w-full h-full relative">
+        <div className="z-0 w-full sm:w-[50%]  h-fit sm:h-[80%]">
           <div className="w-full h-full">
-            <div className="flex flex-col justify-center h-full w-fit mx-auto md:ml-[10%] lg:pl-0 pr-[20%]">
-              <span className="font-extrabold xl:text-4xl text-3xl xl:leading-normal leading-snug tracking-wide capitalize heading-times-bold-uppercase">
+            <div className="flex px-2 sm:px-0 flex-col justify-center sm:items-start items-center h-full w-full sm:w-fit mx-auto md:ml-[10%] lg:pl-0 sm:pr-[20%]">
+              <span className="hidden sm:flex font-extrabold xl:text-4xl text-3xl xl:leading-normal leading-snug tracking-wide capitalize heading-times-bold-uppercase">
                 <TextBlock section="contactUsPage" element="contactUsHeading" />
               </span>
 
@@ -34,7 +34,7 @@ const ContactUs = () => {
             </div>
           </div>
         </div>
-        <div className="relative z-10 h-[80%] flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
+        <div className="relative w-full sm:w-fit z-10 sm:h-[80%] flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
           <div
             className="cutBox bg-gradient-to-r from-[#63A8AE] to-[#5fa4af] h-full"
             style={{

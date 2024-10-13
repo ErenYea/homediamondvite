@@ -21,7 +21,11 @@ const NavBar = () => {
           {/* <Link to="/faq" className="hover:underline">
             <TextBlock section="navbar" element="faq" />
           </Link> */}
-          <Link to="/contact-us" className=" hover:underline">
+          <Link
+            to="/contact-us"
+            className=" hover:underline"
+            onClick={() => setOpenDropDown(false)}
+          >
             <TextBlock section="navbar" element="contact" />
           </Link>
         </div>
@@ -45,12 +49,14 @@ const NavBar = () => {
           <Link
             to="/contact-us"
             className=" hover:underline bg-white w-full text-center rounded-lg py-2"
+            onClick={() => setOpenDropDown(false)}
           >
             <TextBlock section="navbar" element="contact" />
           </Link>
           <Link
             to="/remove-my-data"
             className=" hover:underline bg-white w-full text-center rounded-lg py-2  text-base subheading border-r border-r-[#2E7Eb5] px-2 lg:!text-sm"
+            onClick={() => setOpenDropDown(false)}
           >
             <TextBlock section="footer" element="removeMyData" />
           </Link>
@@ -58,6 +64,7 @@ const NavBar = () => {
           <Link
             to="/terms-and-condition"
             className="text-base  hover:underline bg-white w-full text-center rounded-lg py-2 subheading border-r border-r-[#2E7Eb5] px-2 lg:!text-sm"
+            onClick={() => setOpenDropDown(false)}
           >
             <TextBlock section="footer" element="termsAndConditions" />
           </Link>
@@ -65,6 +72,7 @@ const NavBar = () => {
           <Link
             to="/privacy"
             className="px-2 hover:underline bg-white w-full text-center rounded-lg py-2 text-base subheading lg:!text-sm"
+            onClick={() => setOpenDropDown(false)}
           >
             <TextBlock section="footer" element="privacy" />
           </Link>

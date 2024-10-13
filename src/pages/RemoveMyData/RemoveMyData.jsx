@@ -15,11 +15,11 @@ const RemoveMyData = () => {
   }, []);
   return (
     <div className="mt-[100px] pb-[50px] text-black h-full">
-      <div className="flex items-start w-full h-full relative">
-        <div className="z-0 w-[50%]  h-[80%]">
+      <div className="flex sm:flex-row flex-col sm:items-start items-center  w-full h-full relative">
+        <div className="z-0 w-full sm:w-[50%] h-fit sm:h-[80%]">
           <div className="w-full h-full">
-            <div className="flex flex-col justify-center h-full w-fit mx-auto md:ml-[10%] lg:pl-0 pr-[20%]">
-              <span className="font-extrabold xl:text-4xl text-3xl xl:leading-normal leading-snug tracking-wide capitalize heading-times-bold-uppercase">
+            <div className="flex flex-col justify-center items-center sm:items-start h-full w-full sm:w-fit mx-auto md:ml-[10%] lg:pl-0 sm:pr-[20%]">
+              <span className="hidden sm:flex font-extrabold xl:text-4xl text-3xl xl:leading-normal leading-snug tracking-wide capitalize heading-times-bold-uppercase">
                 <TextBlock
                   section="removeMyDataPage"
                   element="removeMyDataHeading"
@@ -35,7 +35,7 @@ const RemoveMyData = () => {
             </div>
           </div>
         </div>
-        <div className="relative z-10 h-[80%] flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
+        <div className="relative z-10 h-[80%] w-full sm:w-fit flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
           <div
             className="cutBox bg-gradient-to-r from-[#63A8AE] to-[#5fa4af] h-full"
             style={{
