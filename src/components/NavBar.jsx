@@ -14,7 +14,7 @@ const NavBar = () => {
   return (
     <div className="fixed top-0 h-[100px] shadow-xl w-full  z-[1000] transition-all bg-white box-border text-[#2E7Eb5] uppercase flex justify-between items-center">
       <div className="flex items-center justify-between sm:justify-start w-full">
-        <Link to={"/"}>
+        <Link to={"/"} onClick={() => setOpenDropDown(false)}>
           <img src={"/dhp_home_logo.jpg"} alt="Logo" className="w-[200px]" />
         </Link>
         <div className="ml-[20px] hidden sm:flex mt-2 space-x-5 font-semibold">
