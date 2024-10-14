@@ -160,8 +160,8 @@ const Home = () => {
       <div className="">
         <MarqueeComponent />
       </div>
-      <div className="flex items-start w-full h-full">
-        <div className="z-0 w-[50%]  h-[400px]">
+      <div className="flex flex-col sm:flex-row items-start w-full h-full">
+        <div className="z-0 w-full h-[200px] sm:w-[50%]  sm:h-[400px]">
           {/* <ImageSlider /> */}
           <img
             src="Worry-Free Warranty (DHP Page1).png"
@@ -169,27 +169,27 @@ const Home = () => {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="z-10 h-[400px] flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
+        <div className="z-10 w-full h-full sm:h-[400px] flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex sm:items-center">
           <div
-            className="cutBox  h-full bg-gradient-to-r from-[#63A8AE] to-[#5fa4af]"
+            className="cutBox hidden sm:flex  h-full bg-gradient-to-r from-[#63A8AE] to-[#5fa4af]"
             style={{
               clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
               width: "calc(30% )", // Expand the width to cover the extra clipped area
               marginLeft: "-10%", // Shift the div to the left by the amount that was clipped
             }}
           ></div>
-          <div className="w-full text-white mr-[50px]">
+          <div className="w-full text-white sm:mr-[50px] px-2 sm:px-0 py-2 sm:py-0">
             <PremiumHomeText />
           </div>
         </div>
       </div>
-      <div className="w-full h-[450px] flex relative top-[-100px] z-[900] ">
-        <div className=" w-[450px] h-full ml-[10rem] ">
+      <div className=" w-full sm:h-[450px] flex flex-col sm:flex-row relative my-2 sm:my-0 mb-6 sm:top-[-100px] z-[900] ">
+        <div className="px-2 sm:px-0 sm:w-[450px] h-full sm:ml-[10rem] ">
           <div className="bg-[#2E7EB5] p-[10px] rounded-lg box-border">
             <InputForm />
           </div>
         </div>
-        <div className="w-full h-full flex justify-evenly space-x-5 mt-7  items-center">
+        <div className="w-full h-full hidden sm:flex justify-evenly space-x-5 mt-7  items-center ">
           {/* <div className="text-2xl font-bold">{companyData.name}</div> */}
           <div className="text-2xl  3xl:max-w-[50%] 2xl:w-[80%] mx-auto max-w-[90%] text-justify">
             {" "}
@@ -208,8 +208,8 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="w-full flex h-40 justify-center mb-8 bg-gray-300 py-4">
-        <div className="w-[90%] h-full flex items-center justify-around">
+      <div className="w-full flex sm:h-40 px-2 sm:px-0 justify-center sm:mb-8 bg-gray-300 py-4">
+        <div className="sm:w-[90%] h-full flex items-center justify-around">
           <div
             onClick={handlePrev}
             className="w-12 h-12 rounded-full bg-[#2E7Eb5] flex items-center justify-center cursor-pointer"
@@ -221,7 +221,7 @@ const Home = () => {
               fadeOut ? "opacity-0" : "opacity-100"
             }`}
           >
-            <p className="text-lg text-[#2E7Eb5] text-center mb-4">
+            <p className="text-sm sm:text-lg text-[#2E7Eb5] text-center mb-4">
               {testimonials[currentIndex].message} -{" "}
               <span className="font-bold">
                 {testimonials[currentIndex].name}
@@ -236,7 +236,7 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="md:w-full lg:w-[90%] xl:[w-80%] mx-auto flex flex-col items-center gap-10 mb-8">
+      <div className="hidden md:w-full lg:w-[90%] xl:[w-80%] mx-auto sm:flex flex-col items-center gap-10 mb-8">
         <span className="w-full text-center font-bold text-[#2E7Eb5] text-3xl">
           How it works... Easy as 1, 2, 3
         </span>
@@ -252,30 +252,30 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="flex items-start w-full h-full">
-        <div className="z-0 md:w-full lg:w-[80%] h-[400px]">
+      <div className="flex flex-col sm:flex-row items-start w-full h-full">
+        <div className="z-0 md:w-full lg:w-[80%] sm:h-[400px]">
           <img
             src="/56ebb5e051381fbf99398cea78a84b36_1200_80.webp"
             alt=""
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="z-10 h-[400px] flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
+        <div className="z-10 sm:h-[400px] flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
           <div
-            className="cutBox bg-gradient-to-r from-[#63A8AE] to-[#5fa4af] h-full"
+            className="cutBox bg-gradient-to-r from-[#63A8AE] to-[#5fa4af] h-full sm:flex hidden"
             style={{
               clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
               width: "calc(30% )", // Expand the width to cover the extra clipped area
               marginLeft: "-10%", // Shift the div to the left by the amount that was clipped
             }}
           ></div>
-          <div className="w-full text-white mr-[70px]">
+          <div className="w-full text-white sm:mr-[70px]">
             {/* <PremiumHomeText /> */}
             <PremiumProductText />
           </div>
         </div>
       </div>
-      <div className="w-full flex flex-col items-center justify-center p-10 gap-2">
+      <div className="w-full flex flex-col items-center justify-center p-3 sm:p-10 gap-2">
         <div className="subheading text-xl !font-bold">
           <TextBlock section="homeInfoText" element="whatishomedaimond" />
         </div>
@@ -286,12 +286,12 @@ const Home = () => {
           <TextBlock section="homeInfoText" element="whatishomedaimondtext2" />
         </div>
       </div>
-      <div className="w-full flex justify-center p-10">
-        <div className="grid grid-cols-2 gap-4 w-fit">
+      <div className="w-full flex flex-wrap flex-col sm:flex-row justify-center p-10">
+        <div className="grid sm:grid-cols-2 gap-4 w-full sm:w-fit">
           {products.map((product, ind) => (
             <div
               key={ind}
-              className="col-span-1 flex flex-col items-center justify-center gap-2 bg-gradient-to-b from-white to-[#63A8AE] py-6 w-fit px-6 min-w-[500px] min-h-[200px] subheading "
+              className="col-span-1 flex flex-col items-center justify-center gap-2 bg-gradient-to-b from-white to-[#63A8AE] py-6 w-fit px-6 sm:min-w-[500px] w-full sm:min-h-[200px] subheading "
             >
               <span className="font-bold text-xl tracking-wide leading-normal">{`${product.title}`}</span>
               <span className="text-lg font-medium leading-normal">{`Avg. repair cost: ${product.averageRepairCost}`}</span>
@@ -305,21 +305,21 @@ const Home = () => {
         <MarqueeComponent />
       </div>
       <FAQ />
-      <div className="flex items-start w-full h-[400px] relative">
-        <div className="z-0 w-[70%] h-[400px] bg-white">
+      <div className="flex sm:flex-row flex-col items-start w-full h-[400px] relative">
+        <div className="z-0 sm:w-[70%] sm:h-[400px] bg-white">
           <div className="w-full h-full flex flex-col pt-6 items-center">
             <img src="/dhp_home_logo.jpg" alt="" className="w-[350px]" />
             <div
               onClick={scrolltoContainer}
-              className="flex justify-center !bg-[#63A8AE] items-center py-2 px-6 text-2xl cursor-pointer  transition-all   rounded-lg shadow-md border text-white"
+              className="flex justify-center !bg-[#63A8AE] items-center py-2 px-6 text-xl sm:text-2xl cursor-pointer  transition-all   rounded-lg shadow-md border text-white"
             >
               Free Quote
             </div>
           </div>
         </div>
-        <div className=" z-10 h-full flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
+        <div className=" z-10 h-full flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] hidden sm:flex items-center">
           <div
-            className="cutBox bg-gradient-to-r from-[#63A8AE] to-[#5fa4af] h-full"
+            className="cutBox bg-gradient-to-r hidden sm:flex from-[#63A8AE] to-[#5fa4af] h-full"
             style={{
               clipPath: "polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%)",
               width: "calc(30%)", // Expand the width to cover the extra clipped area

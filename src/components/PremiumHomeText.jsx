@@ -3,9 +3,9 @@ import TextBlock from "./TextBlock";
 
 const PremiumHomeText = () => {
   return (
-    <div className="flex flex-col xl:gap-6 lg:gap-4 gap-2 ">
-      <div className="max-w-[80%]">
-        <span className=" font-extrabold xl:text-4xl text-3xl xl:leading-normal subheading leading-snug tracking-wide heading-times-bold-uppercase">
+    <div className="flex flex-col xl:gap-6 lg:gap-4 gap-2 w-full">
+      <div className="sm:max-w-[80%] w-full">
+        <span className=" font-extrabold xl:text-4xl text-xl sm:text-3xl xl:leading-normal subheading leading-snug tracking-wide heading-times-bold-uppercase">
           <TextBlock section="homeInfoText" element="mainHomePageHeading" />
         </span>
       </div>

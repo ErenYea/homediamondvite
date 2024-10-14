@@ -4,8 +4,8 @@ import TextBlock from "./TextBlock";
 const PremiumProductText = () => {
   return (
     <div className="flex flex-col xl:gap-6 lg:gap-4 gap-2 w-full justify-center items-center">
-      <div className="max-w-[90%]">
-        <span className=" font-extrabold xl:text-4xl text-3xl xl:leading-normal leading-snug tracking-wide heading-times-bold-uppercase">
+      <div className="sm:max-w-[90%] w-full px-2 sm:px-0">
+        <span className=" font-extrabold xl:text-4xl sm:text-3xl xl:leading-normal leading-snug tracking-wide heading-times-bold-uppercase">
           <TextBlock section="productsPage" element="mainText" />
         </span>
       </div>

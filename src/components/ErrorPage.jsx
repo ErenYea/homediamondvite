@@ -40,7 +40,7 @@ const ErrorPage = () => {
           <TextBlock section="errorpage" element={`title`} />
         )}
       </div>
-      <div className="w-[40%] flex flex-col gap-6">
+      <div className="w-full px-2 sm:px-0 sm:w-[40%] flex flex-col gap-6">
         <div className="flex flex-col items-start">
           <span className="text-xl !font-semibold subheading ">
             <TextBlock section="noWarrantiesPage" element="sorryMessage" />
@@ -85,8 +85,8 @@ const ErrorPage = () => {
           </div>
         </Link>
       </div>
-      <div className="flex items-start w-full h-[400px] relative">
-        <div className="z-0 w-[50%] h-[400px] bg-white">
+      <div className="flex sm:flex-row flex-col items-start ju w-full h-[400px] relative gap-2 sm:gap-2">
+        <div className="z-0 w-full sm:w-[50%] h-[400px] bg-white">
           <div className="w-full h-full flex flex-col pt-6 items-center">
             <img src="/dhp_home_logo.jpg" alt="" className="w-[350px]" />
             <div
@@ -97,7 +97,7 @@ const ErrorPage = () => {
             </div>
           </div>
         </div>
-        <div className=" z-10 h-full flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex items-center">
+        <div className="hidden py-2 sm:py-0 z-10 h-full flex-grow bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] sm:flex items-center">
           <div
             className="cutBox bg-gradient-to-r from-[#63A8AE] to-[#5fa4af] h-full"
             style={{

@@ -54,11 +54,11 @@ const FAQ = () => {
 
   return (
     <div className=" pb-[30px] text-black h-full w-full flex justify-center items-center">
-      <div className="flex flex-col h-fit gap-8 w-[70%]">
-        <span className="subheading text-[#2E7Eb5] !font-extrabold !text-3xl text-center">
+      <div className="flex flex-col h-fit gap-8 sm:w-[70%] px-2 sm:px-0">
+        <span className="subheading text-[#2E7Eb5] !font-extrabold text-2xl sm:text-3xl text-center">
           <TextBlock section="faqPage" element="faqHeading" />
         </span>
-        <div className="w-full p-5 rounded-lg transition-all bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex flex-col gap-5">
+        <div className="w-full sm:p-5 p-2 rounded-lg transition-all bg-gradient-to-r from-[#63A8AE] to-[#2E7Eb5] flex flex-col gap-5">
           {Array(6)
             .fill(1)
             .map((_, ind) => (
