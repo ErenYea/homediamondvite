@@ -54,9 +54,7 @@ const Enrollment = () => {
       behavior: "smooth", // Optional: Add smooth scrolling
     });
   };
-  useEffect(() => {
-    scrolltoContainer();
-  }, [currentIndex]);
+
   useEffect(() => {
     if (!fadeOut) {
       const timeout = setTimeout(() => {
@@ -169,6 +167,7 @@ const Enrollment = () => {
         navigate("/");
       }
     }
+    scrolltoContainer();
     // if (currentStep >= 3) {
     //   setFormData(
     //     step2Data.Options?.map((option) => ({
